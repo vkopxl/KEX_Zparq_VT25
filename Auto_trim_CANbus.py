@@ -61,13 +61,13 @@ def read_can_data():
             if angle is not None and power is not None and speed is not None:
                 break  # Avsluta när alla värden är inlästa
         
-        if angle in None or power is None or speed is None
+        if angle in None or power is None or speed is None:
             print("NO DATA READ FROM CANBUS")
 
     filtered_power = smooth_data(power_buffer, power)
     filtered_speed = smooth_data(speed_buffer, speed)
     
-    return current_angle, filtered_power, filtered_speed
+    return angle, filtered_power, filtered_speed
 
 def send_can_angle(angle):
     # Skicka ny vinkel till motorn via CANbus.
@@ -78,135 +78,139 @@ def send_can_angle(angle):
 
 # ------------------ALGORITHM-------------------- #
 
-# Initialisering
-max_iterations = 1000  
-iteration = 0
-efficiency_history = []
-angle_history = []
-speed_history = []
-power_history = []
+def main():
+    # Initialisering
+    max_iterations = 1000  
+    iteration = 0
+    efficiency_history = []
+    angle_history = []
+    speed_history = []
+    power_history = []
 
-current_angle, power, speed = read_can_data()
-prev_efficiency = measure_efficiency(speed,power)
-
-efficiency_history.append(prev_efficiency)
-angle_history.append(current_angle)
-speed_history.append(speed)
-power_history.append(power)
-
-# Initierande vinkeländring
-new_angle =  current_angle + step_size
-send_can_angle(new_angle)
-
-# Tid det kommer ta motorn att justera vinkeln till den nya
-tid = abs(step_size)/vinkelhastighet
-
-# Tidsfördröjning till nästa iteration så motorn har hunnit ändra till den nya vinkel
-time.sleep(tid+1)   
-
-# Huvudoptimeringsloop
-while iteration < max_iterations:
-    iteration += 1
-    
-    # Läs av motorns vinkel, effekt och hastighet
     current_angle, power, speed = read_can_data()
-    
-    # Lagra värden till plot
+    prev_efficiency = measure_efficiency(speed,power)
+
+    efficiency_history.append(prev_efficiency)
     angle_history.append(current_angle)
     speed_history.append(speed)
     power_history.append(power)
 
-    # Räkna ut kvoten mellan hastighet och effekt
-    new_efficiency = measure_efficiency(speed,power)
+    # Initierande vinkeländring
+    new_angle =  current_angle + step_size
+    send_can_angle(new_angle)
 
-    # Lagra effektiviteten för plot
-    efficiency_history.append(new_efficiency)
-
-    # Beräkna fel (trend för förändring av effektivitet)        
-    error = new_efficiency - prev_efficiency
-    
-    # Kontrollera konvergens
-    if abs(error) < tolerance:
-        print(f'Optimal vinkel funnen: {current_angle:.2f} grader efter {iteration} iterationer')
-        break
-
-    if error > 0:
-        # Effektiviteten förbättrades, fortsätt i samma riktning
-        new_angle =  current_angle + step_size
-
-        # Skicka ut vinkeln som motorn ska ändra till --> motorn ändrar vinkel
-        send_can_angle(new_angle)
-        
-    else:
-        # Effektiviteten försämrades, vänd riktning och minska steglängden
-        step_size = -0.5 * step_size
-
-        new_angle =  current_angle + step_size
-        
-        # Skicka ut vinkeln som motorn ska ändra till --> motorn ändrar vinkel
-        send_can_angle(new_angle)
-
-    # Lagra effektiviteten till nästa iteration
-    prev_efficiency = new_efficiency
-    
     # Tid det kommer ta motorn att justera vinkeln till den nya
-    tid = vinkelhastighet/abs(step_size)
+    tid = abs(step_size)/vinkelhastighet
 
     # Tidsfördröjning till nästa iteration så motorn har hunnit ändra till den nya vinkel
-    time.sleep(tid+1)
+    time.sleep(tid+1)   
 
-# Kontrollera om max antal iterationer uppnåddes
-if iteration == max_iterations:
-    print('Maximalt antal iterationer uppnått. Konvergens ej garanterad.')
+    # Huvudoptimeringsloop
+    while iteration < max_iterations:
+        iteration += 1
+        
+        # Läs av motorns vinkel, effekt och hastighet
+        current_angle, power, speed = read_can_data()
+        
+        # Lagra värden till plot
+        angle_history.append(current_angle)
+        speed_history.append(speed)
+        power_history.append(power)
 
-# Skapa iterationsvektor för plottning
-iterations = np.arange(len(angle_history))
+        # Räkna ut kvoten mellan hastighet och effekt
+        new_efficiency = measure_efficiency(speed,power)
 
-# ------------------PLOTS-------------------- #
+        # Lagra effektiviteten för plot
+        efficiency_history.append(new_efficiency)
 
-# Plotta resultatet
-plt.figure(figsize=(8, 5))
-plt.plot(iterations, angle_history, markersize=3, label='Vinkel')
-plt.axhline(y=15, color='r', linestyle='--', label='Optimal vinkel (konstant)')
-plt.xlabel('Iterationer')
-plt.ylabel('Trimvinkel (grader)')
-plt.title('Motorns vinkel över antalet iternationer')
-plt.legend()
-plt.grid()
-plt.show()
+        # Beräkna fel (trend för förändring av effektivitet)        
+        error = new_efficiency - prev_efficiency
+        
+        # Kontrollera konvergens
+        if abs(error) < tolerance:
+            print(f'Optimal vinkel funnen: {current_angle:.2f} grader efter {iteration} iterationer')
+            break
 
-plt.figure(figsize=(8, 5))
-plt.plot(iterations, efficiency_history, markersize=3, label='Effektivitet')
-plt.axhline(y=15, color='r', linestyle='--', label='Optimal vinkel (konstant)')
-plt.xlabel('Iterationer')
-plt.ylabel('Effektivitet (m/J)')
-plt.title('Båtens effektivitet över antalet iternationer')
-plt.legend()
-plt.grid()
-plt.show()
+        if error > 0:
+            # Effektiviteten förbättrades, fortsätt i samma riktning
+            new_angle =  current_angle + step_size
+
+            # Skicka ut vinkeln som motorn ska ändra till --> motorn ändrar vinkel
+            send_can_angle(new_angle)
+            
+        else:
+            # Effektiviteten försämrades, vänd riktning och minska steglängden
+            step_size = -0.5 * step_size
+
+            new_angle =  current_angle + step_size
+            
+            # Skicka ut vinkeln som motorn ska ändra till --> motorn ändrar vinkel
+            send_can_angle(new_angle)
+
+        # Lagra effektiviteten till nästa iteration
+        prev_efficiency = new_efficiency
+        
+        # Tid det kommer ta motorn att justera vinkeln till den nya
+        tid = vinkelhastighet/abs(step_size)
+
+        # Tidsfördröjning till nästa iteration så motorn har hunnit ändra till den nya vinkel
+        time.sleep(tid+1)
+
+    # Kontrollera om max antal iterationer uppnåddes
+    if iteration == max_iterations:
+        print('Maximalt antal iterationer uppnått. Konvergens ej garanterad.')
+
+    # Skapa iterationsvektor för plottning
+    iterations = np.arange(len(angle_history))
+
+    # ------------------PLOTS-------------------- #
+
+    # Plotta resultatet
+    plt.figure(figsize=(8, 5))
+    plt.plot(iterations, angle_history, markersize=3, label='Vinkel')
+    plt.axhline(y=15, color='r', linestyle='--', label='Optimal vinkel (konstant)')
+    plt.xlabel('Iterationer')
+    plt.ylabel('Trimvinkel (grader)')
+    plt.title('Motorns vinkel över antalet iternationer')
+    plt.legend()
+    plt.grid()
+    plt.show()
+
+    plt.figure(figsize=(8, 5))
+    plt.plot(iterations, efficiency_history, markersize=3, label='Effektivitet')
+    plt.axhline(y=15, color='r', linestyle='--', label='Optimal vinkel (konstant)')
+    plt.xlabel('Iterationer')
+    plt.ylabel('Effektivitet (m/J)')
+    plt.title('Båtens effektivitet över antalet iternationer')
+    plt.legend()
+    plt.grid()
+    plt.show()
 
 
-plt.figure(figsize=(8, 5))
-plt.plot(iterations, power_history, markersize=3, label='Effekt')
-plt.axhline(y=15, color='r', linestyle='--', label='Optimal vinkel (konstant)')
-plt.xlabel('Iterationer')
-plt.ylabel('Effekt (W)')
-plt.title('Motorns effekt över antalet iternationer')
-plt.legend()
-plt.grid()
-plt.show()
+    plt.figure(figsize=(8, 5))
+    plt.plot(iterations, power_history, markersize=3, label='Effekt')
+    plt.axhline(y=15, color='r', linestyle='--', label='Optimal vinkel (konstant)')
+    plt.xlabel('Iterationer')
+    plt.ylabel('Effekt (W)')
+    plt.title('Motorns effekt över antalet iternationer')
+    plt.legend()
+    plt.grid()
+    plt.show()
 
 
-plt.figure(figsize=(8, 5))
-plt.plot(iterations, speed_history, markersize=3, label='Båtens hastighet')
-plt.axhline(y=15, color='r', linestyle='--', label='Optimal vinkel (konstant)')
-plt.xlabel('Iterationer')
-plt.ylabel('Hastighet (ENHET)')
-plt.title('Båtens hastighet över antalet iternationer')
-plt.legend()
-plt.grid()
-plt.show()
+    plt.figure(figsize=(8, 5))
+    plt.plot(iterations, speed_history, markersize=3, label='Båtens hastighet')
+    plt.axhline(y=15, color='r', linestyle='--', label='Optimal vinkel (konstant)')
+    plt.xlabel('Iterationer')
+    plt.ylabel('Hastighet (ENHET)')
+    plt.title('Båtens hastighet över antalet iternationer')
+    plt.legend()
+    plt.grid()
+    plt.show()
 
+
+if __name__ == "__main__":
+    main()
 
 
 #       _
