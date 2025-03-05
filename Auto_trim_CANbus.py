@@ -8,13 +8,13 @@ from collections import deque
 
 step_size = 1.0  # Vinkelförändrningens storlek
 tolerance = 0.01  
-vinkelhastighet = ? 
+vinkelhastighet = 1
 
 # ------------------FAILSAFES-------------------- #
 
 # Gränser för trimvinkel
-MIN_ANGLE = 0 # minsta tillåtna vinkel
-MAX_ANGLE = 30 # Största tilåtna vinkel
+MIN_ANGLE = 500 # minsta tillåtna vinkel
+MAX_ANGLE = 9500 # Största tilåtna vinkel
 
 # Clamp för trimvinkel, returnerar max eller min vinkel om vinkeln överskrids i algoritmen
 def clamp_angle(angle):
@@ -31,50 +31,68 @@ def measure_efficiency(speed,power):
 
 # Buffrar för sensordata
 speed_buffer = deque(maxlen=5) # Hastighet
-power_buffer = deque(maxlen=5) # Effekt
+vridmoment_buffer = deque(maxlen=5) # Vridmoment
+varvtal_buffer = deque(maxlen=5) # Varvtal
+#power_buffer = deque(maxlen=5) # Effekt
 
 def smooth_data(buffer, new_value):
     # filter för inkommande sensordata med glidande medelvärde
     buffer.append(new_value)
     return sum(buffer) / len(buffer)
 
-# ------------------CANBUS-------------------- #
+# ------------------CANbus-------------------- #
 
 # CANbus setup (justera för din hårdvara)
-bus = can.interface.Bus(channel='can0', bustype='socketcan')
+bus = can.interface.Bus(bustype='pcan', channel='PCAN_USBBUS1', bitrate=1000000)
 
 def read_can_data():
     # Läs vinkel, effekt och hastighet från CANbus.
-    angle, power, speed = None, None, None
+    angle, vridmoment, varvtal, speed = None, None, None, None
     start_time = time.time()
     # Lyssna på CAN-meddelanden
     while time.time() - start_time < 10.0: # Timeout efter 10s om ingen data tar emot
         message = bus.recv(timeout=1.0)  # Vänta 1 sek på meddelande
         if message:
-            if message.arbitration_id == 0x100:  # Antag att 0x100 är vinkel-ID
+            if message.arbitration_id == 0x100:  
                 angle = int.from_bytes(message.data, byteorder='big')
             elif message.arbitration_id == 0x101:  # Effekt-ID
-                power = int.from_bytes(message.data, byteorder='big')
+                vridmoment = int.from_bytes(message.data, byteorder='big')
+            elif message.arbitration_id == 0x102:  # Hastighet-ID
+                varvtal = int.from_bytes(message.data, byteorder='big')
             elif message.arbitration_id == 0x102:  # Hastighet-ID
                 speed = int.from_bytes(message.data, byteorder='big')
             
-            if angle is not None and power is not None and speed is not None:
+            if angle is not None and vridmoment is not None and varvtal is not None and speed is not None:
                 break  # Avsluta när alla värden är inlästa
         
+<<<<<<< HEAD
         if angle in None or power is None or speed is None:
+=======
+        if angle is None or vridmoment is None or varvtal is None or speed is None:
+>>>>>>> e0f217b5ef909716a93217f0d83454e7bf27dce1
             print("NO DATA READ FROM CANBUS")
 
-    filtered_power = smooth_data(power_buffer, power)
+    filtered_vridmoment = smooth_data(vridmoment_buffer, vridmoment)
+    filtered_varvtal = smooth_data(varvtal_buffer, varvtal)
     filtered_speed = smooth_data(speed_buffer, speed)
+<<<<<<< HEAD
     
     return angle, filtered_power, filtered_speed
+=======
+
+    power = filtered_vridmoment*(2*3.1416*filtered_varvtal/60)
+
+    return current_angle, power, filtered_speed
+>>>>>>> e0f217b5ef909716a93217f0d83454e7bf27dce1
 
 def send_can_angle(angle):
     # Skicka ny vinkel till motorn via CANbus.
-    angle = clamp_angle(angle) # Ser till att vinkeln är inom säkra gränser
-    message = can.Message(arbitration_id=0x200, data=angle.to_bytes(2, byteorder='big'), is_extended_id=False)
-    bus.send(message)
+    angle = clamp_angle(angle) # Failsafe, ser till att vinkeln är inom säkra gränser
+    message = can.Message(arbitration_id=0x200, data=angle.to_bytes(2, byteorder='big'), is_extended_id=True)
+    bus.send(message) # send periodic!!!
     print(f"Skickade ny vinkel: {angle} grader")
+
+# CANBUS -> class
 
 # ------------------ALGORITHM-------------------- #
 
@@ -218,5 +236,5 @@ if __name__ == "__main__":
 #     /_|_\
 #   ____|____
 #   \_o_o_o_/
-#~~~~~~~ | ~~~~~
+#~~~~~~~ | ~~~~~~~~
 #________t_________ 
