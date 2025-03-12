@@ -8,52 +8,45 @@ import can  # För att kommunicera med CAN-bussen
 import time  # För tidsstyrning och pauser
 import threading  # För att hantera parallella trådar
 import numpy as np  # För matematiska beräkningar
-import matplotlib.pyplot as plt  # För att rita grafer
 from collections import deque  # För att skapa ringbuffertar för medelvärdesutjämning
 import csv # För att spara dokumentation i csv filer
 import os # Filhantering för dokumentation
 
 
-
 # Klass som hanterar CAN-kommunikation
 class CANInterface:
     def __init__(self, channel='PCAN_USBBUS1', bitrate=1000000):
-        # Initiera anslutningen till CAN-bussen
-        self.bus = can.interface.Bus(bustype='pcan', channel=channel, bitrate=bitrate)
+        self.bus = can.interface.Bus(interface='pcan', channel=channel, bitrate=bitrate)
         
-        # Buffertar för att släta ut inkommande data
         self.speed_buffer = deque(maxlen=5)
         self.vridmoment_buffer = deque(maxlen=5)
         self.varvtal_buffer = deque(maxlen=5)
 
-        # Begränsningar för tilt-procenten
         self.min_tilt_percent = 500
         self.max_tilt_percent = 9500
         
-        # Nuvarande tilt-vinkel (procent)
         self.current_tilt_percent = None
-        self.running = False  # Flagga för att hålla igång periodisk sändning
+        self.running = False
+        
+        # Ensure we can reference 'periodic_thread' from start/stop
+        self.periodic_thread = None
 
-    # Säkerställ att tilt-procenten hålls inom tillåtna gränser
     def clamp_tilt_percent(self, tilt_percent):
         clamped = max(self.min_tilt_percent, min(tilt_percent, self.max_tilt_percent))
         if clamped == self.min_tilt_percent:
             print(f"Minsta vinkel nådd: {self.min_tilt_percent} %")
         elif clamped == self.max_tilt_percent:
             print(f"Största vinkel nådd: {self.max_tilt_percent} %")
-        return clamped
+        return clamped 
 
-    # Släta ut mätdata med hjälp av medelvärde av de senaste värdena
     def smooth_data(self, buffer, new_value):
         buffer.append(new_value)
         return sum(buffer) / len(buffer)
 
-    # Läs data från CAN-bussen inom en tidsgräns
     def read_data(self, timeout=10.0):
         tilt_percent = vridmoment = varvtal = speed = None
         start_time = time.time()
 
-        # Försök läsa all nödvändig data tills timeout nås
         while time.time() - start_time < timeout:
             message = self.bus.recv(timeout=1.0)
             if message:
@@ -71,38 +64,38 @@ class CANInterface:
         if None in [tilt_percent, vridmoment, varvtal, speed]:
             print("Ingen data läst från CANbus!")
 
-        # Släta ut värdena
         filtered_vridmoment = self.smooth_data(self.vridmoment_buffer, vridmoment or 0)
         filtered_varvtal = self.smooth_data(self.varvtal_buffer, varvtal or 0)
         filtered_speed = self.smooth_data(self.speed_buffer, speed or 0)
 
-        # Beräkna effekt (power) från vridmoment och varvtal
         power = filtered_vridmoment * (2 * np.pi * filtered_varvtal / 60)
 
         return tilt_percent, power, filtered_speed
 
-    # Skicka tilt-procent till CAN-bussen
     def send_tilt_percent(self, tilt_percent):
         tilt_percent = self.clamp_tilt_percent(int(tilt_percent))
+        # Using integer directly for tilt_mode
         tilt_mode = 3
-        tilt_mode = tilt_mode.to_bytes(1, byteorder='little')
+
+        # Convert to bytes
         tilt_bytes = tilt_percent.to_bytes(2, byteorder='little')
 
+        data_bytes = bytearray(8)
+        data_bytes[0] = tilt_mode
+        # We need TWO bytes for tilt_percent, so slice [2:4]
+        data_bytes[2:4] = tilt_bytes
 
-        data_bytes = bytearray(4)
-        data_bytes[0] = tilt_mode 
-        data_bytes[2:3] = tilt_bytes # Target
-
+        # Comma is needed between dlc=8 and is_extended_id=True
         message = can.Message(
             arbitration_id=0x18FF1840,
             data=data_bytes,
+            dlc=8,  # <-- Important
             is_extended_id=True
         )
 
         self.bus.send(message)
         print(f"Skickade tilt-procent: {tilt_percent / 100:.2f} %")
 
-    # Starta en tråd som periodiskt skickar tilt-värdet
     def start_periodic_sending(self, interval=0.1):
         self.running = True
 
@@ -112,13 +105,17 @@ class CANInterface:
                     self.send_tilt_percent(self.current_tilt_percent)
                 time.sleep(interval)
 
-        thread = threading.Thread(target=sender)
-        thread.daemon = True
-        thread.start()
+        # Store in self.periodic_thread for later .join()
+        self.periodic_thread = threading.Thread(target=sender)
+        self.periodic_thread.start()
 
-    # Stoppa den periodiska sändningen
     def stop_periodic_sending(self):
         self.running = False
+        # Only join if the thread was actually started
+        if self.periodic_thread is not None and self.periodic_thread.is_alive():
+            self.periodic_thread.join()
+        self.periodic_thread = None
+
 
 class CSVLoggning:
     def __init__(self, directory="logs"):
