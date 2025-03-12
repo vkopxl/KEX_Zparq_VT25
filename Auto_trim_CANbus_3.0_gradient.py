@@ -1,7 +1,5 @@
- # Auto-Trim Version 3.0_SIM
-# Den här varianten av programmet är till för att testa algorithmen på land, utan data om speed, vridmotstånd, rpm.
-# Programemt imsulerar istället en optimal tilt_percent. 
-
+ # Auto-Trim Version 3.0_gradient
+# Den här varianten av programmet är till för att testa algorithmen i vatten
 
 #Importera nödvändiga bibliotek
 import can  # För att kommunicera med CAN-bussen
