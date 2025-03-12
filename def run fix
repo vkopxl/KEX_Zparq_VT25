@@ -1,0 +1,55 @@
+def run(self):
+        current_tilt, power, speed = self.can.read_data()
+        current_tilt = self.can.clamp_tilt_percent(current_tilt)
+        prev_efficiency = self.simulate_efficiency(current_tilt)
+        self.can.current_tilt_percent = current_tilt
+
+        self.tilt_percent_history.append(current_tilt)
+        #self.power_history.append(power)
+        #self.speed_history.append(speed)
+        self.efficiency_history.append(prev_efficiency)
+
+        step_direction = 1  # börja med att öka tilt
+        step_size = self.step_size
+
+        for iteration in range(1, self.max_iterations + 1):
+            # Föreslå nytt tilt-värde
+            new_tilt = current_tilt + step_direction * step_size
+            new_tilt = self.can.clamp_tilt_percent(new_tilt)
+
+            # Uppdatera tilt explicit via CAN
+            self.can.current_tilt_percent = new_tilt
+
+            # Vänta på stabilisering
+            time.sleep(3)
+
+            # Läs data efter tilt-justering
+            _, power, speed = self.can.read_data()
+
+            # Beräkna ny effektivitet
+            new_efficiency = self.simulate_efficiency(new_tilt)
+            error = new_efficiency - prev_efficiency
+
+            # Spara historik
+            self.tilt_percent_history.append(new_tilt)
+            self.power_history.append(power)
+            self.speed_history.append(speed)
+            self.efficiency_history.append(new_efficiency)
+
+            # Kontrollera tolerans
+            if abs(error) < self.tolerance:
+                print(f"Optimal tilt uppnådd: {new_tilt / 100:.2f}%")
+                break
+
+            # Justera riktning och stegstorlek
+            if new_efficiency < prev_efficiency:
+                current_tilt = new_tilt
+                prev_efficiency = new_efficiency
+            else:
+                step_direction *= -1
+                step_size *= 0.5
+
+            # Kort paus mellan iterationer
+            time.sleep(0.5)
+        else:
+            print("Maximalt antal iterationer nått.")
