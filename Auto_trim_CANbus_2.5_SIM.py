@@ -1,20 +1,6 @@
-# Auto-Trim Version 2.5
-# Uppdaterat i denna version:
-# 2.0:
-# - All kommunikation till och från CANbus sker igenom klassen CANInterface
-# - Trim-optimeringsalgoritmen sköts i klassen TrimAlgorithm
-# - La till funktionerna start_periodic_sending och stop_periodic_sending
-# för att regelbundet pinga motorn och undvika manual override. 
-# 2.5:
-# - Dokumentation sparas i .csv filer istället för plottar
-# - 
-
-
-# Simulera canbus data för att testa algoritmen innan provkörning
-# Till näst nästa version:
-# uppdatera algoritmen till Gradient Descent.
-
-
+# Auto-Trim Version 2.5_SIM
+# Den här varianten av programmet är till för att testa algorithmen på land, utan data om speed, vridmotstånd, rpm.
+# Programemt imsulerar istället en optimal tilt_percent. 
 
 
 #Importera nödvändiga bibliotek
@@ -98,10 +84,14 @@ class CANInterface:
     # Skicka tilt-procent till CAN-bussen
     def send_tilt_percent(self, tilt_percent):
         tilt_percent = self.clamp_tilt_percent(int(tilt_percent))
+        tilt_mode = 3
+        tilt_mode = tilt_mode.to_bytes(1, byteorder='little')
         tilt_bytes = tilt_percent.to_bytes(2, byteorder='little')
 
-        data_bytes = bytearray(8)
-        data_bytes[0:2] = tilt_bytes
+
+        data_bytes = bytearray(4)
+        data_bytes[0] = tilt_mode 
+        data_bytes[2:3] = tilt_bytes # Target
 
         message = can.Message(
             arbitration_id=0x18FF1840,
@@ -137,19 +127,19 @@ class CSVLoggning:
         self.directory = directory
         os.makedirs(self.directory, exist_ok=True)
 
-    def save(self, tilt_percent_history, speed_history, power_history, efficiency_history, filename_prefix="trim_results"):
+    def save(self, filename_prefix, tilt_percent_history, speed_history, power_history, efficiency_history):
         # sparar csv filer med unika timestamps i filnamnen.
         filename = os.path.join(self.directory, f"{filename_prefix}_{int(time.time())}.csv")
         with open(filename, 'w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerows(["Iteration", "Tilt(%)", "Speed", "Power", "Efficiency"])
+            writer.writerow(["Iteration", "Tilt(%)", "Speed", "Power", "Efficiency"])
             for i in range(len(tilt_percent_history)):
-                writer.writerow([i, tilt_percent_history(i)*0.01, speed_history(i), power_history(i), efficiency_history(i)])
+                writer.writerow([i, tilt_percent_history[i]*0.01, speed_history[i], power_history[i], efficiency_history[i]])
         print(f"resultat sparade i {filename}")
 
 # Trim-algoritm som optimerar tilt för bästa effektivitet
 class TrimAlgorithm:
-    def __init__(self, can_interface,  csv_logger, step_size=1.0, tolerance=0.01, max_iterations=1000):
+    def __init__(self, can_interface,  csv_logger, step_size=1.0, tolerance=1, max_iterations=1000):
         self.can = can_interface
         self.csv_logger = csv_logger
         self.step_size = step_size
@@ -164,8 +154,8 @@ class TrimAlgorithm:
 
     # Beräkna effektivitet som hastighet delat med effekt
     def simulate_efficiency(self, tilt_percent):
-        optimal_tilt = 5000
-        return (optimal_tilt - tilt_percent)^2 + 10
+        optimal_tilt = 4000
+        return (optimal_tilt - tilt_percent)**2 + 10
 
     # Kör optimeringen
     def run(self):
