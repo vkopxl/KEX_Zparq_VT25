@@ -1,0 +1,20 @@
+C:\Users\marti\Desktop>python3 Auto_trim.py
+uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+Exception in thread Thread-1 (sender):
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.752.0_x64__qbz5n2kfra8p0\Lib\threading.py", line 1041, in _bootstrap_inner
+    self.run()
+    ~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.752.0_x64__qbz5n2kfra8p0\Lib\threading.py", line 992, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marti\Desktop\Auto_trim.py", line 112, in sender
+    self.send_tilt_percent(self.current_tilt_percent)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marti\Desktop\Auto_trim.py", line 93, in send_tilt_percent
+    data_bytes[1] = tilt_mode
+    ~~~~~~~~~~^^^
+TypeError: 'bytes' object cannot be interpreted as an integer
+Optimal vinkel hittad: 6106.00 % efter 1 iterationer
+resultat sparade i logs\trim_results_1741785437.csv
+PcanBus was not properly shut down
