@@ -1,0 +1,14 @@
+C:\Users\marti\Desktop>python3 Auto_trim.py
+uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+Skickade tilt-procent: 46.28 %
+Skickade tilt-procent: 46.28 %
+Optimal vinkel hittad: 46.28 % efter 1 iterationer
+resultat sparade i logs\trim_results_1741786107.csv
+Skickade tilt-procent: 46.28 %
+Fatal Python error: _enter_buffered_busy: could not acquire lock for <_io.BufferedWriter name='<stdout>'> at interpreter shutdown, possibly due to daemon threads
+Python runtime state: finalizing (tstate=0x00007ffb9b681da0)
+
+Current thread 0x00001f90 (most recent call first):
+  <no Python frame>
+
+Extension modules: numpy._core._multiarray_umath, numpy.linalg._umath_linalg (total: 2)
