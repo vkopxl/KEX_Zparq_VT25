@@ -136,7 +136,7 @@ class CSVLoggning:
 
 # Trim-algoritm som optimerar tilt för bästa effektivitet
 class TrimAlgorithm:
-    def __init__(self, can_interface,  csv_logger, step_size=1.0, tolerance=1, max_iterations=1000):
+    def __init__(self, can_interface,  csv_logger, step_size=10.0, tolerance=1, max_iterations=100):
         self.can = can_interface
         self.csv_logger = csv_logger
         self.step_size = step_size
@@ -166,33 +166,44 @@ class TrimAlgorithm:
         self.efficiency_history.append(prev_efficiency)
 
         for iteration in range(1, self.max_iterations + 1):
-            current_tilt, power, speed = self.can.read_data()
-            new_efficiency = self.simulate_efficiency(current_tilt)
+            # ✅ Force a first change if stuck
+            if iteration == 1:
+                current_tilt += self.step_size
+
+            # ✅ Use last tilt sent, NOT re-read values
+            new_tilt = self.can.current_tilt_percent
+            new_efficiency = self.simulate_efficiency(new_tilt)
             error = new_efficiency - prev_efficiency
 
-            self.tilt_percent_history.append(current_tilt)
+            self.tilt_percent_history.append(new_tilt)
             self.power_history.append(power)
             self.speed_history.append(speed)
             self.efficiency_history.append(new_efficiency)
 
-            if abs(error) < self.tolerance:
-                print(f"Optimal vinkel hittad: {current_tilt:.2f} % efter {iteration} iterationer")
+            # ✅ Force at least 10 iterations before stopping
+            if iteration > 10 and abs(error) < self.tolerance:
+                print(f"✅ Optimal vinkel hittad: {new_tilt:.2f} % efter {iteration} iterationer")
                 break
 
             if error > 0:
-                new_tilt = current_tilt + self.step_size
+                new_tilt += self.step_size
             else:
-                self.step_size = -0.5 * self.step_size
-                new_tilt = current_tilt + self.step_size
+                self.step_size = max(self.step_size * -0.5, 1.0)
+                new_tilt += self.step_size
 
-            self.can.current_tilt_percent = new_tilt
+            # ✅ Ensure a real update happens before proceeding
+            self.can.send_tilt_percent(new_tilt)
+            time.sleep(1.0)  # Give it time to actually adjust
+            self.can.current_tilt_percent, _, _ = self.can.read_data()  # ✅ Confirm change!
+
             prev_efficiency = new_efficiency
-            time.sleep(abs(3))
+            time.sleep(max(0.1, abs(self.step_size) * 0.1))  # Adaptive sleep
+
         else:
-            print("Maximalt antal iterationer uppnått.")
+            print("⚠️ Maximalt antal iterationer uppnått.")
 
         self.csv_logger.save("trim_results", self.tilt_percent_history, self.power_history, self.speed_history, self.efficiency_history)
-        
+
 
 def main():
     can_interface = CANInterface()
