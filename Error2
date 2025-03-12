@@ -1,0 +1,23 @@
+C:\Users\marti\Desktop>python3 Auto_trim.py
+uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+Exception in thread Thread-1 (sender):
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.752.0_x64__qbz5n2kfra8p0\Lib\threading.py", line 1041, in _bootstrap_inner
+    self.run()
+    ~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.752.0_x64__qbz5n2kfra8p0\Lib\threading.py", line 992, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marti\Desktop\Auto_trim.py", line 112, in sender
+    self.send_tilt_percent(self.current_tilt_percent)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marti\Desktop\Auto_trim.py", line 102, in send_tilt_percent
+    self.bus.send(message)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\marti\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\can\interfaces\pcan\pcan.py", line 654, in send
+    CANMsg.DATA[: CANMsg.LEN] = msg.data[: CANMsg.LEN]
+    ~~~~~~~~~~~^^^^^^^^^^^^^^
+ValueError: Can only assign sequence of same size
+Optimal vinkel hittad: 61.06 % efter 1 iterationer
+resultat sparade i logs\trim_results_1741785857.csv
+PcanBus was not properly shut down
