@@ -1,0 +1,17 @@
+C:\Users\marti\Desktop>python3 autotrim.py
+Traceback (most recent call last):
+  File "C:\Users\marti\Desktop\autotrim.py", line 206, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\marti\Desktop\autotrim.py", line 194, in main
+    can_interface = CANInterface()
+  File "C:\Users\marti\Desktop\autotrim.py", line 19, in __init__
+    self.bus = can.interface.Bus(interface='pcan', channel=channel, bitrate=bitrate)
+               ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marti\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\can\util.py", line 388, in wrapper
+    return f(*args, **kwargs)
+  File "C:\Users\marti\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\can\interface.py", line 135, in Bus
+    bus = cls(channel, **kwargs)
+  File "C:\Users\marti\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\can\interfaces\pcan\pcan.py", line 311, in __init__
+    raise PcanCanInitializationError(self._get_formatted_error(result))
+can.interfaces.pcan.pcan.PcanCanInitializationError: A PCAN Channel has not been initialized yet or the initialization process has failed
