@@ -1,12 +1,19 @@
-# Auto-Trim Version 3.5
+# Auto-Trim Version 3.5 
 # Baserad på 3.0_SIM verifierad på land.
-# Uppdaterade Algorithm för att säkertställa funktionalitet.
-# Börjat på Gradient Descent
-# Börjat på att lägga in olika approx.metoder och välja med input innan testning --> lagra vilken metod som användes i CSV
+
+# Gjort i denna verion
+# - Promptar input frör val av algorithm
+# - Gradient Descent tillagd
+# - Lägga till så att data kan sparas även fast for loopen inte breakar av sig själv. "Press enter to end" --> sparar all tidigare data. 
+# - Parametrar lagras i CSV för bättre vetenskaplig dokumentation
 
 # Till nästa version:
-# - Uppdaterade parameterar baserat på testrun 
-# - lägga till använda parametrar i CSV lagring för bättre vetenskaplig dokumentation
+# - Lägga till använda parametrar i CSV lagring för bättre vetenskaplig dokumentation
+# - Separera på vanilla och momentum gradient ascent, gör en egen klass för momentum
+
+# Till ännu senare versioner:
+# Spara tidigare data i Luts för initial gissning. 
+
 
 #Importera nödvändiga bibliotek
 import can  # För att kommunicera med CAN-bussen
@@ -141,6 +148,7 @@ class CANInterface:
 # nytt directory om inte redan finns.
 # skapar csv-filer med data om tilt, speed, power, efficiency
 # sparar filer med timestamp
+
 class CSVLoggning:
     def __init__(self, directory="logs"):
         # skapar ny directory för dokumentation om det inte redan finns.
@@ -148,30 +156,46 @@ class CSVLoggning:
         self.directory = directory
         os.makedirs(self.directory, exist_ok=True)
 
-    def save(self, filename_prefix, tilt_percent_history, speed_history, power_history, efficiency_history):
+    def save(self, filename_prefix, parameters_used, tilt_percent_history, speed_history, power_history, efficiency_history, stepsize_history):
         # sparar csv filer med unika timestamps i filnamnen.
         filename = os.path.join(self.directory, f"{filename_prefix}_{int(time.time())}.csv")
         with open(filename, 'w', newline='') as file:
             writer = csv.writer(file)
+
+            # fyller parametrar
+            writer.writerow(["parameter, value"])
+            for key, value in parameters_used.items():
+                writer.writerow([key, value])
+
+            # tom rad
+            writer.writerow([])
+
+            # Skriver titel
             writer.writerow(["Iteration", "Tilt(%)", "Speed", "Power", "Efficiency"])
+
+            #Fyller log-fil
             for i in range(len(tilt_percent_history)):
-                writer.writerow([i, tilt_percent_history[i]*0.01, speed_history[i], power_history[i], efficiency_history[i]])
+                writer.writerow([i, tilt_percent_history[i]*0.01, speed_history[i], power_history[i], efficiency_history[i], stepsize_history[i]])
         print(f"resultat sparade i {filename}")
 
 # Trim-algoritm som optimerar tilt för bästa effektivitet (Gradient Ascent)
 class GradientAscent:
-    def __init__(self, can_interface, csv_logger, step_size=100, tolerance=0.01, max_iterations=100):
+    def __init__(self, can_interface, csv_logger, step_size=100, tolerance=0.01, max_iterations=100, alpha = 5000, beta = 0.95, v=0):
         self.can = can_interface
         self.csv_logger = csv_logger
         self.step_size = step_size
         self.tolerance = tolerance
         self.max_iterations = max_iterations
+        self.alpha = alpha
+        self.beta = beta
+        self.v = v
 
         # Historik för att logga och plotta data
         self.tilt_percent_history = []
         self.speed_history = []
         self.power_history = []
         self.efficiency_history = []
+        self.stepsize_history =[]
 
         # Beräkna effektivitet som hastighet delat med effekt
     def measure_efficiency(self, speed, power):
@@ -179,75 +203,121 @@ class GradientAscent:
 
     # Kör optimeringen
     def run(self):
-        current_tilt, speed, power = self.can.read_data()
-        current_tilt = self.can.clamp_tilt_percent(current_tilt)
-        current_efficiency = self.measure_efficiency(speed, power)
-        self.can.current_tilt_percent = current_tilt # Krävs för att skicka periodiska msg
+        try:
+            prev_tilt, speed, power = self.can.read_data()
+            prev_tilt = self.can.clamp_tilt_percent(prev_tilt)
+            prev_efficiency = self.measure_efficiency(speed, power)
+            self.can.current_tilt_percent = current_tilt # Krävs för att skicka periodiska msg
+            alpha = self.alpha
+            beta = self.beta
 
-        self.tilt_percent_history.append(current_tilt)
-        self.power_history.append(power)
-        self.speed_history.append(speed)
-        self.efficiency_history.append(current_efficiency)
-
-        step_size = self.step_size
-        alpha = 5000 # Skalar gradienten, experimentera med den. 
-
-        for iteration in range(1, self.max_iterations + 1):
-            # Föreslå nytt tilt-värde
-            new_tilt = current_tilt + step_size
-
-            # Uppdatera tilt explicit via CAN
-            self.can.current_tilt_percent = new_tilt
-
-            # Vänta på stabilisering
-            time.sleep(3)
-
-            # Läs data efter tilt-justering
-            _, power, speed = self.can.read_data()
-
-            # Beräkna ny effektivitet
-            new_efficiency = self.measure_efficiency(speed,power)
-            error = new_efficiency - current_efficiency
-
-            # Estimera gradient
-            gradient = (new_efficiency - current_efficiency) / (new_tilt - current_tilt)
-
-            print(f"Iteration {iteration}")
-            print(f"Current Tilt: {current_tilt /100:.2f}%, Efficiency: {current_efficiency:.5f}")
-            print(f"New Tilt: {new_tilt /100:.2f}%, Efficiency: {new_efficiency:.5f}")
-
-            # Gradient ascent uppdatering
-            tilt_update = (alpha * gradient)
-            next_tilt = new_tilt + tilt_update
-            next_tilt = clamp? 
-            
-            # Spara historik
-            self.tilt_percent_history.append(new_tilt)
+            self.tilt_percent_history.append(current_tilt)
             self.power_history.append(power)
             self.speed_history.append(speed)
-            self.efficiency_history.append(new_efficiency)
+            self.efficiency_history.append(current_efficiency)
+            self.stepsize_history.append(step_size)
 
-            # Kontrollera tolerans
-            if abs(error) < self.tolerance:
-                print(f"Optimal tilt uppnådd: {new_tilt / 100:.2f}%")
-                break
+            step_size = self.step_size
+            v = self.v
             
-            # Förbereda nästa iteration
-            current_tilt = new_tilt
-            current_efficiency = new_efficiency # Samma som "prev_efficiency = new_efficiency" i hill climbing
-            step_size = next_tilt - current_tilt  # Dynamisk updatering av steglängden  
-            step_size = new_tilt + (alpha*gradient) - new_tilt
-            # Kort paus mellan iterationer
-            time.sleep(0.5)
+            for iteration in range(1, self.max_iterations + 1):
 
-        else:
-            print("Maximalt antal iterationer nått.")
+                # Utan momentum
+                new_tilt = prev_tilt - step_size
 
-        self.csv_logger.save("Gradient_trim_results", self.tilt_percent_history, self.speed_history, self.power_history, self.efficiency_history)
+                # Med momentum
+                new_tilt = prev_tilt + v
+
+                # Uppdatera tilt explicit via CAN
+                self.can.current_tilt_percent = new_tilt
+
+                # Vänta på stabilisering
+                time.sleep(3)
+
+                # Läs data efter tilt-justering
+                _, power, speed = self.can.read_data()
+
+                # Beräkna ny effektivitet
+                new_efficiency = self.measure_efficiency(speed,power)
+                error = new_efficiency - prev_efficiency
+
+                # Estimera gradient (första derivatan efter det är envariabel)
+                # gradient = (new_efficiency - prev_efficiency) / (new_tilt - prev_tilt)
+                gradient = error / step_size
+
+                print(f"Iteration {iteration}")
+                print(f"Current Tilt: {current_tilt /100:.2f}%, Efficiency: {current_efficiency:.5f}")
+                print(f"New Tilt: {new_tilt /100:.2f}%, Efficiency: {new_efficiency:.5f}")
+
+                '''
+                # Gradient ascent uppdatering
+                tilt_update = (alpha * gradient)
+                next_tilt = new_tilt + tilt_update
+                next_tilt = clamp?
+                '''
+                
+                # Spara historik
+                self.tilt_percent_history.append(new_tilt)
+                self.power_history.append(power)
+                self.speed_history.append(speed)
+                self.efficiency_history.append(new_efficiency)
+                self.stepsize_history.append(step_size)
+
+                # Kontrollera tolerans
+                if abs(error) < self.tolerance:
+                    print(f"Optimal tilt uppnådd: {new_tilt / 100:.2f}%")
+                    break
+                
+                # Förbereda nästa iteration
+                '''
+                current_tilt = new_tilt
+                current_efficiency = new_efficiency # Samma som "prev_efficiency = new_efficiency" i hill climbing
+                step_size = next_tilt - current_tilt  # Dynamisk updatering av steglängden  
+                step_size = new_tilt + (alpha*gradient) - new_tilt
+                '''
+
+                # Förbereda nästa iteration
+                prev_efficiency = new_efficiency
+                prev_tilt = new_tilt 
+
+                # Utan momentum 
+                step_size = (alpha*gradient)
+
+                # Med momentum 
+                v = beta*v - (alpha*gradient)
+
+                # Kort paus mellan iterationer
+                time.sleep(0.5)
+
+            else:
+                print("Maximalt antal iterationer nått.")
+        
+        except KeyboardInterrupt:
+            print("Optimering avbrutet av användaren")
+
+        finally: 
+            parameters_used = {
+                    "Algorithm": "Gradient",
+                    "Tolerance": self.tolerance,
+                    "Max Iterations": self.max_iterations,
+                    "Alpha": self.alpha,
+                    "Beta": self.beta
+                }
+            
+            self.csv_logger.save(
+                "Gradient_results",
+                parameters_used,
+                self.tilt_percent_history,
+                self.speed_history,
+                self.power_history,
+                self.efficiency_history,
+                self.stepsize_history
+            )
+        
 
 # Trim-algoritm som optimerar tilt för bästa effektivitet (Hill Climbing)
 class HillClimbing:
-    def __init__(self, can_interface, csv_logger, step_size=100, tolerance=0.01, max_iterations=100):
+    def __init__(self, can_interface, csv_logger, parameters_used, step_size=100, tolerance=0.01, max_iterations=100):
         self.can = can_interface
         self.csv_logger = csv_logger
         self.step_size = step_size
@@ -259,6 +329,7 @@ class HillClimbing:
         self.speed_history = []
         self.power_history = []
         self.efficiency_history = []
+        self.stepsize_history =[]
 
         # Beräkna effektivitet som hastighet delat med effekt
     def measure_efficiency(self, speed, power):
@@ -266,69 +337,91 @@ class HillClimbing:
 
     # Kör optimeringen
     def run(self):
-        current_tilt, speed, power = self.can.read_data()
-        current_tilt = self.can.clamp_tilt_percent(current_tilt)
-        prev_efficiency = self.measure_efficiency(speed, power)
-        self.can.current_tilt_percent = current_tilt # Krävs för att skicka periodiska msg
+        try:
+            current_tilt, speed, power = self.can.read_data()
+            current_tilt = self.can.clamp_tilt_percent(current_tilt)
+            prev_efficiency = self.measure_efficiency(speed, power)
+            self.can.current_tilt_percent = current_tilt # Krävs för att skicka periodiska msg
 
-        self.tilt_percent_history.append(current_tilt)
-        self.power_history.append(power)
-        self.speed_history.append(speed)
-        self.efficiency_history.append(prev_efficiency)
-
-        step_direction = 1  # börja med att öka tilt
-        step_size = self.step_size
-        dircounter = 0
-        for iteration in range(1, self.max_iterations + 1):
-            
-            # Föreslå nytt tilt-värde
-            new_tilt = current_tilt + step_direction * step_size
-
-            # Uppdatera tilt explicit via CAN
-            self.can.current_tilt_percent = new_tilt
-
-            # Vänta på stabilisering
-            time.sleep(3)
-
-            # Läs data efter tilt-justering
-            _, power, speed = self.can.read_data()
-
-            # Beräkna ny effektivitet
-            new_efficiency = self.measure_efficiency(speed,power)
-            error = new_efficiency - prev_efficiency
-
-            # Spara historik
-            self.tilt_percent_history.append(new_tilt)
+            self.tilt_percent_history.append(current_tilt)
             self.power_history.append(power)
             self.speed_history.append(speed)
-            self.efficiency_history.append(new_efficiency)
+            self.efficiency_history.append(prev_efficiency)
+            self.stepsize_history.append(step_size)
 
-            # Kontrollera tolerans
-            if abs(error) < self.tolerance:
-                print(f"Optimal tilt uppnådd: {new_tilt / 100:.2f}%")
-                break
-            
-            # Justera riktning och stegstorlek
-            if error > 0:
-                current_tilt = new_tilt
-                prev_efficiency = new_efficiency
+            step_direction = 1  # börja med att öka tilt
+            step_size = self.step_size
+            dircounter = 0
+            for iteration in range(1, self.max_iterations + 1):
+                
+                # Föreslå nytt tilt-värde
+                new_tilt = current_tilt + step_direction * step_size
+
+                # Uppdatera tilt explicit via CAN
+                self.can.current_tilt_percent = new_tilt
+
+                # Vänta på stabilisering
+                time.sleep(3)
+
+                # Läs data efter tilt-justering
+                _, power, speed = self.can.read_data()
+
+                # Beräkna ny effektivitet
+                new_efficiency = self.measure_efficiency(speed,power)
+                error = new_efficiency - prev_efficiency
+
+                # Spara historik
+                self.tilt_percent_history.append(new_tilt)
+                self.power_history.append(power)
+                self.speed_history.append(speed)
+                self.efficiency_history.append(new_efficiency)
+                self.stepsize_history.append(step_size)
+
+                # Kontrollera tolerans
+                if abs(error) < self.tolerance:
+                    print(f"Optimal tilt uppnådd: {new_tilt / 100:.2f}%")
+                    break
+                
+                # Justera riktning och stegstorlek
+                if error > 0:
+                    current_tilt = new_tilt
+                    prev_efficiency = new_efficiency
+                else:
+                    step_direction *= -1
+                    dircounter += 1
+                    if dircounter > 3:
+                        step_size *= 0.5
+        
+
+                # Kort paus mellan iterationer
+                time.sleep(0.5)
             else:
-                step_direction *= -1
-                dircounter += 1
-                if dircounter > 3:
-                    step_size *= 0.5
-     
+                print("Maximalt antal iterationer nått.")
+                
+        except KeyboardInterrupt:
+            print("Optimering avbröts av användaren")
 
-            # Kort paus mellan iterationer
-            time.sleep(0.5)
-        else:
-            print("Maximalt antal iterationer nått.")
-
-        self.csv_logger.save("Hillclimbing_trim_results_", self.tilt_percent_history, self.speed_history, self.power_history, self.efficiency_history)
+        finally:    
+            parameters_used = {
+                    "Algorithm": "Hillclimbing",
+                    "Step Size": self.step_size,
+                    "Tolerance": self.tolerance,
+                    "Max Iterations": self.max_iterations
+                }
+            
+            self.csv_logger.save(
+                "Hillclimbing_results",
+                parameters_used,
+                self.tilt_percent_history,
+                self.speed_history,
+                self.power_history,
+                self.efficiency_history,
+                self.stepsize_history
+                )
 
 def main():
     print("Välj algorithm: 1 = HillClimbing, 2 = Gradient Ascent")
-    val = input()
+    val = int(input())
     can_interface = CANInterface()
     csv_logger = CSVLoggning()
     first_tilt_percent, _, _ = can_interface.read_data()
@@ -339,7 +432,8 @@ def main():
         optimizer = HillClimbing(can_interface,csv_logger)
     if val == 2:
         optimizer = GradientAscent(can_interface,csv_logger)
-        
+    
+
     optimizer.run()
 
     can_interface.stop_periodic_sending()
