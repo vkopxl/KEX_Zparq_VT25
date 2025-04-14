@@ -1,0 +1,30 @@
+4
+READ ONLY MODE
+Visar data från CAN-bus
+Avslutar CAN-kommunikation.
+Traceback (most recent call last):
+  File "C:\Users\marti\Desktop\RO.py", line 540, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\marti\Desktop\RO.py", line 524, in main
+    can_interface.read_only_mode()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\marti\Desktop\RO.py", line 152, in read_only_mode
+    tilt_percent, power, speed, filtered_varvtal, filtered_vridmoment, varvtal, vridmoment = self.read_data()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 7)
+PcanBus was not properly shut down
+
+5
+READ AND WRITE MODE
+Visar och sparar data från CAN-bus
+Avslutar CAN-kommunikation.
+Traceback (most recent call last):
+  File "C:\Users\marti\Desktop\RO.py", line 540, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\marti\Desktop\RO.py", line 529, in main
+    can_interface.read_mode(csv_logger, log=True)
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CANInterface' object has no attribute 'read_mode'
+PcanBus was not properly shut down
