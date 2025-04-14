@@ -44,6 +44,17 @@ class CANInterface:
         self.running = False
         self.periodic_thread = None # Säkerställer att priodic_thread refereras från start
 
+        # ny tråd för att läsa canbus i bakgrunden
+        self.read_thread = None
+        self.read_running = False
+        self.latest_data = {
+            "tilt_percent": None,
+            "speed": None,
+            "vridmoment": None,
+            "varvtal": None
+        }
+        self.data_lock = threading.Lock()
+
     def clamp_tilt_percent(self, tilt_percent):
     # "clamp", hindrar programmet från att justera tilten utanför spannet [min_tilt max_tilt]
     # När CAN-message skickar tilt_percent, filteras värdet med följande logik:
@@ -62,41 +73,54 @@ class CANInterface:
         buffer.append(new_value)
         return sum(buffer) / len(buffer)
 
-    def read_data(self, timeout=10.0):
-        tilt_percent = vridmoment = varvtal = speed = None
-        start_time = time.time()
+    def start_reading(self):
+        self.read_running = True
 
-    # Tar emot CANbus messages. exempel: "int.from_bytes(message.data[0:2]" läser byte 0 och 1 men inte 2.
-    # Applicerar scaling och offsets.
-        while time.time() - start_time < timeout:
-            message = self.bus.recv(timeout=10.0)
-            if message:
-                if message.arbitration_id == 0x0CC6D4E1:  # Inverter Status
-                    vridmoment = int.from_bytes(message.data[0:2], byteorder='little') * 0.0625 - 2048
-                    varvtal = int.from_bytes(message.data[2:4], byteorder='little') * -1 * 0.5 - 16000  # Negativ RPM kan komma att ändras
-                elif message.arbitration_id == 0x14FF1140:  # GPS Status
-                    speed = int.from_bytes(message.data[0:2], byteorder='little') * 0.01
-                elif message.arbitration_id == 0x14FF0A50:  # Junction Box Status
-                    tilt_percent = int.from_bytes(message.data[2:4], byteorder='little')
+        def reader():
+            while self.read_running:
+        # Tar emot CANbus messages. exempel: "int.from_bytes(message.data[0:2]" läser byte 0 och 1 men inte 2.
+        # Applicerar scaling och offsets.
+                message = self.bus.recv(timeout=10.0)
+                if message:
+                    if message.arbitration_id == 0x0CC6D4E1:  # Inverter Status
+                        self.latest_data["vridmoment"] = int.from_bytes(message.data[0:2], byteorder='little') * 0.0625 - 2048
+                        self.latest_data["varvtal"] = (int.from_bytes(message.data[2:4], byteorder='little') * 0.5 - 16000) *-1  # Negativ RPM kan komma att ändras
+                    elif message.arbitration_id == 0x14FF1140:  # GPS Status
+                        self.latest_data["speed"] = int.from_bytes(message.data[0:2], byteorder='little') * 0.01
+                    elif message.arbitration_id == 0x14FF0A50:  # Junction Box Status
+                        self.latest_data["tilt_percent"] = int.from_bytes(message.data[2:4], byteorder='little')
+                
+        self.read_thread = threading.Thread(target=reader)
+        self.read_thread.start()
+
+    def stop_read(self):
+        self.read_running = False
+        if self.read_thread and self.read_thread.is_alive():
+            self.read_thread.join()
+
+    def get_latest_data(self):
+        with self.data_lock:
+            tilt_percent = self.latest_data["tilt_percent"]
+            vridmoment = self.latest_data["vridmoment"]
+            varvtal = self.latest_data["varvtal"]
+            speed = self.latest_data["speed"]
             
-            # printar mottagen data, kommentera bort om det blir jobbigt.
-            # print(f"Received DATA: vridmoment: {vridmoment:.2f} -- varvtal: {varvtal:.2f} -- speed: {speed:.2f} -- tilt%: {tilt_percent:.2f}")
 
-            if None not in [tilt_percent, vridmoment, varvtal, speed]:
-                break
 
-        if None in [tilt_percent, vridmoment, varvtal, speed]:
-            print("Ingen data läst från CANbus!")
+            if None in [tilt_percent, vridmoment, varvtal, speed]:
+                print("Ingen data läst från CANbus!")
+                return None, None, None, None, None, None, None, None
 
-        # Applicerar filter
-        filtered_vridmoment = self.smooth_data(self.vridmoment_buffer, vridmoment or 0)
-        filtered_varvtal = self.smooth_data(self.varvtal_buffer, varvtal or 0)
-        filtered_speed = self.smooth_data(self.speed_buffer, speed or 0)
+            # Applicerar filter
+            filtered_vridmoment = self.smooth_data(self.vridmoment_buffer, vridmoment or 0)
+            filtered_varvtal = self.smooth_data(self.varvtal_buffer, varvtal or 0)
+            filtered_speed = self.smooth_data(self.speed_buffer, speed or 0)
 
-        # P = M * 2pi*RPM / 60
-        power = filtered_vridmoment * (2 * np.pi * filtered_varvtal / 60)
+            # P = M * 2pi*RPM / 60
+            power = filtered_vridmoment * (2 * np.pi * filtered_varvtal / 60)
 
-        return tilt_percent, power, filtered_speed, filtered_varvtal, filtered_vridmoment, speed, vridmoment, varvtal
+            return tilt_percent, power, filtered_speed, filtered_varvtal, filtered_vridmoment, speed, vridmoment, varvtal
+
 
     # Skickar data till CANbus
     def send_tilt_percent(self, tilt_percent, meddela = True):
@@ -149,7 +173,7 @@ class CANInterface:
 
         try:
             while True:
-                tilt_percent, power, filtered_speed, filtered_varvtal, filtered_vridmoment, speed, vridmoment, varvtal = self.read_data()
+                tilt_percent, power, filtered_speed, filtered_varvtal, filtered_vridmoment, speed, vridmoment, varvtal = self.get_latest_data()
 
                 if None not in [tilt_percent, power, speed]:
                     efficiency = speed / power if power else 0
@@ -260,7 +284,7 @@ class GradientAscent:
     # Kör optimeringen
     def run(self):
         try:
-            prev_tilt, speed, power = self.can.read_data()
+            prev_tilt, speed, power = self.can.get_latest_data()
             prev_tilt = self.can.clamp_tilt_percent(prev_tilt)
             prev_efficiency = self.measure_efficiency(speed, power)
             self.can.current_tilt_percent = prev_tilt # Krävs för att skicka periodiska msg
@@ -291,7 +315,7 @@ class GradientAscent:
                 time.sleep(3)
 
                 # Läs data efter tilt-justering
-                _, power, speed = self.can.read_data()
+                _, power, speed = self.can.get_latest_data()
 
                 # Beräkna ny effektivitet
                 new_efficiency = self.measure_efficiency(speed,power)
@@ -379,7 +403,7 @@ class HillClimbing:
     # Kör optimeringen
     def run(self):
         try:
-            current_tilt, speed, power = self.can.read_data()
+            current_tilt, speed, power = self.can.get_latest_data()
             current_tilt = self.can.clamp_tilt_percent(current_tilt)
             prev_efficiency = self.measure_efficiency(speed, power)
             self.can.current_tilt_percent = current_tilt # Krävs för att skicka periodiska msg
@@ -405,7 +429,7 @@ class HillClimbing:
                 time.sleep(3)
 
                 # Läs data efter tilt-justering
-                _, power, speed = self.can.read_data()
+                _, power, speed = self.can.get_latest_data()
 
                 # Beräkna ny effektivitet
                 new_efficiency = self.measure_efficiency(speed,power)
@@ -541,9 +565,11 @@ def main():
     print("Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode")
     val = input()
     can_interface = CANInterface()
+    can_interface.start_reading()
     csv_logger = CSVLoggning()
     #lookup = LookupTable("lookup_table.csv")  # Ny: initiera lookup-tabell
     can_interface.start_periodic_sending()
+
 
 
     print("Spara data i LUTs? y/n")
@@ -551,7 +577,7 @@ def main():
     try:
         if val2 == 'y':
         # Hämtar startdata från CAN
-            tilt, power, speed, rpm, torque, *_ = can_interface.read_data()
+            tilt, power, speed, rpm, torque, *_ = can_interface.get_latest_data()
 
             # Testar om tidigare trim finns för liknande speed/rpm/vridmoment
             initial_guess = lookup.find_closest_tilt(speed, rpm, torque)
@@ -592,6 +618,7 @@ def main():
         print("Avbröts manuellt av användaren.")
     finally:
         can_interface.stop_periodic_sending()
+        can_interface.stop_read()
         print("Avslutar CAN-kommunikation.")
 
 
@@ -602,7 +629,7 @@ def main():
         can_interface.current_tilt_percent = best_tilt
 
         # Läs aktuella värden direkt från CAN
-        tilt_percent, power, speed, filtered_rpm, filtered_torque, raw_speed, raw_torque, raw_rpm = can_interface.read_data()
+        tilt_percent, power, speed, filtered_rpm, filtered_torque, raw_speed, raw_torque, raw_rpm = can_interface.get_latest_data()
 
         # Spara till lookup
         lookup.add_entry(
