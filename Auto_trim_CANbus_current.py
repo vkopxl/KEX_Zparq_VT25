@@ -23,9 +23,10 @@ import numpy as np  # För matematiska beräkningar
 from collections import deque  # För att skapa buffertar
 import csv # För att spara dokumentation i csv filer
 import os # Filhantering för dokumentation   
+#from scipy.spatial import KDTree # hämtar kdtree ur scipy för att hitta närmsta grannar i LUTs
 
-# Klass som hanterar CAN-kommunikation
 class CANInterface:
+# Klass som hanterar CAN-kommunikation
     def __init__(self, channel='PCAN_USBBUS1', bitrate=1000000):
         self.bus = can.interface.Bus(interface='pcan', channel=channel, bitrate=bitrate)
         
@@ -43,11 +44,11 @@ class CANInterface:
         self.running = False
         self.periodic_thread = None # Säkerställer att priodic_thread refereras från start
 
+    def clamp_tilt_percent(self, tilt_percent):
     # "clamp", hindrar programmet från att justera tilten utanför spannet [min_tilt max_tilt]
     # När CAN-message skickar tilt_percent, filteras värdet med följande logik:
     # Om tilt_percent > max_tilt_percent skickas max_tilt_percent
     # Om tilt_percent < min_tilt_percent skickas min_tilt percent
-    def clamp_tilt_percent(self, tilt_percent):
         clamped = max(self.min_tilt_percent, min(tilt_percent, self.max_tilt_percent))
         if clamped == self.min_tilt_percent:
             print(f"Minsta vinkel nådd: {self.min_tilt_percent} %")
@@ -55,12 +56,12 @@ class CANInterface:
             print(f"Största vinkel nådd: {self.max_tilt_percent} %")
         return clamped 
 
-    # Tar ett genomsnitt av de 5 senaste lästa värdena.
     def smooth_data(self, buffer, new_value):
+    # Tar ett genomsnitt av de 5 senaste lästa värdena.
+
         buffer.append(new_value)
         return sum(buffer) / len(buffer)
 
-    # Läser data från CANbus. Om ingen data läses inom 10s -> avbryts.
     def read_data(self, timeout=10.0):
         tilt_percent = vridmoment = varvtal = speed = None
         start_time = time.time()
@@ -123,8 +124,8 @@ class CANInterface:
         if meddela:
             print(f"Skickade tilt-procent: {tilt_percent / 100:.2f} % -- -- -- databyte = {data_bytes:.2f}")
 
-    # Skapar separat tråd för att skicka periodiska meddelanden (100ms) och undvika manual override
     def start_periodic_sending(self, interval=0.1):
+    # Skapar separat tråd för att skicka periodiska meddelanden (100ms) och undvika manual override
         self.running = True
 
         # skickar
@@ -145,18 +146,17 @@ class CANInterface:
         power_history = []
         speed_history = []
         efficiency_history = []
-        stepsize_history = []
 
         try:
             while True:
-                tilt_percent, power, speed, filtered_varvtal, filtered_vridmoment, varvtal, vridmoment = self.read_data()
+                tilt_percent, power, filtered_speed, filtered_varvtal, filtered_vridmoment, speed, vridmoment, varvtal = self.read_data()
 
                 if None not in [tilt_percent, power, speed]:
                     efficiency = speed / power if power else 0
                     
                     #lägg till buffrad/obuffrad speed
                     print(f"Tilt: {tilt_percent / 100:.2f}% | "
-                        f"Hastighet: {speed:.2f} km/h | "
+                        f"Hastighet: {speed:.2f} m/s | "
                         f"Effekt: {power:.2f} W | "
                         f"Vridmoment: {vridmoment:.2f} Nm |"
                         f"Buffrat Vridmoment: {filtered_vridmoment:.2f} Nm | "
@@ -169,7 +169,6 @@ class CANInterface:
                     power_history.append(power)
                     speed_history.append(speed)
                     efficiency_history.append(efficiency)
-                    stepsize_history.append()
 
                 else:
                     print("Väntar på komplett data...")
@@ -192,7 +191,6 @@ class CANInterface:
                 speed_history,
                 power_history,
                 efficiency_history,
-                stepsize_history
             )
 
     # stoppar separat tråd 
@@ -203,18 +201,17 @@ class CANInterface:
             self.periodic_thread.join()
         self.periodic_thread = None
 
-# Hanterar dokumentation. Skapar 
-# nytt directory om inte redan finns.
+class CSVLoggning:
+# Hanterar dokumentation. Skapar nytt directory om inte redan finns.
 # skapar csv-filer med data om använda parametrar, tilt, speed, power, efficiency
 # sparar filer med timestamp
-class CSVLoggning:
     def __init__(self, directory="logs"):
         # skapar ny directory för dokumentation om det inte redan finns.
         # om dir redan finns skapar ingen ny. 
         self.directory = directory
         os.makedirs(self.directory, exist_ok=True)
 
-    def save(self, filename_prefix, parameters_used, tilt_percent_history, speed_history, power_history, efficiency_history, stepsize_history):
+    def save(self, filename_prefix, parameters_used, tilt_percent_history, speed_history, power_history, efficiency_history):
         # sparar csv filer med unika timestamps i filnamnen.
         filename = os.path.join(self.directory, f"{filename_prefix}_{int(time.time())}.csv")
         with open(filename, 'w', newline='') as file:
@@ -233,12 +230,12 @@ class CSVLoggning:
 
             #Fyller log-fil
             for i in range(len(tilt_percent_history)):
-                writer.writerow([i, tilt_percent_history[i]*0.01, speed_history[i], power_history[i], efficiency_history[i], stepsize_history[i]])
+                writer.writerow([i, tilt_percent_history[i]*0.01, speed_history[i], power_history[i], efficiency_history[i]])
         print(f"resultat sparade i {filename}")
 
-# Trim-algoritm som optimerar tilt för bästa effektivitet (Gradient Ascent), har alternativet momentum gradient ascent. 
 class GradientAscent:
-    def __init__(self, can_interface, csv_logger, step_size=100, tolerance=0.01, max_iterations=100, alpha = 5000, beta = 0.95, v=0, use_momentum=False):
+# Trim-algoritm som optimerar tilt för bästa effektivitet (Gradient Ascent), har alternativet momentum gradient ascent.
+    def __init__(self, can_interface, csv_logger, step_size=100, tolerance=0.01, max_iterations=100, alpha=5000, beta=0.95, v=0, use_momentum=False):
         self.can = can_interface
         self.csv_logger = csv_logger
         self.step_size = step_size
@@ -359,8 +356,8 @@ class GradientAscent:
                 self.stepsize_history
             )
         
-# Trim-algoritm som optimerar tilt för bästa effektivitet (Hill Climbing)
 class HillClimbing:
+# Trim-algoritm som optimerar tilt för bästa effektivitet (Hill Climbing)
     def __init__(self, can_interface, csv_logger, parameters_used, step_size=100, tolerance=0.01, max_iterations=100):
         self.can = can_interface
         self.csv_logger = csv_logger
@@ -449,7 +446,7 @@ class HillClimbing:
         finally:    
             parameters_used = {
                     "Algorithm": "Hillclimbing",
-                    "Step Size": self.step_size,
+                    "Initial Step Size": step_size,
                     "Tolerance": self.tolerance,
                     "Max Iterations": self.max_iterations
                 }
@@ -464,37 +461,133 @@ class HillClimbing:
                 self.stepsize_history
                 )
 
+class LookupTable:
+# sparar och hämtar data i lookup table för initial gissning innan algorithm. 
+    def __init__(self, filename="lookup_table.csv"):
+        self.filename = filename
+        self.data = []  # Lista av dictionaries: {'speed': ..., 'rpm': ..., 'torque': ..., 'tilt': ...}
+        self.points = None  # NumPy array (N,3) med inputs
+        self.tilts = None  # NumPy array (N,) med tiltvärden
+        self.kdtree = None  # KDTree för effektiv närmaste-granne-sökning
+        self.load() # metod för att läsa in data från CSV
+
+    # Läser tidigare data från CSV
+    def load(self):
+        if not os.path.exists(self.filename):
+            print("Ingen tidigare lookup-tabell hittades.")
+            return  # Hoppar över om filen inte finns
+    
+        with open(self.filename, mode='r') as file:
+            reader = csv.DictReader(file)
+            self.data = [
+                {
+                    'speed': float(row['speed']),
+                    'rpm': float(row['rpm']),
+                    'torque': float(row['torque']),
+                    'tilt': float(row['tilt']),
+                }
+                for row in reader
+            ]
+        self._rebuild_index() # KDTree
+        print(f"Laddade {len(self.data)} datapunkter från lookup-tabell.")
+
+    # Skriver all data till CSV
+    def save(self):
+        with open(self.filename, mode='w', newline='') as file:
+            writer = csv.DictWriter(file, fieldnames=['speed', 'rpm', 'torque', 'tilt'])
+            writer.writeheader()
+            for entry in self.data:
+                writer.writerow(entry)
+        print(f"Lookup-tabell sparad till {self.filename}")
+
+    # Uppdaterar interna KDTree för snabb sökning
+    def _rebuild_index(self):
+        if not self.data:
+            self.points = self.tilts = self.kdtree = None
+            return
+        self.points = np.array([
+            (entry['speed'], entry['rpm'], entry['torque']) for entry in self.data
+        ])
+        self.tilts = np.array([entry['tilt'] for entry in self.data])
+        self.kdtree = KDTree(self.points)
+
+    # Lägger till ny datapunkt om den inte redan finns (inom tolerans)
+    def add_entry(self, speed, rpm, torque, tilt, tolerance=1.0):
+        if self.kdtree:
+            dist, idx = self.kdtree.query([speed, rpm, torque])
+            if dist < tolerance:
+                print("Liknande datapunkt finns redan, hoppar över inlärning.")
+                return  # Undviker duplicat
+
+        entry = {'speed': speed, 'rpm': rpm, 'torque': torque, 'tilt': tilt}
+        self.data.append(entry)
+        self._rebuild_index()
+        self.save()
+        print(f"La till ny datapunkt: speed={speed}, rpm={rpm}, torque={torque}, tilt={tilt}")
+
+    # Hämtar tilt för närmaste datapunkt baserat på input
+    def find_closest_tilt(self, speed, rpm, torque):
+        if self.kdtree is None or len(self.data) == 0:
+            print("Lookup-tabell tom – inget initialt förslag.")
+            return None
+
+        query = np.array([speed, rpm, torque])
+        dist, idx = self.kdtree.query(query)
+        closest_tilt = self.tilts[idx]
+        print(f"Närmsta match: speed={self.points[idx][0]}, rpm={self.points[idx][1]}, torque={self.points[idx][2]} → tilt={closest_tilt}")
+        return closest_tilt
+
 def main():
     print("Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode")
     val = input()
     can_interface = CANInterface()
     csv_logger = CSVLoggning()
-
+    #lookup = LookupTable("lookup_table.csv")  # Ny: initiera lookup-tabell
     can_interface.start_periodic_sending()
 
 
+    print("Spara data i LUTs? y/n")
+    val2 = input()
     try:
+        if val2 == 'y':
+        # Hämtar startdata från CAN
+            tilt, power, speed, rpm, torque, *_ = can_interface.read_data()
+
+            # Testar om tidigare trim finns för liknande speed/rpm/vridmoment
+            initial_guess = lookup.find_closest_tilt(speed, rpm, torque)
+            if initial_guess is not None:
+                print(f"Startar optimering med tidigare tilt-gissning: {initial_guess / 100:.2f}%")
+                can_interface.current_tilt_percent = can_interface.clamp_tilt_percent(initial_guess)
+            else:
+                print("Ingen tidigare match – startar med nuvarande tilt.")
+        elif val2 == 'n':
+            print("Ingen aprning av data")
+        
+        # Skapa rätt optimeringsalgoritm
         if val == '1':
             print("Algoritm vald: HILL CLIMBING")
             optimizer = HillClimbing(can_interface, csv_logger)
+            optimizer.run()
         elif val == '2':
-            print("Algoritm vald: Vanilla GRADIENT ASCENT")
+            print("Algoritm vald: VANILLA GRADIENT ASCENT")
             optimizer = GradientAscent(can_interface, csv_logger)
+            optimizer.run()
         elif val == '3':
-            print("Algoritm vald: Momentum GRADIENT ASCENT")
+            print("Algoritm vald: MOMENTUM GRADIENT ASCENT")
             optimizer = GradientAscent(can_interface, csv_logger, use_momentum=True)
-        elif val =='4':
-            print("READ ONLY MODE")
-            print("Visar data från CAN-bus")
+            optimizer.run()
+        elif val == '4':
+            print("READ ONLY MODE – Visar data från CAN-bus")
             can_interface.read_only_mode()
             return
         elif val == '5':
-            print("READ AND WRITE MODE")
-            print("Visar och sparar data från CAN-bus")
-            can_interface.read_mode(csv_logger, log=True)
-
-        optimizer.run()
-
+            print("READ AND WRITE MODE – Visar och sparar data")
+            can_interface.read_only_mode(csv_logger, log=True)
+            return
+        else:
+            print("Ogiltigt val – avslutar.")
+            return
+        
     except KeyboardInterrupt:
         print("Avbröts manuellt av användaren.")
     finally:
@@ -502,6 +595,22 @@ def main():
         print("Avslutar CAN-kommunikation.")
 
 
+    # Efter optimering – hämta bästa tilt från historik
+    if optimizer.efficiency_history and val2 == 'y':
+        final_idx = np.argmax(optimizer.efficiency_history)
+        best_tilt = optimizer.tilt_percent_history[final_idx]
+        can_interface.current_tilt_percent = best_tilt
+
+        # Läs aktuella värden direkt från CAN
+        tilt_percent, power, speed, filtered_rpm, filtered_torque, raw_speed, raw_torque, raw_rpm = can_interface.read_data()
+
+        # Spara till lookup
+        lookup.add_entry(
+            speed=speed,
+            rpm=filtered_rpm,
+            torque=filtered_torque,
+            tilt=best_tilt
+        )
 
 if __name__ == "__main__":
     main()  
