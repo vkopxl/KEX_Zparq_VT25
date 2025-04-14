@@ -74,7 +74,7 @@ class CANInterface:
         return sum(buffer) / len(buffer)
 
     def start_reading(self):
-        self.read_running = True
+        self.read_running = True2
 
         def reader():
             while self.read_running:
@@ -275,7 +275,6 @@ class GradientAscent:
         self.speed_history = []
         self.power_history = []
         self.efficiency_history = []
-        self.stepsize_history =[]
 
         # Beräkna effektivitet som hastighet delat med effekt
     def measure_efficiency(self, speed, power):
@@ -295,7 +294,6 @@ class GradientAscent:
             self.power_history.append(power)
             self.speed_history.append(speed)
             self.efficiency_history.append(prev_efficiency)
-            self.stepsize_history.append(step_size)
 
             step_size = self.step_size
             v = self.v
@@ -334,7 +332,6 @@ class GradientAscent:
                 self.power_history.append(power)
                 self.speed_history.append(speed)
                 self.efficiency_history.append(new_efficiency)
-                self.stepsize_history.append(step_size)
 
                 # Kontrollera tolerans
                 if abs(error) < self.tolerance:
@@ -377,7 +374,6 @@ class GradientAscent:
                 self.speed_history,
                 self.power_history,
                 self.efficiency_history,
-                self.stepsize_history
             )
         
 class HillClimbing:
@@ -394,7 +390,6 @@ class HillClimbing:
         self.speed_history = []
         self.power_history = []
         self.efficiency_history = []
-        self.stepsize_history =[]
 
         # Beräkna effektivitet som hastighet delat med effekt
     def measure_efficiency(self, speed, power):
@@ -412,7 +407,6 @@ class HillClimbing:
             self.power_history.append(power)
             self.speed_history.append(speed)
             self.efficiency_history.append(prev_efficiency)
-            self.stepsize_history.append(step_size)
 
             step_direction = 1  # börja med att öka tilt
             step_size = self.step_size
@@ -440,7 +434,6 @@ class HillClimbing:
                 self.power_history.append(power)
                 self.speed_history.append(speed)
                 self.efficiency_history.append(new_efficiency)
-                self.stepsize_history.append(step_size)
 
                 # Kontrollera tolerans
                 if abs(error) < self.tolerance:
@@ -482,7 +475,6 @@ class HillClimbing:
                 self.speed_history,
                 self.power_history,
                 self.efficiency_history,
-                self.stepsize_history
                 )
 
 class LookupTable:
