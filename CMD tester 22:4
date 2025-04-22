@@ -1,0 +1,939 @@
+Microsoft Windows [Version 10.0.19045.4780]
+(c) Microsoft Corporation. Med ensamrätt.
+
+C:\Users\marti>cd desktop
+
+C:\Users\marti\Desktop>AT.py
+
+C:\Users\marti\Desktop>
+python3 AT.py
+Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode
+
+Spara data i LUTs? y/n
+
+Ogiltigt val – avslutar.
+Avslutar CAN-kommunikation.
+PcanBus was not properly shut down
+
+C:\Users\marti\Desktop>python3 AT.py
+Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode
+5
+Spara data i LUTs? y/n
+n
+Ingen aprning av data
+READ AND WRITE MODE – Visar och sparar data
+Tilt: 9.34% | Hastighet: 0.47 m/s | Buffrat hastighet: 0.47000000000000003 m/s | Effekt: 0.00 W | Vridmoment: -0.00 Nm |Buffrat Vridmoment: 0.00 Nm | Varvtal: -0.00 RPM | Buffrat Varvtal: 0.00 RPM | Effektivitet: 0.00000Filter delta Hastighet: 0.0Filter delta Vridmoment: 0.0Filter delta Varvtal: 0.0
+Tilt: 9.34% | Hastighet: 0.55 m/s | Buffrat hastighet: 0.47464 m/s | Effekt: 0.00 W | Vridmoment: -0.00 Nm |Buffrat Vridmoment: 0.00 Nm | Varvtal: -0.00 RPM | Buffrat Varvtal: 0.00 RPM | Effektivitet: 0.00000Filter delta Hastighet: 0.07536000000000004Filter delta Vridmoment: 0.0Filter delta Varvtal: 0.0
+Tilt: 9.34% | Hastighet: 0.37 m/s | Buffrat hastighet: 0.46831304704000004 m/s | Effekt: 0.00 W | Vridmoment: -0.00 Nm |Buffrat Vridmoment: 0.00 Nm | Varvtal: -0.00 RPM | Buffrat Varvtal: 0.00 RPM | Effektivitet: 0.00000Filter delta Hastighet: 0.09831304704000005Filter delta Vridmoment: 0.0Filter delta Varvtal: 0.0
+Tilt: 9.34% | Hastighet: 0.30 m/s | Buffrat hastighet: 0.4570644665076111 m/s | Effekt: 0.00 W | Vridmoment: -0.00 Nm |Buffrat Vridmoment: 0.00 Nm | Varvtal: -0.00 RPM | Buffrat Varvtal: 0.00 RPM | Effektivitet: 0.00000Filter delta Hastighet: 0.15706446650761113Filter delta Vridmoment: 0.0Filter delta Varvtal: 0.0
+Tilt: 9.34% | Hastighet: 0.22 m/s | Buffrat hastighet: 0.43959128705417677 m/s | Effekt: 0.00 W | Vridmoment: -0.00 Nm |Buffrat Vridmoment: 0.00 Nm | Varvtal: -0.00 RPM | Buffrat Varvtal: 0.00 RPM | Effektivitet: 0.00000Filter delta Hastighet: 0.21959128705417677Filter delta Vridmoment: 0.0Filter delta Varvtal: 0.0
+Tilt: 9.34% | Hastighet: 0.36 m/s | Buffrat hastighet: 0.4349782454039739 m/s | Effekt: 0.00 W | Vridmoment: -0.00 Nm |Buffrat Vridmoment: 0.00 Nm | Varvtal: -0.00 RPM | Buffrat Varvtal: 0.00 RPM | Effektivitet: 0.00000Filter delta Hastighet: 0.07497824540397391Filter delta Vridmoment: 0.0Filter delta Varvtal: 0.0
+Tilt: 9.34% | Hastighet: 0.50 m/s | Buffrat hastighet: 0.4386521159908498 m/s | Effekt: 0.00 W | Vridmoment: -0.00 Nm |Buffrat Vridmoment: 0.00 Nm | Varvtal: -0.00 RPM | Buffrat Varvtal: 0.00 RPM | Effektivitet: 0.00000Filter delta Hastighet: 0.0613478840091502Filter delta Vridmoment: 0.0Filter delta Varvtal: 0.0
+Tilt: 9.34% | Hastighet: 0.55 m/s | Buffrat hastighet: 0.44545934531863884 m/s | Effekt: 0.00 W | Vridmoment: -0.00 Nm |Buffrat Vridmoment: 0.00 Nm | Varvtal: -0.00 RPM | Buffrat Varvtal: 0.00 RPM | Effektivitet: 0.00000Filter delta Hastighet: 0.1045406546813612Filter delta Vridmoment: 0.0Filter delta Varvtal: 0.0
+Tilt: 9.34% | Hastighet: 0.44 m/s | Buffrat hastighet: 0.4451833976075761 m/s | Effekt: -0.00 W | Vridmoment: 1.00 Nm |Buffrat Vridmoment: 0.15 Nm | Varvtal: -0.50 RPM | Buffrat Varvtal: -0.05 RPM | Effektivitet: -56022.53997Filter delta Hastighet: 0.005183397607576079Filter delta Vridmoment: 0.85Filter delta Varvtal: 0.45
+Tilt: 9.34% | Hastighet: 0.46 m/s | Buffrat hastighet: 0.44594618089784277 m/s | Effekt: 5.32 W | Vridmoment: 2.00 Nm |Buffrat Vridmoment: 0.52 Nm | Varvtal: 489.00 RPM | Buffrat Varvtal: 97.76 RPM | Effektivitet: 8.64101Filter delta Hastighet: 0.01405381910215725Filter delta Vridmoment: 1.48Filter delta Varvtal: 391.24
+Tilt: 9.34% | Hastighet: 0.83 m/s | Buffrat hastighet: 0.4798986054496459 m/s | Effekt: 29.87 W | Vridmoment: 4.00 Nm |Buffrat Vridmoment: 1.22 Nm | Varvtal: 782.00 RPM | Buffrat Varvtal: 234.61 RPM | Effektivitet: 2.77826Filter delta Hastighet: 0.35010139455035416Filter delta Vridmoment: 2.784Filter delta Varvtal: 547.392
+Tilt: 9.34% | Hastighet: 0.57 m/s | Buffrat hastighet: 0.48521550130715546 m/s | Effekt: 56.75 W | Vridmoment: 3.00 Nm |Buffrat Vridmoment: 1.57 Nm | Varvtal: 784.50 RPM | Buffrat Varvtal: 344.59 RPM | Effektivitet: 1.00433Filter delta Hastighet: 0.0847844986928446Filter delta Vridmoment: 1.4271999999999996Filter delta Varvtal: 439.9136
+Tilt: 9.34% | Hastighet: 0.61 m/s | Buffrat hastighet: 0.49301184335320014 m/s | Effekt: 91.02 W | Vridmoment: 4.00 Nm |Buffrat Vridmoment: 2.06 Nm | Varvtal: 733.00 RPM | Buffrat Varvtal: 422.27 RPM | Effektivitet: 0.67022Filter delta Hastighet: 0.11698815664679985Filter delta Vridmoment: 1.9417599999999995Filter delta Varvtal: 310.73087999999996
+Tilt: 9.34% | Hastighet: 0.64 m/s | Buffrat hastighet: 0.5025218030049825 m/s | Effekt: 124.11 W | Vridmoment: 4.00 Nm |Buffrat Vridmoment: 2.45 Nm | Varvtal: 733.00 RPM | Buffrat Varvtal: 484.42 RPM | Effektivitet: 0.51567Filter delta Hastighet: 0.1374781969950175Filter delta Vridmoment: 1.5534079999999992Filter delta Varvtal: 248.584704
+Tilt: 9.34% | Hastighet: 0.63 m/s | Buffrat hastighet: 0.5105207819256434 m/s | Effekt: 151.97 W | Vridmoment: 4.00 Nm |Buffrat Vridmoment: 2.76 Nm | Varvtal: 694.00 RPM | Buffrat Varvtal: 526.33 RPM | Effektivitet: 0.41455Filter delta Hastighet: 0.11947921807435657Filter delta Vridmoment: 1.2427263999999996Filter delta Varvtal: 167.66776319999997
+Tilt: 9.34% | Hastighet: 0.80 m/s | Buffrat hastighet: 0.5333745645990553 m/s | Effekt: 155.46 W | Vridmoment: 2.00 Nm |Buffrat Vridmoment: 2.66 Nm | Varvtal: 683.00 RPM | Buffrat Varvtal: 557.67 RPM | Effektivitet: 0.51460Filter delta Hastighet: 0.26662543540094474Filter delta Vridmoment: 0.6620635894743048Filter delta Varvtal: 125.33421055999997
+Tilt: 9.34% | Hastighet: 0.91 m/s | Buffrat hastighet: 0.5663905082281976 m/s | Effekt: 156.35 W | Vridmoment: 2.00 Nm |Buffrat Vridmoment: 2.59 Nm | Varvtal: 657.00 RPM | Buffrat Varvtal: 577.53 RPM | Effektivitet: 0.58204Filter delta Hastighet: 0.34360949177180244Filter delta Vridmoment: 0.5851275903498294Filter delta Varvtal: 79.467368448
+Tilt: 9.34% | Hastighet: 0.96 m/s | Buffrat hastighet: 0.6015638260180733 m/s | Effekt: 140.59 W | Vridmoment: 1.00 Nm |Buffrat Vridmoment: 2.27 Nm | Varvtal: 649.50 RPM | Buffrat Varvtal: 591.93 RPM | Effektivitet: 0.68283Filter delta Hastighet: 0.3584361739819266Filter delta Vridmoment: 1.2681020722798637Filter delta Varvtal: 57.5738947584
+Tilt: 9.34% | Hastighet: 0.91 m/s | Buffrat hastighet: 0.6264989220592306 m/s | Effekt: 149.86 W | Vridmoment: 3.00 Nm |Buffrat Vridmoment: 2.36 Nm | Varvtal: 666.50 RPM | Buffrat Varvtal: 606.84 RPM | Effektivitet: 0.60722Filter delta Hastighet: 0.2835010779407694Filter delta Vridmoment: 0.6417355736740262Filter delta Varvtal: 59.65911580671991
+Tilt: 9.34% | Hastighet: 0.88 m/s | Buffrat hastighet: 0.6456002556079824 m/s | Effekt: 150.65 W | Vridmoment: 2.00 Nm |Buffrat Vridmoment: 2.33 Nm | Varvtal: 663.00 RPM | Buffrat Varvtal: 618.07 RPM | Effektivitet: 0.58415Filter delta Hastighet: 0.2343997443920176Filter delta Vridmoment: 0.32751586509260733Filter delta Varvtal: 44.92729264537593
+Tilt: 9.34% | Hastighet: 0.88 m/s | Buffrat hastighet: 0.6628145668446876 m/s | Effekt: 150.21 W | Vridmoment: 2.00 Nm |Buffrat Vridmoment: 2.30 Nm | Varvtal: 645.50 RPM | Buffrat Varvtal: 623.56 RPM | Effektivitet: 0.58583Filter delta Hastighet: 0.21718543315531236Filter delta Vridmoment: 0.30041340764924085Filter delta Varvtal: 21.941834116300697
+Tilt: 9.34% | Hastighet: 0.99 m/s | Buffrat hastighet: 0.6898788692693562 m/s | Effekt: 150.74 W | Vridmoment: 2.00 Nm |Buffrat Vridmoment: 2.28 Nm | Varvtal: 667.50 RPM | Buffrat Varvtal: 632.35 RPM | Effektivitet: 0.65676Filter delta Hastighet: 0.30012113073064384Filter delta Vridmoment: 0.27636791571723585Filter delta Varvtal: 35.153467293040535
+Tilt: 9.34% | Hastighet: 1.10 m/s | Buffrat hastighet: 0.7272048599930665 m/s | Effekt: 150.93 W | Vridmoment: 2.00 Nm |Buffrat Vridmoment: 2.25 Nm | Varvtal: 666.50 RPM | Buffrat Varvtal: 639.18 RPM | Effektivitet: 0.72881Filter delta Hastighet: 0.3727951400069336Filter delta Vridmoment: 0.25491159744758507Filter delta Varvtal: 27.322773834432383
+Tilt: 9.34% | Hastighet: 1.04 m/s | Buffrat hastighet: 0.752628696954609 m/s | Effekt: 150.95 W | Vridmoment: 2.00 Nm |Buffrat Vridmoment: 2.24 Nm | Varvtal: 667.00 RPM | Buffrat Varvtal: 644.74 RPM | Effektivitet: 0.68899Filter delta Hastighet: 0.28737130304539105Filter delta Vridmoment: 0.23566802532387765Filter delta Varvtal: 22.258219067545838
+Tilt: 9.34% | Hastighet: 1.18 m/s | Buffrat hastighet: 0.79226188517355 m/s | Effekt: 136.26 W | Vridmoment: 1.00 Nm |Buffrat Vridmoment: 2.02 Nm | Varvtal: 640.00 RPM | Buffrat Varvtal: 643.79 RPM | Effektivitet: 0.86596Filter delta Hastighet: 0.38773811482644993Filter delta Vridmoment: 1.0211970771769026Filter delta Varvtal: 3.793424745963307
+Tilt: 9.34% | Hastighet: 1.08 m/s | Buffrat hastighet: 0.8149281131872603 m/s | Effekt: 136.96 W | Vridmoment: 2.00 Nm |Buffrat Vridmoment: 2.02 Nm | Varvtal: 662.00 RPM | Buffrat Varvtal: 647.43 RPM | Effektivitet: 0.78855Filter delta Hastighet: 0.26507188681273974Filter delta Vridmoment: 0.020092291709973065Filter delta Varvtal: 14.5652602032294
+Tilt: 9.34% | Hastighet: 1.06 m/s | Buffrat hastighet: 0.8331877304984929 m/s | Effekt: 136.68 W | Vridmoment: 2.00 Nm |Buffrat Vridmoment: 2.02 Nm | Varvtal: 642.50 RPM | Buffrat Varvtal: 646.45 RPM | Effektivitet: 0.77553Filter delta Hastighet: 0.22681226950150712Filter delta Vridmoment: 0.019047307105858557Filter delta Varvtal: 3.947791837416503
+Tilt: 9.34% | Hastighet: 1.14 m/s | Buffrat hastighet: 0.8579417208452349 m/s | Effekt: 146.59 W | Vridmoment: 3.00 Nm |Buffrat Vridmoment: 2.16 Nm | Varvtal: 648.00 RPM | Buffrat Varvtal: 646.76 RPM | Effektivitet: 0.77770Filter delta Hastighet: 0.2820582791547652Filter delta Vridmoment: 0.8356782396798077Filter delta Varvtal: 1.2417665300667977
+Tilt: 9.34% | Hastighet: 1.14 m/s | Buffrat hastighet: 0.8800003220869479 m/s | Effekt: 145.18 W | Vridmoment: 2.00 Nm |Buffrat Vridmoment: 2.15 Nm | Varvtal: 632.00 RPM | Buffrat Varvtal: 643.81 RPM | Effektivitet: 0.78523Filter delta Hastighet: 0.25999967791305223Filter delta Vridmoment: 0.15340550821270993Filter delta Varvtal: 11.806586775946585
+Tilt: 9.34% | Hastighet: 1.20 m/s | Buffrat hastighet: 0.9062402853690461 m/s | Effekt: 132.43 W | Vridmoment: 1.00 Nm |Buffrat Vridmoment: 1.96 Nm | Varvtal: 646.50 RPM | Buffrat Varvtal: 644.35 RPM | Effektivitet: 0.90611Filter delta Hastighet: 0.29375971463095385Filter delta Vridmoment: 0.9627008061645326Filter delta Varvtal: 2.154730579242596
+Tilt: 9.34% | Hastighet: 1.16 m/s | Buffrat hastighet: 0.9253676703775521 m/s | Effekt: 132.14 W | Vridmoment: 2.00 Nm |Buffrat Vridmoment: 1.96 Nm | Varvtal: 634.00 RPM | Buffrat Varvtal: 642.28 RPM | Effektivitet: 0.87783Filter delta Hastighet: 0.23463232962244784Filter delta Vridmoment: 0.03529511115761652Filter delta Varvtal: 8.27621553660606
+Tilt: 9.34% | Hastighet: 1.22 m/s | Buffrat hastighet: 0.9487801078245496 m/s | Effekt: 148.67 W | Vridmoment: 3.00 Nm |Buffrat Vridmoment: 2.12 Nm | Varvtal: 773.50 RPM | Buffrat Varvtal: 668.52 RPM | Effektivitet: 0.82060Filter delta Hastighet: 0.2712198921754504Filter delta Vridmoment: 0.8763467588810494Filter delta Varvtal: 104.97902757071506
+Tilt: 9.34% | Hastighet: 1.21 m/s | Buffrat hastighet: 0.9686646856401374 m/s | Effekt: 185.33 W | Vridmoment: 4.00 Nm |Buffrat Vridmoment: 2.50 Nm | Varvtal: 867.00 RPM | Buffrat Varvtal: 708.22 RPM | Effektivitet: 0.65289Filter delta Hastighet: 0.24133531435986255Filter delta Vridmoment: 1.5010774071048392Filter delta Varvtal: 158.78322205657207
+Tilt: 9.34% | Hastighet: 1.27 m/s | Buffrat hastighet: 0.9928117485261664 m/s | Effekt: 217.81 W | Vridmoment: 4.00 Nm |Buffrat Vridmoment: 2.80 Nm | Varvtal: 882.50 RPM | Buffrat Varvtal: 743.07 RPM | Effektivitet: 0.58307Filter delta Hastighet: 0.27718825147383364Filter delta Vridmoment: 1.2008619256838715Filter delta Varvtal: 139.42657764525768
+Tilt: 9.34% | Hastighet: 1.28 m/s | Buffrat hastighet: 1.0154188702783178 m/s | Effekt: 228.66 W | Vridmoment: 3.00 Nm |Buffrat Vridmoment: 2.81 Nm | Varvtal: 908.50 RPM | Buffrat Varvtal: 776.16 RPM | Effektivitet: 0.55979Filter delta Hastighet: 0.26458112972168224Filter delta Vridmoment: 0.18678427808073428Filter delta Varvtal: 132.34126211620605
+Tilt: 9.34% | Hastighet: 1.32 m/s | Buffrat hastighet: 1.0399248932226555 m/s | Effekt: 251.48 W | Vridmoment: 4.00 Nm |Buffrat Vridmoment: 3.01 Nm | Varvtal: 880.00 RPM | Buffrat Varvtal: 796.93 RPM | Effektivitet: 0.52489Filter delta Hastighet: 0.2800751067773446Filter delta Vridmoment: 0.9865993719067365Filter delta Varvtal: 83.07300969296477
+Tilt: 9.34% | Hastighet: 1.44 m/s | Buffrat hastighet: 1.075934657667813 m/s | Effekt: 268.66 W | Vridmoment: 4.00 Nm |Buffrat Vridmoment: 3.16 Nm | Varvtal: 871.50 RPM | Buffrat Varvtal: 811.84 RPM | Effektivitet: 0.53600Filter delta Hastighet: 0.3640653423321869Filter delta Vridmoment: 0.8399315712467228Filter delta Varvtal: 59.658407754371865
+Tilt: 9.34% | Hastighet: 1.55 m/s | Buffrat hastighet: 1.1221117196644759 m/s | Effekt: 282.35 W | Vridmoment: 4.00 Nm |Buffrat Vridmoment: 3.27 Nm | Varvtal: 872.00 RPM | Buffrat Varvtal: 823.87 RPM | Effektivitet: 0.54897Filter delta Hastighet: 0.4278882803355242Filter delta Vridmoment: 0.7273864882466876Filter delta Varvtal: 48.12672620349747
+Tilt: 9.32% | Hastighet: 1.59 m/s | Buffrat hastighet: 1.1673980779687856 m/s | Effekt: 293.40 W | Vridmoment: 4.00 Nm |Buffrat Vridmoment: 3.36 Nm | Varvtal: 871.50 RPM | Buffrat Varvtal: 833.40 RPM | Effektivitet: 0.54192Filter delta Hastighet: 0.4226019220312145Filter delta Vridmoment: 0.6381080535059684Filter delta Varvtal: 38.101380962797975
+Tilt: 8.01% | Hastighet: 1.46 m/s | Buffrat hastighet: 1.1905897625479824 m/s | Effekt: 302.48 W | Vridmoment: 4.00 Nm |Buffrat Vridmoment: 3.43 Nm | Varvtal: 871.50 RPM | Buffrat Varvtal: 841.02 RPM | Effektivitet: 0.48267Filter delta Hastighet: 0.26941023745201753Filter delta Vridmoment: 0.5654844620357524Filter delta Varvtal: 30.48110477023829
+Tilt: 8.01% | Hastighet: 1.43 m/s | Buffrat hastighet: 1.2082920006002666 m/s | Effekt: 309.98 W | Vridmoment: 4.00 Nm |Buffrat Vridmoment: 3.49 Nm | Varvtal: 871.00 RPM | Buffrat Varvtal: 847.02 RPM | Effektivitet: 0.46132Filter delta Hastighet: 0.2217079993997333Filter delta Vridmoment: 0.5052329712535784Filter delta Varvtal: 23.984883816190518
+Tilt: 8.01% | Hastighet: 1.52 m/s | Buffrat hastighet: 1.2335935882592317 m/s | Effekt: 316.16 W | Vridmoment: 4.00 Nm |Buffrat Vridmoment: 3.55 Nm | Varvtal: 869.50 RPM | Buffrat Varvtal: 851.51 RPM | Effektivitet: 0.48077Filter delta Hastighet: 0.2864064117407683Filter delta Vridmoment: 0.4544452871667275Filter delta Varvtal: 17.987907052952437
+Tilt: 8.01% | Hastighet: 1.50 m/s | Buffrat hastighet: 1.254011146467929 m/s | Effekt: 320.70 W | Vridmoment: 4.00 Nm |Buffrat Vridmoment: 3.59 Nm | Varvtal: 860.50 RPM | Buffrat Varvtal: 853.31 RPM | Effektivitet: 0.46773Filter delta Hastighet: 0.2459888535320709Filter delta Vridmoment: 0.4110709709055862Filter delta Varvtal: 7.190325642361927
+Tilt: 8.01% | Hastighet: 1.64 m/s | Buffrat hastighet: 1.288209328649633 m/s | Effekt: 352.49 W | Vridmoment: 5.00 Nm |Buffrat Vridmoment: 3.86 Nm | Varvtal: 948.50 RPM | Buffrat Varvtal: 872.35 RPM | Effektivitet: 0.46526Filter delta Hastighet: 0.3517906713503671Filter delta Vridmoment: 1.1414052938670638Filter delta Varvtal: 76.15226051388947
+Tilt: 8.01% | Hastighet: 1.48 m/s | Buffrat hastighet: 1.3014772283788538 m/s | Effekt: 408.82 W | Vridmoment: 6.00 Nm |Buffrat Vridmoment: 4.29 Nm | Varvtal: 1064.00 RPM | Buffrat Varvtal: 910.68 RPM | Effektivitet: 0.36202Filter delta Hastighet: 0.17852277162114616Filter delta Vridmoment: 1.7131242350936509Filter delta Varvtal: 153.32180841111153
+Tilt: 8.01% | Hastighet: 1.78 m/s | Buffrat hastighet: 1.3483017712559096 m/s | Effekt: 490.80 W | Vridmoment: 7.00 Nm |Buffrat Vridmoment: 4.83 Nm | Varvtal: 1209.50 RPM | Buffrat Varvtal: 970.44 RPM | Effektivitet: 0.36268Filter delta Hastighet: 0.4316982287440905Filter delta Vridmoment: 2.17049938807492Filter delta Varvtal: 239.0574467288892
+Tilt: 8.01% | Hastighet: 1.90 m/s | Buffrat hastighet: 1.4063237762530507 m/s | Effekt: 642.19 W | Vridmoment: 10.00 Nm |Buffrat Vridmoment: 5.86 Nm | Varvtal: 1347.50 RPM | Buffrat Varvtal: 1045.85 RPM | Effektivitet: 0.29586Filter delta Hastighet: 0.4936762237469494Filter delta Vridmoment: 4.1363995104599365Filter delta Varvtal: 301.6459573831112
+Tilt: 8.01% | Hastighet: 2.07 m/s | Buffrat hastighet: 1.4835542004370994 m/s | Effekt: 776.89 W | Vridmoment: 10.00 Nm |Buffrat Vridmoment: 6.69 Nm | Varvtal: 1360.50 RPM | Buffrat Varvtal: 1108.78 RPM | Effektivitet: 0.26645Filter delta Hastighet: 0.5864457995629004Filter delta Vridmoment: 3.309119608367949Filter delta Varvtal: 251.71676590648894
+Tilt: 8.01% | Hastighet: 2.02 m/s | Buffrat hastighet: 1.5391539000021124 m/s | Effekt: 921.84 W | Vridmoment: 11.00 Nm |Buffrat Vridmoment: 7.55 Nm | Varvtal: 1392.50 RPM | Buffrat Varvtal: 1165.53 RPM | Effektivitet: 0.21913Filter delta Hastighet: 0.48084609999788763Filter delta Vridmoment: 3.4472956866943587Filter delta Varvtal: 226.9734127251911
+Tilt: 8.01% | Hastighet: 2.19 m/s | Buffrat hastighet: 1.6140562695902527 m/s | Effekt: 1056.91 W | Vridmoment: 11.00 Nm |Buffrat Vridmoment: 8.24 Nm | Varvtal: 1460.50 RPM | Buffrat Varvtal: 1224.52 RPM | Effektivitet: 0.20721Filter delta Hastighet: 0.5759437304097472Filter delta Vridmoment: 2.7578365493554866Filter delta Varvtal: 235.97873018015298
+Tilt: 8.01% | Hastighet: 2.24 m/s | Buffrat hastighet: 1.6845340114746672 m/s | Effekt: 1132.49 W | Vridmoment: 10.00 Nm |Buffrat Vridmoment: 8.59 Nm | Varvtal: 1394.00 RPM | Buffrat Varvtal: 1258.42 RPM | Effektivitet: 0.19779Filter delta Hastighet: 0.555465988525333Filter delta Vridmoment: 1.4062692394843879Filter delta Varvtal: 135.5829841441223
+Tilt: 8.01% | Hastighet: 1.56 m/s | Buffrat hastighet: 1.6767564388995366 m/s | Effekt: 1229.66 W | Vridmoment: 11.00 Nm |Buffrat Vridmoment: 9.07 Nm | Varvtal: 1436.00 RPM | Buffrat Varvtal: 1293.93 RPM | Effektivitet: 0.12686Filter delta Hastighet: 0.11675643889953657Filter delta Vridmoment: 1.925015391587511Filter delta Varvtal: 142.0663873152978
+Tilt: 8.01% | Hastighet: 2.42 m/s | Buffrat hastighet: 1.7691597160662895 m/s | Effekt: 1473.08 W | Vridmoment: 15.00 Nm |Buffrat Vridmoment: 10.26 Nm | Varvtal: 1679.50 RPM | Buffrat Varvtal: 1371.05 RPM | Effektivitet: 0.16428Filter delta Hastighet: 0.6508402839337104Filter delta Vridmoment: 4.740012313270007Filter delta Varvtal: 308.4531098522382
+Tilt: 8.01% | Hastighet: 2.55 m/s | Buffrat hastighet: 1.8691728851643428 m/s | Effekt: 1683.83 W | Vridmoment: 15.00 Nm |Buffrat Vridmoment: 11.21 Nm | Varvtal: 1689.00 RPM | Buffrat Varvtal: 1434.64 RPM | Effektivitet: 0.15144Filter delta Hastighet: 0.6808271148356575Filter delta Vridmoment: 3.7920098506160063Filter delta Varvtal: 254.36248788179046
+Tilt: 8.01% | Hastighet: 2.73 m/s | Buffrat hastighet: 1.9863165730697538 m/s | Effekt: 2025.54 W | Vridmoment: 19.00 Nm |Buffrat Vridmoment: 12.77 Nm | Varvtal: 1837.00 RPM | Buffrat Varvtal: 1515.11 RPM | Effektivitet: 0.13478Filter delta Hastighet: 0.7436834269302461Filter delta Vridmoment: 6.233607880492803Filter delta Varvtal: 321.8899903054323
+Tilt: 8.01% | Hastighet: 2.84 m/s | Buffrat hastighet: 2.101878283757803 m/s | Effekt: 2586.72 W | Vridmoment: 25.00 Nm |Buffrat Vridmoment: 15.21 Nm | Varvtal: 2058.00 RPM | Buffrat Varvtal: 1623.69 RPM | Effektivitet: 0.10979Filter delta Hastighet: 0.7381217162421967Filter delta Vridmoment: 9.786886304394242Filter delta Varvtal: 434.3119922443457
+Tilt: 8.01% | Hastighet: 3.03 m/s | Buffrat hastighet: 2.2344253615859495 m/s | Effekt: 3250.94 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 17.77 Nm | Varvtal: 2240.00 RPM | Buffrat Varvtal: 1746.95 RPM | Effektivitet: 0.09320Filter delta Hastighet: 0.7955746384140507Filter delta Vridmoment: 10.229509043515392Filter delta Varvtal: 493.04959379547654
+Tilt: 8.01% | Hastighet: 3.25 m/s | Buffrat hastighet: 2.3883432781256353 m/s | Effekt: 3878.14 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 20.02 Nm | Varvtal: 2263.00 RPM | Buffrat Varvtal: 1850.16 RPM | Effektivitet: 0.08380Filter delta Hastighet: 0.8616567218743647Filter delta Vridmoment: 8.983607234812311Filter delta Varvtal: 412.8396750363813
+Tilt: 8.01% | Hastighet: 3.45 m/s | Buffrat hastighet: 2.5541376137294556 m/s | Effekt: 4379.14 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 21.61 Nm | Varvtal: 2273.50 RPM | Buffrat Varvtal: 1934.83 RPM | Effektivitet: 0.07878Filter delta Hastighet: 0.8958623862705446Filter delta Vridmoment: 6.386885787849845Filter delta Varvtal: 338.67174002910497
+Tilt: 8.01% | Hastighet: 3.49 m/s | Buffrat hastighet: 2.6885145736465828 m/s | Effekt: 4805.59 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 22.89 Nm | Varvtal: 2284.50 RPM | Buffrat Varvtal: 2004.76 RPM | Effektivitet: 0.07262Filter delta Hastighet: 0.8014854263534175Filter delta Vridmoment: 5.109508630279873Filter delta Varvtal: 279.73739202328375
+Tilt: 8.01% | Hastighet: 3.55 m/s | Buffrat hastighet: 2.8058045589461864 m/s | Effekt: 5251.38 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 24.31 Nm | Varvtal: 2294.00 RPM | Buffrat Varvtal: 2062.61 RPM | Effektivitet: 0.06760Filter delta Hastighet: 0.7441954410538139Filter delta Vridmoment: 5.687606904223898Filter delta Varvtal: 231.3899136186269
+Tilt: 8.01% | Hastighet: 3.62 m/s | Buffrat hastighet: 2.9128057526221585 m/s | Effekt: 5534.44 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 25.05 Nm | Varvtal: 2298.50 RPM | Buffrat Varvtal: 2109.79 RPM | Effektivitet: 0.06541Filter delta Hastighet: 0.7071942473778416Filter delta Vridmoment: 2.9500855233791157Filter delta Varvtal: 188.71193089490134
+Tilt: 8.01% | Hastighet: 3.69 m/s | Buffrat hastighet: 3.012068554806771 m/s | Effekt: 5767.75 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 25.64 Nm | Varvtal: 2301.50 RPM | Buffrat Varvtal: 2148.13 RPM | Effektivitet: 0.06398Filter delta Hastighet: 0.677931445193229Filter delta Vridmoment: 2.360068418703289Filter delta Varvtal: 153.3695447159207
+Tilt: 8.01% | Hastighet: 3.71 m/s | Buffrat hastighet: 3.0956759572853834 m/s | Effekt: 6005.91 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 26.31 Nm | Varvtal: 2306.00 RPM | Buffrat Varvtal: 2179.70 RPM | Effektivitet: 0.06177Filter delta Hastighet: 0.6143240427146166Filter delta Vridmoment: 2.6880547349626305Filter delta Varvtal: 126.2956357727362
+Tilt: 8.01% | Hastighet: 3.77 m/s | Buffrat hastighet: 3.1748634508794127 m/s | Effekt: 6155.14 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 26.65 Nm | Varvtal: 2309.00 RPM | Buffrat Varvtal: 2205.56 RPM | Effektivitet: 0.06125Filter delta Hastighet: 0.5951365491205873Filter delta Vridmoment: 1.3504437879701001Filter delta Varvtal: 103.43650861818878
+Tilt: 8.01% | Hastighet: 3.83 m/s | Buffrat hastighet: 3.2505406681348052 m/s | Effekt: 6323.89 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 27.12 Nm | Varvtal: 2311.50 RPM | Buffrat Varvtal: 2226.75 RPM | Effektivitet: 0.06056Filter delta Hastighet: 0.5794593318651948Filter delta Vridmoment: 1.8803550303760765Filter delta Varvtal: 84.74920689455075
+Tilt: 8.01% | Hastighet: 3.87 m/s | Buffrat hastighet: 3.3198866211115523 m/s | Effekt: 6401.15 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 27.24 Nm | Varvtal: 2312.50 RPM | Buffrat Varvtal: 2243.90 RPM | Effektivitet: 0.06046Filter delta Hastighet: 0.5501133788884478Filter delta Vridmoment: 0.7588347809064295Filter delta Varvtal: 68.59936551564078
+Tilt: 8.01% | Hastighet: 3.94 m/s | Buffrat hastighet: 3.3893463503236196 m/s | Effekt: 6465.45 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 27.34 Nm | Varvtal: 2317.00 RPM | Buffrat Varvtal: 2258.52 RPM | Effektivitet: 0.06094Filter delta Hastighet: 0.5506536496763803Filter delta Vridmoment: 0.6633100193897761Filter delta Varvtal: 58.47949241251263
+Tilt: 8.01% | Hastighet: 3.88 m/s | Buffrat hastighet: 3.4379531332015136 m/s | Effekt: 6579.75 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 27.67 Nm | Varvtal: 2320.00 RPM | Buffrat Varvtal: 2270.82 RPM | Effektivitet: 0.05897Filter delta Hastighet: 0.44204686679848626Filter delta Vridmoment: 1.3306480155118194Filter delta Varvtal: 49.18359393000992
+Tilt: 8.01% | Hastighet: 3.89 m/s | Buffrat hastighet: 3.4809901135196712 m/s | Effekt: 6718.99 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 28.14 Nm | Varvtal: 2319.00 RPM | Buffrat Varvtal: 2280.45 RPM | Effektivitet: 0.05790Filter delta Hastighet: 0.4090098864803289Filter delta Vridmoment: 1.8645184124094527Filter delta Varvtal: 38.54687514400757
+Tilt: 8.01% | Hastighet: 3.90 m/s | Buffrat hastighet: 3.5194975363405137 m/s | Effekt: 6741.41 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.13 Nm | Varvtal: 2322.00 RPM | Buffrat Varvtal: 2288.76 RPM | Effektivitet: 0.05785Filter delta Hastighet: 0.38050246365948626Filter delta Vridmoment: 0.1268719821534141Filter delta Varvtal: 33.237500115205876
+Tilt: 8.01% | Hastighet: 4.00 m/s | Buffrat hastighet: 3.5666109212817716 m/s | Effekt: 6757.90 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.12 Nm | Varvtal: 2320.00 RPM | Buffrat Varvtal: 2295.01 RPM | Effektivitet: 0.05919Filter delta Hastighet: 0.4333890787182284Filter delta Vridmoment: 0.11891873306019107Filter delta Varvtal: 24.990000092164337
+Tilt: 8.01% | Hastighet: 4.01 m/s | Buffrat hastighet: 3.6084397627303426 m/s | Effekt: 6772.02 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.11 Nm | Varvtal: 2322.00 RPM | Buffrat Varvtal: 2300.41 RPM | Effektivitet: 0.05921Filter delta Hastighet: 0.40156023726965717Filter delta Vridmoment: 0.1115586298999176Filter delta Varvtal: 21.59200007373147
+Tilt: 8.01% | Hastighet: 4.04 m/s | Buffrat hastighet: 3.64864219843305 m/s | Effekt: 6816.87 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.23 Nm | Varvtal: 2326.00 RPM | Buffrat Varvtal: 2305.53 RPM | Effektivitet: 0.05926Filter delta Hastighet: 0.3913578015669499Filter delta Vridmoment: 0.7650864947845442Filter delta Varvtal: 20.473600058985085
+Tilt: 8.01% | Hastighet: 4.02 m/s | Buffrat hastighet: 3.681000750189862 m/s | Effekt: 6823.62 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.22 Nm | Varvtal: 2324.00 RPM | Buffrat Varvtal: 2309.22 RPM | Effektivitet: 0.05891Filter delta Hastighet: 0.3389992498101386Filter delta Vridmoment: 0.21764939446142506Filter delta Varvtal: 14.778880047188068
+Tilt: 8.01% | Hastighet: 4.02 m/s | Buffrat hastighet: 3.7094427618175523 m/s | Effekt: 6829.76 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.20 Nm | Varvtal: 2326.00 RPM | Buffrat Varvtal: 2312.58 RPM | Effektivitet: 0.05886Filter delta Hastighet: 0.3105572381824482Filter delta Vridmoment: 0.20202979884741268Filter delta Varvtal: 13.423104037750363
+Tilt: 8.01% | Hastighet: 4.04 m/s | Buffrat hastighet: 3.7368974324981554 m/s | Effekt: 6325.63 W | Vridmoment: 21.00 Nm |Buffrat Vridmoment: 26.76 Nm | Varvtal: 2035.50 RPM | Buffrat Varvtal: 2257.16 RPM | Effektivitet: 0.06387Filter delta Hastighet: 0.3031025675018446Filter delta Vridmoment: 5.761623839077931Filter delta Varvtal: 221.66151676979962
+Tilt: 8.01% | Hastighet: 3.82 m/s | Buffrat hastighet: 3.7417431645457873 m/s | Effekt: 5939.19 W | Vridmoment: 21.00 Nm |Buffrat Vridmoment: 25.61 Nm | Varvtal: 2044.50 RPM | Buffrat Varvtal: 2214.63 RPM | Effektivitet: 0.06432Filter delta Hastighet: 0.07825683545421303Filter delta Vridmoment: 4.609299071262345Filter delta Varvtal: 170.12921341583979
+Tilt: 8.01% | Hastighet: 3.68 m/s | Buffrat hastighet: 3.738274784481685 m/s | Effekt: 5407.85 W | Vridmoment: 18.00 Nm |Buffrat Vridmoment: 24.09 Nm | Varvtal: 1861.00 RPM | Buffrat Varvtal: 2143.90 RPM | Effektivitet: 0.06805Filter delta Hastighet: 0.05827478448168488Filter delta Vridmoment: 6.08743925700988Filter delta Varvtal: 282.90337073267165
+Tilt: 8.01% | Hastighet: 3.48 m/s | Buffrat hastighet: 3.7186904588276946 m/s | Effekt: 4947.22 W | Vridmoment: 17.00 Nm |Buffrat Vridmoment: 22.67 Nm | Varvtal: 1844.00 RPM | Buffrat Varvtal: 2083.92 RPM | Effektivitet: 0.07034Filter delta Hastighet: 0.23869045882769457Filter delta Vridmoment: 5.669951405607904Filter delta Varvtal: 239.9226965861376
+Tilt: 8.01% | Hastighet: 3.23 m/s | Buffrat hastighet: 3.6703740994313874 m/s | Effekt: 4340.19 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 20.74 Nm | Varvtal: 1658.00 RPM | Buffrat Varvtal: 1998.74 RPM | Effektivitet: 0.07442Filter delta Hastighet: 0.4403740994313874Filter delta Vridmoment: 7.735961124486327Filter delta Varvtal: 340.7381572689101
+Tilt: 8.01% | Hastighet: 2.98 m/s | Buffrat hastighet: 3.588193754743248 m/s | Effekt: 3751.91 W | Vridmoment: 11.00 Nm |Buffrat Vridmoment: 18.79 Nm | Varvtal: 1539.50 RPM | Buffrat Varvtal: 1906.89 RPM | Effektivitet: 0.07943Filter delta Hastighet: 0.6081937547432479Filter delta Vridmoment: 7.788768899589062Filter delta Varvtal: 367.3905258151283
+Tilt: 8.01% | Hastighet: 2.78 m/s | Buffrat hastighet: 3.4824663524854866 m/s | Effekt: 3459.49 W | Vridmoment: 14.00 Nm |Buffrat Vridmoment: 17.83 Nm | Varvtal: 1636.00 RPM | Buffrat Varvtal: 1852.71 RPM | Effektivitet: 0.08036Filter delta Hastighet: 0.7024663524854864Filter delta Vridmoment: 3.8310151196712496Filter delta Varvtal: 216.71242065210276
+Tilt: 8.01% | Hastighet: 2.71 m/s | Buffrat hastighet: 3.3841726082889894 m/s | Effekt: 3234.99 W | Vridmoment: 14.00 Nm |Buffrat Vridmoment: 17.06 Nm | Varvtal: 1640.50 RPM | Buffrat Varvtal: 1810.27 RPM | Effektivitet: 0.08377Filter delta Hastighet: 0.6741726082889894Filter delta Vridmoment: 3.0648120957370004Filter delta Varvtal: 169.7699365216822
+Tilt: 8.01% | Hastighet: 2.57 m/s | Buffrat hastighet: 3.27717627426573 m/s | Effekt: 3096.63 W | Vridmoment: 15.00 Nm |Buffrat Vridmoment: 16.65 Nm | Varvtal: 1638.00 RPM | Buffrat Varvtal: 1775.82 RPM | Effektivitet: 0.08299Filter delta Hastighet: 0.7071762742657302Filter delta Vridmoment: 1.651849676589599Filter delta Varvtal: 137.81594921734586
+Tilt: 8.01% | Hastighet: 2.59 m/s | Buffrat hastighet: 3.1955963373610707 m/s | Effekt: 3050.96 W | Vridmoment: 16.00 Nm |Buffrat Vridmoment: 16.58 Nm | Varvtal: 1684.50 RPM | Buffrat Varvtal: 1757.55 RPM | Effektivitet: 0.08489Filter delta Hastighet: 0.6055963373610709Filter delta Vridmoment: 0.5767663926731217Filter delta Varvtal: 73.05275937387682
+Tilt: 8.01% | Hastighet: 2.65 m/s | Buffrat hastighet: 3.138548984158836 m/s | Effekt: 2960.55 W | Vridmoment: 15.00 Nm |Buffrat Vridmoment: 16.26 Nm | Varvtal: 1662.50 RPM | Buffrat Varvtal: 1738.54 RPM | Effektivitet: 0.08951Filter delta Hastighet: 0.48854898415883596Filter delta Vridmoment: 1.2614131141384988Filter delta Varvtal: 76.04220749910155
+Tilt: 8.01% | Hastighet: 2.66 m/s | Buffrat hastighet: 3.0917206219269486 m/s | Effekt: 2895.06 W | Vridmoment: 15.00 Nm |Buffrat Vridmoment: 16.04 Nm | Varvtal: 1664.00 RPM | Buffrat Varvtal: 1723.63 RPM | Effektivitet: 0.09188Filter delta Hastighet: 0.4317206219269485Filter delta Vridmoment: 1.039226153979513Filter delta Varvtal: 59.633765999281195
+Tilt: 8.19% | Hastighet: 2.57 m/s | Buffrat hastighet: 3.038415350096217 m/s | Effekt: 2872.46 W | Vridmoment: 16.00 Nm |Buffrat Vridmoment: 16.04 Nm | Varvtal: 1657.50 RPM | Buffrat Varvtal: 1710.41 RPM | Effektivitet: 0.08947Filter delta Hastighet: 0.46841535009621715Filter delta Vridmoment: 0.03711097716493583Filter delta Varvtal: 52.90701279942505
+Tilt: 10.67% | Hastighet: 2.77 m/s | Buffrat hastighet: 3.0177899025746786 m/s | Effekt: 2823.82 W | Vridmoment: 15.00 Nm |Buffrat Vridmoment: 15.88 Nm | Varvtal: 1650.00 RPM | Buffrat Varvtal: 1698.33 RPM | Effektivitet: 0.09809Filter delta Hastighet: 0.2477899025746786Filter delta Vridmoment: 0.8776955104110886Filter delta Varvtal: 48.32561023954008
+Tilt: 13.96% | Hastighet: 2.83 m/s | Buffrat hastighet: 3.004873902695044 m/s | Effekt: 2798.08 W | Vridmoment: 15.00 Nm |Buffrat Vridmoment: 15.76 Nm | Varvtal: 1685.50 RPM | Buffrat Varvtal: 1695.76 RPM | Effektivitet: 0.10114Filter delta Hastighet: 0.17487390269504388Filter delta Vridmoment: 0.7567757939909558Filter delta Varvtal: 10.260488191632248
+Tilt: 17.33% | Hastighet: 2.93 m/s | Buffrat hastighet: 3.000569597429813 m/s | Effekt: 2725.28 W | Vridmoment: 14.00 Nm |Buffrat Vridmoment: 15.41 Nm | Varvtal: 1663.50 RPM | Buffrat Varvtal: 1689.31 RPM | Effektivitet: 0.10751Filter delta Hastighet: 0.07056959742981306Filter delta Vridmoment: 1.4054206351927654Filter delta Varvtal: 25.808390553306026
+Tilt: 18.61% | Hastighet: 2.96 m/s | Buffrat hastighet: 2.998376528334761 m/s | Effekt: 2709.67 W | Vridmoment: 15.00 Nm |Buffrat Vridmoment: 15.37 Nm | Varvtal: 1661.00 RPM | Buffrat Varvtal: 1683.65 RPM | Effektivitet: 0.10924Filter delta Hastighet: 0.03837652833476124Filter delta Vridmoment: 0.36871301428911707Filter delta Varvtal: 22.646712442644912
+Tilt: 18.61% | Hastighet: 2.93 m/s | Buffrat hastighet: 2.9944901669553117 m/s | Effekt: 2703.91 W | Vridmoment: 15.00 Nm |Buffrat Vridmoment: 15.34 Nm | Varvtal: 1683.00 RPM | Buffrat Varvtal: 1683.57 RPM | Effektivitet: 0.10836Filter delta Hastighet: 0.06449016695531151Filter delta Vridmoment: 0.33668243488404315Filter delta Varvtal: 0.5725531221655729
+Tilt: 18.61% | Hastighet: 2.96 m/s | Buffrat hastighet: 2.9926467014458855 m/s | Effekt: 2588.48 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 14.87 Nm | Varvtal: 1577.50 RPM | Buffrat Varvtal: 1662.36 RPM | Effektivitet: 0.11435Filter delta Hastighet: 0.03264670144588555Filter delta Vridmoment: 1.8693459479072345Filter delta Varvtal: 84.85804249773264
+Tilt: 18.61% | Hastighet: 2.84 m/s | Buffrat hastighet: 2.9826842648273604 m/s | Effekt: 2499.46 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 14.50 Nm | Varvtal: 1583.50 RPM | Buffrat Varvtal: 1646.59 RPM | Effektivitet: 0.11362Filter delta Hastighet: 0.14268426482736052Filter delta Vridmoment: 1.495476758325788Filter delta Varvtal: 63.086433998186294
+Tilt: 18.61% | Hastighet: 2.65 m/s | Buffrat hastighet: 2.9549821695796203 m/s | Effekt: 2426.57 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 14.20 Nm | Varvtal: 1574.50 RPM | Buffrat Varvtal: 1632.17 RPM | Effektivitet: 0.10921Filter delta Hastighet: 0.30498216957962043Filter delta Vridmoment: 1.197057846940238Filter delta Varvtal: 57.669147198549126
+Tilt: 18.61% | Hastighet: 2.63 m/s | Buffrat hastighet: 2.928171720046172 m/s | Effekt: 2426.40 W | Vridmoment: 14.00 Nm |Buffrat Vridmoment: 14.18 Nm | Varvtal: 1639.50 RPM | Buffrat Varvtal: 1633.64 RPM | Effektivitet: 0.10839Filter delta Hastighet: 0.298171720046172Filter delta Vridmoment: 0.18332177508915493Filter delta Varvtal: 5.864682241160608
+Tilt: 18.61% | Hastighet: 2.75 m/s | Buffrat hastighet: 2.9160886178614422 m/s | Effekt: 2426.29 W | Vridmoment: 14.00 Nm |Buffrat Vridmoment: 14.17 Nm | Varvtal: 1640.50 RPM | Buffrat Varvtal: 1635.01 RPM | Effektivitet: 0.11334Filter delta Hastighet: 0.16608861786144224Filter delta Vridmoment: 0.1707949990125126Filter delta Varvtal: 5.491745792928214
+Tilt: 18.61% | Hastighet: 2.80 m/s | Buffrat hastighet: 2.908936530248672 m/s | Effekt: 2455.63 W | Vridmoment: 15.00 Nm |Buffrat Vridmoment: 14.28 Nm | Varvtal: 1670.00 RPM | Buffrat Varvtal: 1642.01 RPM | Effektivitet: 0.11402Filter delta Hastighet: 0.10893653024867156Filter delta Vridmoment: 0.7189866575718487Filter delta Varvtal: 27.99339663434239
+Tilt: 18.61% | Hastighet: 2.69 m/s | Buffrat hastighet: 2.893196383308506 m/s | Effekt: 2456.48 W | Vridmoment: 14.00 Nm |Buffrat Vridmoment: 14.26 Nm | Varvtal: 1657.50 RPM | Buffrat Varvtal: 1645.11 RPM | Effektivitet: 0.10951Filter delta Hastighet: 0.20319638330850598Filter delta Vridmoment: 0.25906582544447865Filter delta Varvtal: 12.394717307473911
+Tilt: 18.61% | Hastighet: 2.82 m/s | Buffrat hastighet: 2.889000793090136 m/s | Effekt: 2301.84 W | Vridmoment: 11.00 Nm |Buffrat Vridmoment: 13.61 Nm | Varvtal: 1496.50 RPM | Buffrat Varvtal: 1615.38 RPM | Effektivitet: 0.12251Filter delta Hastighet: 0.06900079309013618Filter delta Vridmoment: 2.6072526603555843Filter delta Varvtal: 118.88422615402101
+Tilt: 18.61% | Hastighet: 2.69 m/s | Buffrat hastighet: 2.8750906218705787 m/s | Effekt: 2279.15 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 13.54 Nm | Varvtal: 1575.50 RPM | Buffrat Varvtal: 1607.41 RPM | Effektivitet: 0.11803Filter delta Hastighet: 0.1850906218705788Filter delta Vridmoment: 0.5400144479869109Filter delta Varvtal: 31.907380923216806
+Tilt: 18.61% | Hastighet: 2.80 m/s | Buffrat hastighet: 2.8707722306277588 m/s | Effekt: 2256.45 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 13.48 Nm | Varvtal: 1560.50 RPM | Buffrat Varvtal: 1598.03 RPM | Effektivitet: 0.12409Filter delta Hastighet: 0.0707722306277585Filter delta Vridmoment: 0.48385216518410523Filter delta Varvtal: 37.525904738573445
+Tilt: 18.61% | Hastighet: 2.81 m/s | Buffrat hastighet: 2.8673642926948237 m/s | Effekt: 2194.20 W | Vridmoment: 12.00 Nm |Buffrat Vridmoment: 13.19 Nm | Varvtal: 1551.00 RPM | Buffrat Varvtal: 1588.62 RPM | Effektivitet: 0.12806Filter delta Hastighet: 0.05736429269482368Filter delta Vridmoment: 1.1894778321127433Filter delta Varvtal: 37.62072379085885
+Tilt: 18.61% | Hastighet: 2.88 m/s | Buffrat hastighet: 2.868012044169993 m/s | Effekt: 2178.06 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 13.18 Nm | Varvtal: 1538.00 RPM | Buffrat Varvtal: 1578.50 RPM | Effektivitet: 0.13223Filter delta Hastighet: 0.011987955830007113Filter delta Vridmoment: 0.17641375562089223Filter delta Varvtal: 40.49657903268735
+Tilt: 18.61% | Hastighet: 2.88 m/s | Buffrat hastighet: 2.8686258130699915 m/s | Effekt: 2255.22 W | Vridmoment: 15.00 Nm |Buffrat Vridmoment: 13.54 Nm | Varvtal: 1638.00 RPM | Buffrat Varvtal: 1590.40 RPM | Effektivitet: 0.12770Filter delta Hastighet: 0.011374186930008356Filter delta Vridmoment: 1.4588689955032859Filter delta Varvtal: 47.60273677385021
+Tilt: 17.63% | Hastighet: 2.75 m/s | Buffrat hastighet: 2.86128731406384 m/s | Effekt: 2285.48 W | Vridmoment: 14.00 Nm |Buffrat Vridmoment: 13.59 Nm | Varvtal: 1671.00 RPM | Buffrat Varvtal: 1606.52 RPM | Effektivitet: 0.12032Filter delta Hastighet: 0.11128731406384018Filter delta Vridmoment: 0.41486947022470133Filter delta Varvtal: 64.48218941907999
+Tilt: 14.41% | Hastighet: 2.79 m/s | Buffrat hastighet: 2.8572147602460047 m/s | Effekt: 2350.65 W | Vridmoment: 15.00 Nm |Buffrat Vridmoment: 13.86 Nm | Varvtal: 1674.00 RPM | Buffrat Varvtal: 1620.01 RPM | Effektivitet: 0.11869Filter delta Hastighet: 0.0672147602460047Filter delta Vridmoment: 1.1439404349360736Filter delta Varvtal: 53.985751535263944
+Tilt: 11.12% | Hastighet: 2.66 m/s | Buffrat hastighet: 2.843464656067816 m/s | Effekt: 2338.14 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 13.74 Nm | Varvtal: 1645.00 RPM | Buffrat Varvtal: 1625.01 RPM | Effektivitet: 0.11377Filter delta Hastighet: 0.18346465606781592Filter delta Vridmoment: 0.7399727889169867Filter delta Varvtal: 19.98860122821111
+Tilt: 7.76% | Hastighet: 2.77 m/s | Buffrat hastighet: 2.8392517176953094 m/s | Effekt: 2308.80 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 13.65 Nm | Varvtal: 1577.00 RPM | Buffrat Varvtal: 1615.41 RPM | Effektivitet: 0.11998Filter delta Hastighet: 0.06925171769530936Filter delta Vridmoment: 0.6482181766373802Filter delta Varvtal: 38.409119017431294
+Tilt: 4.72% | Hastighet: 2.70 m/s | Buffrat hastighet: 2.8303500277224343 m/s | Effekt: 2281.03 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 13.57 Nm | Varvtal: 1562.00 RPM | Buffrat Varvtal: 1604.73 RPM | Effektivitet: 0.11837Filter delta Hastighet: 0.1303500277224341Filter delta Vridmoment: 0.5737885873532029Filter delta Varvtal: 42.727295213945126
+Tilt: 4.72% | Hastighet: 2.69 m/s | Buffrat hastighet: 2.821362713308144 m/s | Effekt: 2258.73 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 13.51 Nm | Varvtal: 1562.50 RPM | Buffrat Varvtal: 1596.28 RPM | Effektivitet: 0.11909Filter delta Hastighet: 0.13136271330814386Filter delta Vridmoment: 0.5121758236878655Filter delta Varvtal: 33.7818361711561
+Tilt: 4.72% | Hastighet: 2.78 m/s | Buffrat hastighet: 2.8191234902375153 m/s | Effekt: 2204.08 W | Vridmoment: 12.00 Nm |Buffrat Vridmoment: 13.21 Nm | Varvtal: 1581.50 RPM | Buffrat Varvtal: 1593.33 RPM | Effektivitet: 0.12613Filter delta Hastighet: 0.039123490237515046Filter delta Vridmoment: 1.2097406589502935Filter delta Varvtal: 11.825468936924835
+Tilt: 4.72% | Hastighet: 2.76 m/s | Buffrat hastighet: 2.8158177570158527 m/s | Effekt: 2358.99 W | Vridmoment: 17.00 Nm |Buffrat Vridmoment: 13.97 Nm | Varvtal: 1690.50 RPM | Buffrat Varvtal: 1612.76 RPM | Effektivitet: 0.11700Filter delta Hastighet: 0.055817757015852454Filter delta Vridmoment: 3.0322074728397634Filter delta Varvtal: 77.73962485046013
+Tilt: 4.72% | Hastighet: 2.72 m/s | Buffrat hastighet: 2.810108764909105 m/s | Effekt: 2334.97 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 13.83 Nm | Varvtal: 1612.50 RPM | Buffrat Varvtal: 1612.74 RPM | Effektivitet: 0.11649Filter delta Hastighet: 0.0901087649091048Filter delta Vridmoment: 0.8257406632395039Filter delta Varvtal: 0.24057687021308993
+Tilt: 4.72% | Hastighet: 2.81 m/s | Buffrat hastighet: 2.8101033254806693 m/s | Effekt: 2314.69 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 13.72 Nm | Varvtal: 1606.50 RPM | Buffrat Varvtal: 1611.49 RPM | Effektivitet: 0.12140Filter delta Hastighet: 0.00010332548066926961Filter delta Vridmoment: 0.7162688657848086Filter delta Varvtal: 4.992461496170563
+Tilt: 4.72% | Hastighet: 2.75 m/s | Buffrat hastighet: 2.806736918233252 m/s | Effekt: 2298.56 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 13.63 Nm | Varvtal: 1606.50 RPM | Buffrat Varvtal: 1610.49 RPM | Effektivitet: 0.11964Filter delta Hastighet: 0.056736918233252Filter delta Vridmoment: 0.6291513136863021Filter delta Varvtal: 3.993969196936405
+Tilt: 4.72% | Hastighet: 2.72 m/s | Buffrat hastighet: 2.8016477430231292 m/s | Effekt: 2302.87 W | Vridmoment: 14.00 Nm |Buffrat Vridmoment: 13.66 Nm | Varvtal: 1606.50 RPM | Buffrat Varvtal: 1609.70 RPM | Effektivitet: 0.11811Filter delta Hastighet: 0.08164774302312905Filter delta Vridmoment: 0.3385533771839526Filter delta Varvtal: 3.1951753575492603
+Tilt: 4.72% | Hastighet: 2.65 m/s | Buffrat hastighet: 2.7917656520755716 m/s | Effekt: 2276.49 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 13.58 Nm | Varvtal: 1562.50 RPM | Buffrat Varvtal: 1600.26 RPM | Effektivitet: 0.11641Filter delta Hastighet: 0.14176565207557168Filter delta Vridmoment: 0.5846231281917706Filter delta Varvtal: 37.756140286039454
+Tilt: 4.72% | Hastighet: 2.63 m/s | Buffrat hastighet: 2.7810605568526494 m/s | Effekt: 2198.02 W | Vridmoment: 12.00 Nm |Buffrat Vridmoment: 13.27 Nm | Varvtal: 1509.00 RPM | Buffrat Varvtal: 1582.00 RPM | Effektivitet: 0.11965Filter delta Hastighet: 0.15106055685264952Filter delta Vridmoment: 1.2676985025534169Filter delta Varvtal: 73.0049122288317
+Tilt: 4.72% | Hastighet: 2.65 m/s | Buffrat hastighet: 2.7727898420537644 m/s | Effekt: 2043.25 W | Vridmoment: 10.00 Nm |Buffrat Vridmoment: 12.61 Nm | Varvtal: 1406.00 RPM | Buffrat Varvtal: 1546.80 RPM | Effektivitet: 0.12970Filter delta Hastighet: 0.12278984205376453Filter delta Vridmoment: 2.614158802042734Filter delta Varvtal: 140.80392978306554
+Tilt: 4.72% | Hastighet: 2.58 m/s | Buffrat hastighet: 2.7594335576311644 m/s | Effekt: 1922.53 W | Vridmoment: 10.00 Nm |Buffrat Vridmoment: 12.09 Nm | Varvtal: 1404.50 RPM | Buffrat Varvtal: 1518.34 RPM | Effektivitet: 0.13420Filter delta Hastighet: 0.1794335576311643Filter delta Vridmoment: 2.0913270416341874Filter delta Varvtal: 113.84314382645266
+Tilt: 4.72% | Hastighet: 2.52 m/s | Buffrat hastighet: 2.7417290368976146 m/s | Effekt: 1938.19 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 12.22 Nm | Varvtal: 1500.00 RPM | Buffrat Varvtal: 1514.67 RPM | Effektivitet: 0.13002Filter delta Hastighet: 0.22172903689761458Filter delta Vridmoment: 0.7806706559209946Filter delta Varvtal: 14.674515061162083
+Tilt: 4.72% | Hastighet: 2.61 m/s | Buffrat hastighet: 2.7334073311365366 m/s | Effekt: 1957.61 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 12.32 Nm | Varvtal: 1528.50 RPM | Buffrat Varvtal: 1517.44 RPM | Effektivitet: 0.13333Filter delta Hastighet: 0.12340733113653668Filter delta Vridmoment: 0.6806924558233334Filter delta Varvtal: 11.060387951070197
+Tilt: 4.72% | Hastighet: 2.54 m/s | Buffrat hastighet: 2.719996325005974 m/s | Effekt: 1805.26 W | Vridmoment: 9.00 Nm |Buffrat Vridmoment: 11.66 Nm | Varvtal: 1325.50 RPM | Buffrat Varvtal: 1479.05 RPM | Effektivitet: 0.14070Filter delta Hastighet: 0.17999632500597418Filter delta Vridmoment: 2.6554460353413347Filter delta Varvtal: 153.55168963914412
+Tilt: 4.72% | Hastighet: 2.61 m/s | Buffrat hastighet: 2.713286589604193 m/s | Effekt: 1686.88 W | Vridmoment: 9.00 Nm |Buffrat Vridmoment: 11.12 Nm | Varvtal: 1324.00 RPM | Buffrat Varvtal: 1448.04 RPM | Effektivitet: 0.15472Filter delta Hastighet: 0.10328658960419324Filter delta Vridmoment: 2.1243568282730685Filter delta Varvtal: 124.0413517113152
+Tilt: 4.72% | Hastighet: 2.56 m/s | Buffrat hastighet: 2.703272582268735 m/s | Effekt: 1594.55 W | Vridmoment: 9.00 Nm |Buffrat Vridmoment: 10.70 Nm | Varvtal: 1323.50 RPM | Buffrat Varvtal: 1423.13 RPM | Effektivitet: 0.16055Filter delta Hastighet: 0.14327258226873507Filter delta Vridmoment: 1.6994854626184566Filter delta Varvtal: 99.6330813690522
+Tilt: 4.72% | Hastighet: 2.74 m/s | Buffrat hastighet: 2.7052438434766186 m/s | Effekt: 1577.79 W | Vridmoment: 10.00 Nm |Buffrat Vridmoment: 10.62 Nm | Varvtal: 1404.00 RPM | Buffrat Varvtal: 1419.31 RPM | Effektivitet: 0.17366Filter delta Hastighet: 0.0347561565233816Filter delta Vridmoment: 0.6155831982460782Filter delta Varvtal: 15.30646509524172
+Tilt: 4.72% | Hastighet: 2.79 m/s | Buffrat hastighet: 2.710200011909649 m/s | Effekt: 1564.20 W | Vridmoment: 10.00 Nm |Buffrat Vridmoment: 10.55 Nm | Varvtal: 1404.00 RPM | Buffrat Varvtal: 1416.25 RPM | Effektivitet: 0.17837Filter delta Hastighet: 0.07979998809035083Filter delta Vridmoment: 0.5469097709374875Filter delta Varvtal: 12.245172076193285
+Tilt: 4.72% | Hastighet: 2.74 m/s | Buffrat hastighet: 2.711778815243185 m/s | Effekt: 1547.86 W | Vridmoment: 10.00 Nm |Buffrat Vridmoment: 10.49 Nm | Varvtal: 1380.50 RPM | Buffrat Varvtal: 1409.10 RPM | Effektivitet: 0.17702Filter delta Hastighet: 0.02822118475681501Filter delta Vridmoment: 0.4896532526359234Filter delta Varvtal: 28.59613766095481
+Tilt: 4.72% | Hastighet: 2.76 m/s | Buffrat hastighet: 2.714422402746961 m/s | Effekt: 1534.89 W | Vridmoment: 10.00 Nm |Buffrat Vridmoment: 10.44 Nm | Varvtal: 1382.50 RPM | Buffrat Varvtal: 1403.78 RPM | Effektivitet: 0.17982Filter delta Hastighet: 0.045577597253039226Filter delta Vridmoment: 0.4411945592224331Filter delta Varvtal: 21.276910128763802
+Tilt: 4.72% | Hastighet: 2.58 m/s | Buffrat hastighet: 2.705894344373586 m/s | Effekt: 1521.10 W | Vridmoment: 10.00 Nm |Buffrat Vridmoment: 10.40 Nm | Varvtal: 1368.50 RPM | Buffrat Varvtal: 1396.72 RPM | Effektivitet: 0.16961Filter delta Hastighet: 0.12589434437358582Filter delta Vridmoment: 0.39966956735256254Filter delta Varvtal: 28.221528103011224
+Tilt: 4.72% | Hastighet: 2.49 m/s | Buffrat hastighet: 2.690438590361657 m/s | Effekt: 1507.55 W | Vridmoment: 10.00 Nm |Buffrat Vridmoment: 10.36 Nm | Varvtal: 1358.50 RPM | Buffrat Varvtal: 1389.08 RPM | Effektivitet: 0.16517Filter delta Hastighet: 0.20043859036165657Filter delta Vridmoment: 0.3637125126781555Filter delta Varvtal: 30.57722248240907
+Tilt: 4.72% | Hastighet: 2.49 m/s | Buffrat hastighet: 2.6763990979929573 m/s | Effekt: 1496.36 W | Vridmoment: 10.00 Nm |Buffrat Vridmoment: 10.33 Nm | Varvtal: 1358.50 RPM | Buffrat Varvtal: 1382.96 RPM | Effektivitet: 0.16640Filter delta Hastighet: 0.18639909799295706Filter delta Vridmoment: 0.33229820785638253Filter delta Varvtal: 24.461777985927256
+Tilt: 4.72% | Hastighet: 2.48 m/s | Buffrat hastighet: 2.662721882524065 m/s | Effekt: 1486.75 W | Vridmoment: 10.00 Nm |Buffrat Vridmoment: 10.30 Nm | Varvtal: 1357.00 RPM | Buffrat Varvtal: 1377.77 RPM | Effektivitet: 0.16681Filter delta Hastighet: 0.18272188252406485Filter delta Vridmoment: 0.3046410875691077Filter delta Varvtal: 20.769422388741987
+Tilt: 4.72% | Hastighet: 2.38 m/s | Buffrat hastighet: 2.6405926221120666 m/s | Effekt: 1479.06 W | Vridmoment: 10.00 Nm |Buffrat Vridmoment: 10.28 Nm | Varvtal: 1358.50 RPM | Buffrat Varvtal: 1373.92 RPM | Effektivitet: 0.16091Filter delta Hastighet: 0.2605926221120667Filter delta Vridmoment: 0.2801284139671232Filter delta Varvtal: 15.415537910993635
+Tilt: 4.72% | Hastighet: 2.46 m/s | Buffrat hastighet: 2.6283016214903325 m/s | Effekt: 1348.11 W | Vridmoment: 7.00 Nm |Buffrat Vridmoment: 9.62 Nm | Varvtal: 1192.50 RPM | Buffrat Varvtal: 1337.63 RPM | Effektivitet: 0.18248Filter delta Hastighet: 0.16830162149033256Filter delta Vridmoment: 2.6241027311737Filter delta Varvtal: 145.13243032879495
+Tilt: 4.72% | Hastighet: 2.58 m/s | Buffrat hastighet: 2.6256532357519564 m/s | Effekt: 1163.06 W | Vridmoment: 5.00 Nm |Buffrat Vridmoment: 8.70 Nm | Varvtal: 1033.00 RPM | Buffrat Varvtal: 1276.71 RPM | Effektivitet: 0.22183Filter delta Hastighet: 0.045653235751956345Filter delta Vridmoment: 3.6992821849389603Filter delta Varvtal: 243.70594426303614
+Tilt: 4.72% | Hastighet: 2.56 m/s | Buffrat hastighet: 2.621939539227889 m/s | Effekt: 984.07 W | Vridmoment: 4.00 Nm |Buffrat Vridmoment: 7.76 Nm | Varvtal: 948.50 RPM | Buffrat Varvtal: 1211.06 RPM | Effektivitet: 0.26014Filter delta Hastighet: 0.06193953922788875Filter delta Vridmoment: 3.759425747951169Filter delta Varvtal: 262.5647554104289
+Tilt: 4.72% | Hastighet: 2.49 m/s | Buffrat hastighet: 2.613601758065328 m/s | Effekt: 888.48 W | Vridmoment: 5.00 Nm |Buffrat Vridmoment: 7.21 Nm | Varvtal: 1041.50 RPM | Buffrat Varvtal: 1177.15 RPM | Effektivitet: 0.28025Filter delta Hastighet: 0.1236017580653277Filter delta Vridmoment: 2.2075405983609357Filter delta Varvtal: 135.65180432834313
+Tilt: 4.72% | Hastighet: 2.38 m/s | Buffrat hastighet: 2.5964646920249406 m/s | Effekt: 815.19 W | Vridmoment: 5.00 Nm |Buffrat Vridmoment: 6.77 Nm | Varvtal: 1044.00 RPM | Buffrat Varvtal: 1150.52 RPM | Effektivitet: 0.29196Filter delta Hastighet: 0.21646469202494067Filter delta Vridmoment: 1.7660324786887491Filter delta Varvtal: 106.5214434626746
+Tilt: 4.72% | Hastighet: 2.41 m/s | Buffrat hastighet: 2.583664549286498 m/s | Effekt: 758.12 W | Vridmoment: 5.00 Nm |Buffrat Vridmoment: 6.41 Nm | Varvtal: 1042.50 RPM | Buffrat Varvtal: 1128.92 RPM | Effektivitet: 0.31789Filter delta Hastighet: 0.17366454928649766Filter delta Vridmoment: 1.4128259829509995Filter delta Varvtal: 86.41715477013986
+Tilt: 4.72% | Hastighet: 2.28 m/s | Buffrat hastighet: 2.559260105972836 m/s | Effekt: 714.99 W | Vridmoment: 5.00 Nm |Buffrat Vridmoment: 6.14 Nm | Varvtal: 1042.00 RPM | Buffrat Varvtal: 1111.53 RPM | Effektivitet: 0.31888Filter delta Hastighet: 0.2792601059728357Filter delta Vridmoment: 1.1425769579933043Filter delta Varvtal: 69.53372381611189
+Tilt: 4.72% | Hastighet: 2.20 m/s | Buffrat hastighet: 2.528390318299833 m/s | Effekt: 684.48 W | Vridmoment: 5.00 Nm |Buffrat Vridmoment: 5.95 Nm | Varvtal: 1042.00 RPM | Buffrat Varvtal: 1097.63 RPM | Effektivitet: 0.32141Filter delta Hastighet: 0.3283903182998329Filter delta Vridmoment: 0.9548998995999156Filter delta Varvtal: 55.62697905288951
+Tilt: 4.72% | Hastighet: 2.15 m/s | Buffrat hastighet: 2.4951528790865365 m/s | Effekt: 661.73 W | Vridmoment: 5.00 Nm |Buffrat Vridmoment: 5.82 Nm | Varvtal: 1042.00 RPM | Buffrat Varvtal: 1086.50 RPM | Effektivitet: 0.32491Filter delta Hastighet: 0.3451528790865366Filter delta Vridmoment: 0.8159715227943272Filter delta Varvtal: 44.50158324231165
+Tilt: 4.72% | Hastighet: 2.10 m/s | Buffrat hastighet: 2.459780655347172 m/s | Effekt: 643.36 W | Vridmoment: 5.00 Nm |Buffrat Vridmoment: 5.71 Nm | Varvtal: 1035.00 RPM | Buffrat Varvtal: 1076.20 RPM | Effektivitet: 0.32641Filter delta Hastighet: 0.35978065534717185Filter delta Vridmoment: 0.7085919940534815Filter delta Varvtal: 41.20126659384937
+Tilt: 4.72% | Hastighet: 2.13 m/s | Buffrat hastighet: 2.4324160945156925 m/s | Effekt: 641.49 W | Vridmoment: 6.00 Nm |Buffrat Vridmoment: 5.73 Nm | Varvtal: 1039.00 RPM | Buffrat Varvtal: 1068.76 RPM | Effektivitet: 0.33204Filter delta Hastighet: 0.3024160945156926Filter delta Vridmoment: 0.26834574305622017Filter delta Varvtal: 29.76101327507945
+Tilt: 4.72% | Hastighet: 2.07 m/s | Buffrat hastighet: 2.401160747233507 m/s | Effekt: 644.67 W | Vridmoment: 6.00 Nm |Buffrat Vridmoment: 5.75 Nm | Varvtal: 1076.00 RPM | Buffrat Varvtal: 1070.21 RPM | Effektivitet: 0.32110Filter delta Hastighet: 0.3311607472335072Filter delta Vridmoment: 0.24772751212176924Filter delta Varvtal: 5.791189379936441
+Tilt: 4.72% | Hastighet: 2.04 m/s | Buffrat hastighet: 2.370059001337605 m/s | Effekt: 646.12 W | Vridmoment: 6.00 Nm |Buffrat Vridmoment: 5.77 Nm | Varvtal: 1065.00 RPM | Buffrat Varvtal: 1069.17 RPM | Effektivitet: 0.31573Filter delta Hastighet: 0.330059001337605Filter delta Vridmoment: 0.22920424448947685Filter delta Varvtal: 4.167048496050938
+Tilt: 4.72% | Hastighet: 1.93 m/s | Buffrat hastighet: 2.3286908588049 m/s | Effekt: 648.94 W | Vridmoment: 6.00 Nm |Buffrat Vridmoment: 5.79 Nm | Varvtal: 1077.00 RPM | Buffrat Varvtal: 1070.73 RPM | Effektivitet: 0.29741Filter delta Hastighet: 0.3986908588049001Filter delta Vridmoment: 0.2124905736958036Filter delta Varvtal: 6.266361203159249
+Tilt: 4.72% | Hastighet: 1.95 m/s | Buffrat hastighet: 2.295415639210416 m/s | Effekt: 673.57 W | Vridmoment: 7.00 Nm |Buffrat Vridmoment: 6.00 Nm | Varvtal: 1081.50 RPM | Buffrat Varvtal: 1072.89 RPM | Effektivitet: 0.28950Filter delta Hastighet: 0.34541563921041596Filter delta Vridmoment: 1.0048527058808956Filter delta Varvtal: 8.6130889625274
+Tilt: 4.72% | Hastighet: 1.85 m/s | Buffrat hastighet: 2.253305348084573 m/s | Effekt: 702.80 W | Vridmoment: 7.00 Nm |Buffrat Vridmoment: 6.15 Nm | Varvtal: 1168.00 RPM | Buffrat Varvtal: 1091.91 RPM | Effektivitet: 0.26323Filter delta Hastighet: 0.40330534808457275Filter delta Vridmoment: 0.8536371745352351Filter delta Varvtal: 76.09047117002183
+Tilt: 4.72% | Hastighet: 1.87 m/s | Buffrat hastighet: 2.2194477816933205 m/s | Effekt: 724.49 W | Vridmoment: 7.00 Nm |Buffrat Vridmoment: 6.26 Nm | Varvtal: 1156.50 RPM | Buffrat Varvtal: 1104.83 RPM | Effektivitet: 0.25811Filter delta Hastighet: 0.34944778169332036Filter delta Vridmoment: 0.7380856732336234Filter delta Varvtal: 51.67237693601737
+Tilt: 4.72% | Hastighet: 1.74 m/s | Buffrat hastighet: 2.1724883750715898 m/s | Effekt: 743.27 W | Vridmoment: 7.00 Nm |Buffrat Vridmoment: 6.35 Nm | Varvtal: 1166.50 RPM | Buffrat Varvtal: 1117.16 RPM | Effektivitet: 0.23410Filter delta Hastighet: 0.43248837507158977Filter delta Vridmoment: 0.6467043434686692Filter delta Varvtal: 49.33790154881376
+Tilt: 4.72% | Hastighet: 1.74 m/s | Buffrat hastighet: 2.132159336860804 m/s | Effekt: 790.10 W | Vridmoment: 8.00 Nm |Buffrat Vridmoment: 6.68 Nm | Varvtal: 1176.50 RPM | Buffrat Varvtal: 1129.03 RPM | Effektivitet: 0.22023Filter delta Hastighet: 0.39215933686080384Filter delta Vridmoment: 1.3173634747749343Filter delta Varvtal: 47.47032123905092
+Tilt: 4.72% | Hastighet: 1.72 m/s | Buffrat hastighet: 2.09456383812161 m/s | Effekt: 827.24 W | Vridmoment: 8.00 Nm |Buffrat Vridmoment: 6.92 Nm | Varvtal: 1190.00 RPM | Buffrat Varvtal: 1141.22 RPM | Effektivitet: 0.20792Filter delta Hastighet: 0.37456383812160987Filter delta Vridmoment: 1.0779506485690789Filter delta Varvtal: 48.77625699124064
+Tilt: 4.72% | Hastighet: 1.76 m/s | Buffrat hastighet: 2.066642350037663 m/s | Effekt: 829.93 W | Vridmoment: 7.00 Nm |Buffrat Vridmoment: 6.93 Nm | Varvtal: 1156.00 RPM | Buffrat Varvtal: 1144.18 RPM | Effektivitet: 0.21207Filter delta Hastighet: 0.30664235003766316Filter delta Vridmoment: 0.07344548577939047Filter delta Varvtal: 11.821005592992378
+Tilt: 4.72% | Hastighet: 1.71 m/s | Buffrat hastighet: 2.036090855951741 m/s | Effekt: 854.82 W | Vridmoment: 8.00 Nm |Buffrat Vridmoment: 7.10 Nm | Varvtal: 1175.50 RPM | Buffrat Varvtal: 1150.44 RPM | Effektivitet: 0.20004Filter delta Hastighet: 0.32609085595174125Filter delta Vridmoment: 0.9045446903964063Filter delta Varvtal: 25.056804474393857
+Tilt: 4.72% | Hastighet: 1.53 m/s | Buffrat hastighet: 1.9851735177063574 m/s | Effekt: 859.41 W | Vridmoment: 7.00 Nm |Buffrat Vridmoment: 7.09 Nm | Varvtal: 1186.00 RPM | Buffrat Varvtal: 1157.55 RPM | Effektivitet: 0.17803Filter delta Hastighet: 0.4551735177063574Filter delta Vridmoment: 0.08977137251026157Filter delta Varvtal: 28.445443579515086
+Tilt: 4.72% | Hastighet: 1.45 m/s | Buffrat hastighet: 1.9297737724156199 m/s | Effekt: 858.87 W | Vridmoment: 7.00 Nm |Buffrat Vridmoment: 7.08 Nm | Varvtal: 1158.50 RPM | Buffrat Varvtal: 1157.69 RPM | Effektivitet: 0.16883Filter delta Hastighet: 0.4797737724156199Filter delta Vridmoment: 0.08447691395251056Filter delta Varvtal: 0.808785044334627
+Tilt: 4.72% | Hastighet: 1.27 m/s | Buffrat hastighet: 1.8532549407180852 m/s | Effekt: 835.99 W | Vridmoment: 6.00 Nm |Buffrat Vridmoment: 6.91 Nm | Varvtal: 1143.50 RPM | Buffrat Varvtal: 1154.85 RPM | Effektivitet: 0.15192Filter delta Hastighet: 0.5832549407180851Filter delta Vridmoment: 0.9126440505652891Filter delta Varvtal: 11.352971964532344
+Tilt: 4.72% | Hastighet: 1.29 m/s | Buffrat hastighet: 1.7933665808578474 m/s | Effekt: 853.47 W | Vridmoment: 8.00 Nm |Buffrat Vridmoment: 7.09 Nm | Varvtal: 1132.00 RPM | Buffrat Varvtal: 1150.28 RPM | Effektivitet: 0.15115Filter delta Hastighet: 0.5033665808578474Filter delta Vridmoment: 0.914753855885869Filter delta Varvtal: 18.282377571626057
+Tilt: 4.72% | Hastighet: 1.32 m/s | Buffrat hastighet: 1.74729065982765 m/s | Effekt: 911.99 W | Vridmoment: 9.00 Nm |Buffrat Vridmoment: 7.47 Nm | Varvtal: 1229.50 RPM | Buffrat Varvtal: 1166.13 RPM | Effektivitet: 0.14474Filter delta Hastighet: 0.42729065982765Filter delta Vridmoment: 1.5318030847086952Filter delta Varvtal: 63.37409794269911
+Tilt: 4.72% | Hastighet: 1.26 m/s | Buffrat hastighet: 1.699180908120741 m/s | Effekt: 1019.80 W | Vridmoment: 11.00 Nm |Buffrat Vridmoment: 8.17 Nm | Varvtal: 1292.00 RPM | Buffrat Varvtal: 1191.30 RPM | Effektivitet: 0.12355Filter delta Hastighet: 0.43918090812074095Filter delta Vridmoment: 2.8254424677669547Filter delta Varvtal: 100.6992783541591
+Tilt: 4.72% | Hastighet: 1.44 m/s | Buffrat hastighet: 1.6795043884012746 m/s | Effekt: 1200.53 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 9.14 Nm | Varvtal: 1506.50 RPM | Buffrat Varvtal: 1254.34 RPM | Effektivitet: 0.11995Filter delta Hastighet: 0.23950438840127464Filter delta Vridmoment: 3.860353974213563Filter delta Varvtal: 252.1594226833272
+Tilt: 4.72% | Hastighet: 1.53 m/s | Buffrat hastighet: 1.669794012766087 m/s | Effekt: 1354.40 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 9.91 Nm | Varvtal: 1507.00 RPM | Buffrat Varvtal: 1304.87 RPM | Effektivitet: 0.11297Filter delta Hastighet: 0.13979401276608705Filter delta Vridmoment: 3.0882831793708494Filter delta Varvtal: 202.12753814666166
+Tilt: 4.72% | Hastighet: 1.80 m/s | Buffrat hastighet: 1.6779996720389385 m/s | Effekt: 1761.18 W | Vridmoment: 20.00 Nm |Buffrat Vridmoment: 11.93 Nm | Varvtal: 1829.50 RPM | Buffrat Varvtal: 1409.80 RPM | Effektivitet: 0.10220Filter delta Hastighet: 0.12200032796106153Filter delta Vridmoment: 8.07062654349668Filter delta Varvtal: 419.70203051732915
+Tilt: 4.72% | Hastighet: 2.12 m/s | Buffrat hastighet: 1.7196361174287602 m/s | Effekt: 2178.16 W | Vridmoment: 21.00 Nm |Buffrat Vridmoment: 13.74 Nm | Varvtal: 1928.00 RPM | Buffrat Varvtal: 1513.44 RPM | Effektivitet: 0.09733Filter delta Hastighet: 0.4003638825712399Filter delta Vridmoment: 7.256501234797344Filter delta Varvtal: 414.5616244138632
+Tilt: 4.72% | Hastighet: 2.55 m/s | Buffrat hastighet: 1.8301047293052009 m/s | Effekt: 2713.87 W | Vridmoment: 25.00 Nm |Buffrat Vridmoment: 15.99 Nm | Varvtal: 2047.50 RPM | Buffrat Varvtal: 1620.25 RPM | Effektivitet: 0.09396Filter delta Hastighet: 0.7198952706947994Filter delta Vridmoment: 9.005200987837874Filter delta Varvtal: 427.2492995310906
+Tilt: 4.72% | Hastighet: 2.75 m/s | Buffrat hastighet: 1.9607202237446066 m/s | Effekt: 3159.56 W | Vridmoment: 24.00 Nm |Buffrat Vridmoment: 17.60 Nm | Varvtal: 2092.50 RPM | Buffrat Varvtal: 1714.70 RPM | Effektivitet: 0.08704Filter delta Hastighet: 0.7892797762553934Filter delta Vridmoment: 6.404160790270296Filter delta Varvtal: 377.7994396248723
+Tilt: 4.72% | Hastighet: 3.04 m/s | Buffrat hastighet: 2.1311686961007656 m/s | Effekt: 3540.10 W | Vridmoment: 24.00 Nm |Buffrat Vridmoment: 18.88 Nm | Varvtal: 2095.50 RPM | Buffrat Varvtal: 1790.86 RPM | Effektivitet: 0.08587Filter delta Hastighet: 0.9088313038992344Filter delta Vridmoment: 5.123328632216236Filter delta Varvtal: 304.63955169989777
+Tilt: 4.72% | Hastighet: 3.25 m/s | Buffrat hastighet: 2.3122886099542135 m/s | Effekt: 3911.50 W | Vridmoment: 25.00 Nm |Buffrat Vridmoment: 20.10 Nm | Varvtal: 2127.50 RPM | Buffrat Varvtal: 1858.19 RPM | Effektivitet: 0.08309Filter delta Hastighet: 0.9377113900457865Filter delta Vridmoment: 4.898662905772987Filter delta Varvtal: 269.3116413599182
+Tilt: 4.72% | Hastighet: 3.34 m/s | Buffrat hastighet: 2.4692932495794873 m/s | Effekt: 4405.22 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 21.68 Nm | Varvtal: 2268.50 RPM | Buffrat Varvtal: 1940.25 RPM | Effektivitet: 0.07582Filter delta Hastighet: 0.8707067504205126Filter delta Vridmoment: 6.318930324618389Filter delta Varvtal: 328.2493130879345
+Tilt: 4.72% | Hastighet: 3.51 m/s | Buffrat hastighet: 2.6296356411375954 m/s | Effekt: 4874.11 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 23.14 Nm | Varvtal: 2294.00 RPM | Buffrat Varvtal: 2011.00 RPM | Effektivitet: 0.07201Filter delta Hastighet: 0.8803643588624048Filter delta Vridmoment: 5.855144259694711Filter delta Varvtal: 282.9994504703475
+Tilt: 4.72% | Hastighet: 3.63 m/s | Buffrat hastighet: 2.7797267441289346 m/s | Effekt: 5264.59 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 24.32 Nm | Varvtal: 2293.50 RPM | Buffrat Varvtal: 2067.50 RPM | Effektivitet: 0.06895Filter delta Hastighet: 0.8502732558710653Filter delta Vridmoment: 4.684115407755769Filter delta Varvtal: 225.99956037627817
+Tilt: 4.72% | Hastighet: 3.72 m/s | Buffrat hastighet: 2.9151517864931256 m/s | Effekt: 5639.46 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 25.45 Nm | Varvtal: 2309.00 RPM | Buffrat Varvtal: 2115.80 RPM | Effektivitet: 0.06596Filter delta Hastighet: 0.8048482135068746Filter delta Vridmoment: 4.547292326204612Filter delta Varvtal: 193.19964830102253
+Tilt: 5.65% | Hastighet: 3.75 m/s | Buffrat hastighet: 3.0265913511280313 m/s | Effekt: 5854.67 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 25.96 Nm | Varvtal: 2304.00 RPM | Buffrat Varvtal: 2153.44 RPM | Effektivitet: 0.06405Filter delta Hastighet: 0.7234086488719687Filter delta Vridmoment: 2.037833860963687Filter delta Varvtal: 150.55971864081766
+Tilt: 8.77% | Hastighet: 3.84 m/s | Buffrat hastighet: 3.133425146577602 m/s | Effekt: 6076.02 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 26.57 Nm | Varvtal: 2305.00 RPM | Buffrat Varvtal: 2183.75 RPM | Effektivitet: 0.06320Filter delta Hastighet: 0.7065748534223979Filter delta Vridmoment: 2.4302670887709468Filter delta Varvtal: 121.24777491265377
+Tilt: 10.64% | Hastighet: 3.84 m/s | Buffrat hastighet: 3.2186786915976104 m/s | Effekt: 6213.23 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 26.85 Nm | Varvtal: 2315.50 RPM | Buffrat Varvtal: 2210.10 RPM | Effektivitet: 0.06180Filter delta Hastighet: 0.6213213084023894Filter delta Vridmoment: 1.1541873398102709Filter delta Varvtal: 105.3982199301231
+Tilt: 9.91% | Hastighet: 3.91 m/s | Buffrat hastighet: 3.301037272162849 m/s | Effekt: 6421.61 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 27.48 Nm | Varvtal: 2318.50 RPM | Buffrat Varvtal: 2231.78 RPM | Effektivitet: 0.06089Filter delta Hastighet: 0.608962727837151Filter delta Vridmoment: 2.5233498718482146Filter delta Varvtal: 86.71857594409812
+Tilt: 6.88% | Hastighet: 3.88 m/s | Buffrat hastighet: 3.36350519257717 m/s | Effekt: 6484.99 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 27.53 Nm | Varvtal: 2320.00 RPM | Buffrat Varvtal: 2249.43 RPM | Effektivitet: 0.05983Filter delta Hastighet: 0.5164948074228297Filter delta Vridmoment: 0.4697928694194502Filter delta Varvtal: 70.57486075527868
+Tilt: 3.59% | Hastighet: 3.97 m/s | Buffrat hastighet: 3.4306135280913974 m/s | Effekt: 6592.86 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 27.82 Nm | Varvtal: 2317.50 RPM | Buffrat Varvtal: 2263.04 RPM | Effektivitet: 0.06022Filter delta Hastighet: 0.5393864719086028Filter delta Vridmoment: 1.1802741180488532Filter delta Varvtal: 54.459888604223124
+Tilt: 0.48% | Hastighet: 3.98 m/s | Buffrat hastighet: 3.4882654012384458 m/s | Effekt: 6673.57 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.02 Nm | Varvtal: 2320.50 RPM | Buffrat Varvtal: 2274.53 RPM | Effektivitet: 0.05964Filter delta Hastighet: 0.49173459876155423Filter delta Vridmoment: 0.9819557127728125Filter delta Varvtal: 45.96791088337841
+Tilt: 0.48% | Hastighet: 3.95 m/s | Buffrat hastighet: 3.532672015145873 m/s | Effekt: 6793.26 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 28.41 Nm | Varvtal: 2317.00 RPM | Buffrat Varvtal: 2283.03 RPM | Effektivitet: 0.05815Filter delta Hastighet: 0.41732798485412737Filter delta Vridmoment: 1.5855645702182493Filter delta Varvtal: 33.974328706702636
+Tilt: 0.48% | Hastighet: 4.00 m/s | Buffrat hastighet: 3.577877958931361 m/s | Effekt: 6834.09 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.48 Nm | Varvtal: 2326.00 RPM | Buffrat Varvtal: 2291.62 RPM | Effektivitet: 0.05853Filter delta Hastighet: 0.42212204106863904Filter delta Vridmoment: 0.5219977551178516Filter delta Varvtal: 34.37946296536211
+Tilt: 0.00% | Hastighet: 4.01 m/s | Buffrat hastighet: 3.6181570068225253 m/s | Effekt: 6926.36 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 28.78 Nm | Varvtal: 2323.50 RPM | Buffrat Varvtal: 2298.00 RPM | Effektivitet: 0.05789Filter delta Hastighet: 0.3918429931774745Filter delta Vridmoment: 1.2175982040942799Filter delta Varvtal: 25.503570372289687
+Tilt: 0.00% | Hastighet: 3.96 m/s | Buffrat hastighet: 3.646934819679853 m/s | Effekt: 6920.84 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.68 Nm | Varvtal: 2329.00 RPM | Buffrat Varvtal: 2304.20 RPM | Effektivitet: 0.05722Filter delta Hastighet: 0.3130651803201472Filter delta Vridmoment: 0.6820664490867863Filter delta Varvtal: 24.802856297831568
+Tilt: 0.01% | Hastighet: 4.03 m/s | Buffrat hastighet: 3.680761971933231 m/s | Effekt: 6990.95 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 28.92 Nm | Varvtal: 2324.50 RPM | Buffrat Varvtal: 2308.26 RPM | Effektivitet: 0.05765Filter delta Hastighet: 0.34923802806676907Filter delta Vridmoment: 1.0783419889052794Filter delta Varvtal: 16.24228503826498
+Tilt: 1.78% | Hastighet: 3.99 m/s | Buffrat hastighet: 3.705786689136832 m/s | Effekt: 6969.07 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.79 Nm | Varvtal: 2324.50 RPM | Buffrat Varvtal: 2311.51 RPM | Effektivitet: 0.05725Filter delta Hastighet: 0.28421331086316837Filter delta Vridmoment: 0.7906297615984741Filter delta Varvtal: 12.993828030611894
+Tilt: 4.95% | Hastighet: 3.98 m/s | Buffrat hastighet: 3.7270166486654444 m/s | Effekt: 6952.78 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.69 Nm | Varvtal: 2325.50 RPM | Buffrat Varvtal: 2314.30 RPM | Effektivitet: 0.05724Filter delta Hastighet: 0.25298335133455563Filter delta Vridmoment: 0.6885887315260248Filter delta Varvtal: 11.195062424489606
+Tilt: 4.96% | Hastighet: 4.01 m/s | Buffrat hastighet: 3.749173773945426 m/s | Effekt: 6938.75 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.61 Nm | Varvtal: 2324.00 RPM | Buffrat Varvtal: 2316.24 RPM | Effektivitet: 0.05779Filter delta Hastighet: 0.26082622605457395Filter delta Vridmoment: 0.6067438508312613Filter delta Varvtal: 7.756049939591321
+Tilt: 4.96% | Hastighet: 4.01 m/s | Buffrat hastighet: 3.769018117267942 m/s | Effekt: 6924.41 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.54 Nm | Varvtal: 2319.50 RPM | Buffrat Varvtal: 2316.90 RPM | Effektivitet: 0.05791Filter delta Hastighet: 0.24098188273205778Filter delta Vridmoment: 0.5395928482375432Filter delta Varvtal: 2.604839951673057
+Tilt: 4.96% | Hastighet: 3.98 m/s | Buffrat hastighet: 3.7840185468886616 m/s | Effekt: 6913.55 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.48 Nm | Varvtal: 2321.50 RPM | Buffrat Varvtal: 2317.82 RPM | Effektivitet: 0.05757Filter delta Hastighet: 0.1959814531113384Filter delta Vridmoment: 0.4834971616387591Filter delta Varvtal: 3.6838719613383546
+Tilt: 3.76% | Hastighet: 4.01 m/s | Buffrat hastighet: 3.8004243812592597 m/s | Effekt: 6913.13 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.44 Nm | Varvtal: 2336.50 RPM | Buffrat Varvtal: 2321.55 RPM | Effektivitet: 0.05801Filter delta Hastighet: 0.20957561874074004Filter delta Vridmoment: 0.4359453530255486Filter delta Varvtal: 14.947097569070593
+Tilt: 2.56% | Hastighet: 4.02 m/s | Buffrat hastighet: 3.8162245074308347 m/s | Effekt: 6910.62 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.40 Nm | Varvtal: 2334.00 RPM | Buffrat Varvtal: 2324.04 RPM | Effektivitet: 0.05817Filter delta Hastighet: 0.20377549256916572Filter delta Vridmoment: 0.3951432502918131Filter delta Varvtal: 9.95767805525611
+Tilt: 2.56% | Hastighet: 4.01 m/s | Buffrat hastighet: 3.829668176211335 m/s | Effekt: 6910.30 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.36 Nm | Varvtal: 2338.00 RPM | Buffrat Varvtal: 2326.83 RPM | Effektivitet: 0.05803Filter delta Hastighet: 0.18033182378866464Filter delta Vridmoment: 0.3597722689521028Filter delta Varvtal: 11.16614244420498
+Tilt: 2.56% | Hastighet: 4.04 m/s | Buffrat hastighet: 3.8446087150105948 m/s | Effekt: 6933.54 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.43 Nm | Varvtal: 2336.00 RPM | Buffrat Varvtal: 2328.67 RPM | Effektivitet: 0.05827Filter delta Hastighet: 0.19539128498940528Filter delta Vridmoment: 0.5672271897352275Filter delta Varvtal: 7.3329139553638925
+Tilt: 2.56% | Hastighet: 4.03 m/s | Buffrat hastighet: 3.857315272115067 m/s | Effekt: 6926.87 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.39 Nm | Varvtal: 2334.00 RPM | Buffrat Varvtal: 2329.73 RPM | Effektivitet: 0.05818Filter delta Hastighet: 0.17268472788493305Filter delta Vridmoment: 0.39240493922108755Filter delta Varvtal: 4.266331164290932
+Tilt: 2.58% | Hastighet: 4.03 m/s | Buffrat hastighet: 3.868931510033783 m/s | Effekt: 6946.73 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.46 Nm | Varvtal: 2335.50 RPM | Buffrat Varvtal: 2330.89 RPM | Effektivitet: 0.05801Filter delta Hastighet: 0.16106848996621714Filter delta Vridmoment: 0.5402981319516726Filter delta Varvtal: 4.613064931432746
+Tilt: 3.84% | Hastighet: 4.05 m/s | Buffrat hastighet: 3.8812635143379586 m/s | Effekt: 6963.80 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.52 Nm | Varvtal: 2336.50 RPM | Buffrat Varvtal: 2332.01 RPM | Effektivitet: 0.05816Filter delta Hastighet: 0.16873648566204125Filter delta Vridmoment: 0.4840910182150395Filter delta Varvtal: 4.490451945146106
+Tilt: 7.15% | Hastighet: 4.10 m/s | Buffrat hastighet: 3.8969849036370383 m/s | Effekt: 7036.15 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 28.81 Nm | Varvtal: 2333.00 RPM | Buffrat Varvtal: 2332.16 RPM | Effektivitet: 0.05827Filter delta Hastighet: 0.20301509636296133Filter delta Vridmoment: 1.1896338522696333Filter delta Varvtal: 0.8428298423241358
+Tilt: 9.23% | Hastighet: 4.10 m/s | Buffrat hastighet: 3.9112571713903126 m/s | Effekt: 7089.40 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.01 Nm | Varvtal: 2339.00 RPM | Buffrat Varvtal: 2333.53 RPM | Effektivitet: 0.05783Filter delta Hastighet: 0.18874282860968705Filter delta Vridmoment: 0.9886292894095625Filter delta Varvtal: 5.474263873858945
+Tilt: 9.23% | Hastighet: 4.11 m/s | Buffrat hastighet: 3.925144184013175 m/s | Effekt: 7052.19 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.86 Nm | Varvtal: 2334.00 RPM | Buffrat Varvtal: 2333.57 RPM | Effektivitet: 0.05828Filter delta Hastighet: 0.18485581598682543Filter delta Vridmoment: 0.858515103636897Filter delta Varvtal: 0.42805805796115237
+Tilt: 9.23% | Hastighet: 4.07 m/s | Buffrat hastighet: 3.934485295555037 m/s | Effekt: 7053.45 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.87 Nm | Varvtal: 2332.00 RPM | Buffrat Varvtal: 2333.26 RPM | Effektivitet: 0.05770Filter delta Hastighet: 0.13551470444496339Filter delta Vridmoment: 0.1324088539550594Filter delta Varvtal: 1.257553553631169
+Tilt: 8.92% | Hastighet: 4.11 m/s | Buffrat hastighet: 3.9463415719249255 m/s | Effekt: 7025.11 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.75 Nm | Varvtal: 2334.50 RPM | Buffrat Varvtal: 2333.47 RPM | Effektivitet: 0.05850Filter delta Hastighet: 0.1636584280750748Filter delta Vridmoment: 0.7489401490731353Filter delta Varvtal: 1.0259568068408953
+Tilt: 6.20% | Hastighet: 4.11 m/s | Buffrat hastighet: 3.9572029014366796 m/s | Effekt: 7078.81 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 28.97 Nm | Varvtal: 2334.00 RPM | Buffrat Varvtal: 2333.53 RPM | Effektivitet: 0.05806Filter delta Hastighet: 0.1527970985633207Filter delta Vridmoment: 1.0319917833204073Filter delta Varvtal: 0.47199591023263565
+Tilt: 2.91% | Hastighet: 4.10 m/s | Buffrat hastighet: 3.966381857500656 m/s | Effekt: 7116.21 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.13 Nm | Varvtal: 2331.50 RPM | Buffrat Varvtal: 2333.12 RPM | Effektivitet: 0.05761Filter delta Hastighet: 0.13361814249934367Filter delta Vridmoment: 0.8738914900703065Filter delta Varvtal: 1.6224032718141643
+Tilt: 1.02% | Hastighet: 4.08 m/s | Buffrat hastighet: 3.9733536728561236 m/s | Effekt: 7114.07 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.12 Nm | Varvtal: 2332.50 RPM | Buffrat Varvtal: 2333.05 RPM | Effektivitet: 0.05735Filter delta Hastighet: 0.10664632714387645Filter delta Vridmoment: 0.11821274880554Filter delta Varvtal: 0.5525445249472796
+Tilt: 1.02% | Hastighet: 4.13 m/s | Buffrat hastighet: 3.983639796394084 m/s | Effekt: 7113.77 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.11 Nm | Varvtal: 2335.50 RPM | Buffrat Varvtal: 2333.54 RPM | Effektivitet: 0.05806Filter delta Hastighet: 0.14636020360591573Filter delta Vridmoment: 0.11090468596724534Filter delta Varvtal: 1.9579643800420854
+Tilt: 1.02% | Hastighet: 4.07 m/s | Buffrat hastighet: 3.9887036150510657 m/s | Effekt: 7110.87 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.10 Nm | Varvtal: 2331.50 RPM | Buffrat Varvtal: 2333.13 RPM | Effektivitet: 0.05724Filter delta Hastighet: 0.08129638494893454Filter delta Vridmoment: 0.10412946673193346Filter delta Varvtal: 1.6336284959666045
+Tilt: 1.02% | Hastighet: 4.15 m/s | Buffrat hastighet: 3.999370086678272 m/s | Effekt: 7108.34 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.10 Nm | Varvtal: 2331.50 RPM | Buffrat Varvtal: 2332.81 RPM | Effektivitet: 0.05838Filter delta Hastighet: 0.15062991332172837Filter delta Vridmoment: 0.09783869881115237Filter delta Varvtal: 1.3069027967735565
+Tilt: 1.02% | Hastighet: 4.10 m/s | Buffrat hastighet: 4.005414220289873 m/s | Effekt: 7106.19 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.09 Nm | Varvtal: 2331.50 RPM | Buffrat Varvtal: 2332.57 RPM | Effektivitet: 0.05770Filter delta Hastighet: 0.09458577971012705Filter delta Vridmoment: 0.09198952277208505Filter delta Varvtal: 1.0707581649135136
+Tilt: 1.02% | Hastighet: 4.09 m/s | Buffrat hastighet: 4.010358984688295 m/s | Effekt: 7136.91 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.22 Nm | Varvtal: 2331.50 RPM | Buffrat Varvtal: 2332.40 RPM | Effektivitet: 0.05731Filter delta Hastighet: 0.07964101531170442Filter delta Vridmoment: 0.7801616506909497Filter delta Varvtal: 0.9025679518949801
+Tilt: 1.02% | Hastighet: 4.07 m/s | Buffrat hastighet: 4.0136967405246216 m/s | Effekt: 6529.47 W | Vridmoment: 20.00 Nm |Buffrat Vridmoment: 27.38 Nm | Varvtal: 2058.50 RPM | Buffrat Varvtal: 2277.62 RPM | Effektivitet: 0.06233Filter delta Hastighet: 0.05630325947537873Filter delta Vridmoment: 7.375870679447242Filter delta Varvtal: 219.12205436151635
+Tilt: 1.02% | Hastighet: 3.97 m/s | Buffrat hastighet: 4.011320962985143 m/s | Effekt: 5353.89 W | Vridmoment: 10.00 Nm |Buffrat Vridmoment: 23.90 Nm | Varvtal: 1585.00 RPM | Buffrat Varvtal: 2139.10 RPM | Effektivitet: 0.07415Filter delta Hastighet: 0.04132096298514254Filter delta Vridmoment: 13.900696543557796Filter delta Varvtal: 554.0976434892132
+Tilt: 1.02% | Hastighet: 3.55 m/s | Buffrat hastighet: 3.966973211746932 m/s | Effekt: 3992.89 W | Vridmoment: 3.00 Nm |Buffrat Vridmoment: 19.72 Nm | Varvtal: 1111.00 RPM | Buffrat Varvtal: 1933.48 RPM | Effektivitet: 0.08891Filter delta Hastighet: 0.4169732117469316Filter delta Vridmoment: 16.72055723484624Filter delta Varvtal: 822.4781147913707
+READ MODE avslutat
+resultat sparade i logs\ReadMode_results_1745330092.csv
+Avslutar CAN-kommunikation.
+PcanBus was not properly shut down
+
+C:\Users\marti\Desktop>python3 AT.py
+Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode
+2
+Spara data i LUTs? y/n
+n
+Ingen aprning av data
+Algoritm vald: VANILLA GRADIENT ASCENT
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Iteration 1
+Tiltjustering: -1.00%
+Förändring i effektivitet: 0.00%
+Optimal tilt uppnådd: 4.00%
+resultat sparade i logs\Gradient_results_1745330137.csv
+Avslutar CAN-kommunikation.
+PcanBus was not properly shut down
+
+C:\Users\marti\Desktop>python3 AT.py
+Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode
+3
+Spara data i LUTs? y/n
+n
+Ingen aprning av data
+Algoritm vald: MOMENTUM GRADIENT ASCENT
+Iteration 1
+Tiltjustering: 0.00%
+Förändring i effektivitet: 0.00%
+Optimal tilt uppnådd: 5.71%
+resultat sparade i logs\Gradient_results_1745330191.csv
+Avslutar CAN-kommunikation.
+PcanBus was not properly shut down
+
+C:\Users\marti\Desktop>python3 AT.py
+Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode
+2
+Spara data i LUTs? y/n
+n
+Ingen aprning av data
+Algoritm vald: VANILLA GRADIENT ASCENT
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Iteration 1
+Tiltjustering: -1.00%
+Förändring i effektivitet: 0.00%
+Optimal tilt uppnådd: 4.71%
+resultat sparade i logs\Gradient_results_1745330213.csv
+Minsta vinkel nådd: 500 %
+Avslutar CAN-kommunikation.
+PcanBus was not properly shut down
+
+C:\Users\marti\Desktop>python3 AT.py
+Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode
+1
+Spara data i LUTs? y/n
+n
+Ingen aprning av data
+Algoritm vald: HILL CLIMBING
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Största vinkel nådd: 90 %
+Iteration 1
+Tiltjustering: 1.00%
+Förändring i effektivitet: 0.00%
+Optimal tilt uppnådd: 1.90%
+Största vinkel nådd: 90 %
+resultat sparade i logs\Hillclimbing_results_1745330320.csv
+Avslutar CAN-kommunikation.
+PcanBus was not properly shut down
+
+C:\Users\marti\Desktop>python3 AT.py
+Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode
+2
+Spara data i LUTs? y/n
+n
+Ingen aprning av data
+Algoritm vald: VANILLA GRADIENT ASCENT
+Största vinkel nådd: 90 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Minsta vinkel nådd: 5 %
+Iteration 1
+Tiltjustering: -1.00%
+Förändring i effektivitet: 0.00%
+Optimal tilt uppnådd: -0.10%
+resultat sparade i logs\Gradient_results_1745330333.csv
+Avslutar CAN-kommunikation.
+PcanBus was not properly shut down
+
+C:\Users\marti\Desktop>python3 AT.py
+Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode
+3
+Spara data i LUTs? y/n
+n
+Ingen aprning av data
+Algoritm vald: MOMENTUM GRADIENT ASCENT
+Iteration 1
+Tiltjustering: 0.00%
+Förändring i effektivitet: 0.38%
+Optimal tilt uppnådd: 12.51%
+resultat sparade i logs\Gradient_results_1745330400.csv
+Avslutar CAN-kommunikation.
+PcanBus was not properly shut down
+
+C:\Users\marti\Desktop>python3 AT.py
+Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode
+3
+Spara data i LUTs? y/n
+n
+Ingen aprning av data
+Algoritm vald: MOMENTUM GRADIENT ASCENT
+Iteration 1
+Tiltjustering: 0.00%
+Förändring i effektivitet: 0.01%
+Optimal tilt uppnådd: 12.51%
+resultat sparade i logs\Gradient_results_1745330454.csv
+Avslutar CAN-kommunikation.
+PcanBus was not properly shut down
+
+C:\Users\marti\Desktop>python3 AT.py
+Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode
+3
+Spara data i LUTs? y/n
+n
+Ingen aprning av data
+Algoritm vald: MOMENTUM GRADIENT ASCENT
+Iteration 1
+Tiltjustering: 0.00%
+Förändring i effektivitet: 0.00%
+Optimal tilt uppnådd: 12.51%
+resultat sparade i logs\Gradient_results_1745330529.csv
+Avslutar CAN-kommunikation.
+PcanBus was not properly shut down
+
+C:\Users\marti\Desktop>python3 AT.py
+Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode
+5
+Spara data i LUTs? y/n
+n
+Ingen aprning av data
+READ AND WRITE MODE – Visar och sparar data
+Tilt: 12.51% | Hastighet: 3.11 m/s | Buffrat hastighet: 3.11 m/s | Effekt: 7056.02 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 30.00 Nm | Varvtal: 2246.00 RPM | Buffrat Varvtal: 2246.00 RPM | Effektivitet: 0.04408Filter delta Hastighet: 0.0Filter delta Vridmoment: 0.0Filter delta Varvtal: 0.0
+Tilt: 12.51% | Hastighet: 3.12 m/s | Buffrat hastighet: 3.11051 m/s | Effekt: 6964.11 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.60 Nm | Varvtal: 2249.50 RPM | Buffrat Varvtal: 2246.70 RPM | Effektivitet: 0.04480Filter delta Hastighet: 0.009489999999999998Filter delta Vridmoment: 1.6000000000000014Filter delta Varvtal: 2.799999999999727
+Tilt: 12.51% | Hastighet: 3.21 m/s | Buffrat hastighet: 3.11647432601 m/s | Effekt: 6960.52 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.53 Nm | Varvtal: 2266.00 RPM | Buffrat Varvtal: 2250.56 RPM | Effektivitet: 0.04612Filter delta Hastighet: 0.09352567398999989Filter delta Vridmoment: 0.5340000000000025Filter delta Varvtal: 15.4399999999996
+Tilt: 12.51% | Hastighet: 3.28 m/s | Buffrat hastighet: 3.1273246743148886 m/s | Effekt: 6899.50 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.23 Nm | Varvtal: 2269.00 RPM | Buffrat Varvtal: 2254.25 RPM | Effektivitet: 0.04754Filter delta Hastighet: 0.15267532568511166Filter delta Vridmoment: 1.2272000000000034Filter delta Varvtal: 14.751999999999498
+Tilt: 12.51% | Hastighet: 3.43 m/s | Buffrat hastighet: 3.151619675877003 m/s | Effekt: 6900.65 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.21 Nm | Varvtal: 2262.50 RPM | Buffrat Varvtal: 2255.90 RPM | Effektivitet: 0.04971Filter delta Hastighet: 0.2783803241229972Filter delta Vridmoment: 0.2106780160000028Filter delta Varvtal: 6.601599999999507
+Tilt: 12.51% | Hastighet: 3.45 m/s | Buffrat hastighet: 3.1754417738655274 m/s | Effekt: 6858.16 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2266.50 RPM | Buffrat Varvtal: 2258.02 RPM | Effektivitet: 0.05031Filter delta Hastighet: 0.2745582261344728Filter delta Vridmoment: 1.003569989357434Filter delta Varvtal: 8.481279999999515
+Tilt: 12.51% | Hastighet: 3.40 m/s | Buffrat hastighet: 3.191712324864717 m/s | Effekt: 6832.14 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.85 Nm | Varvtal: 2274.00 RPM | Buffrat Varvtal: 2261.21 RPM | Effektivitet: 0.04976Filter delta Hastighet: 0.20828767513528312Filter delta Vridmoment: 0.8526762175356737Filter delta Varvtal: 12.78502399999934
+Tilt: 12.51% | Hastighet: 3.46 m/s | Buffrat hastighet: 3.212324536284431 m/s | Effekt: 6810.71 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.74 Nm | Varvtal: 2271.00 RPM | Buffrat Varvtal: 2263.17 RPM | Effektivitet: 0.05080Filter delta Hastighet: 0.24767546371556914Filter delta Vridmoment: 0.737336733463799Filter delta Varvtal: 7.828019199999289
+Tilt: 12.51% | Hastighet: 3.50 m/s | Buffrat hastighet: 3.234984026712606 m/s | Effekt: 6793.19 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.65 Nm | Varvtal: 2270.00 RPM | Buffrat Varvtal: 2264.54 RPM | Effektivitet: 0.05152Filter delta Hastighet: 0.2650159732873938Filter delta Vridmoment: 0.6461033509391036Filter delta Varvtal: 5.462415359999341
+Tilt: 12.51% | Hastighet: 3.52 m/s | Buffrat hastighet: 3.257358235879872 m/s | Effekt: 6784.88 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.57 Nm | Varvtal: 2280.00 RPM | Buffrat Varvtal: 2267.63 RPM | Effektivitet: 0.05188Filter delta Hastighet: 0.26264176412012796Filter delta Vridmoment: 0.572053229382675Filter delta Varvtal: 12.36993228799929
+Tilt: 12.51% | Hastighet: 3.50 m/s | Buffrat hastighet: 3.2753778266554114 m/s | Effekt: 6778.60 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.51 Nm | Varvtal: 2281.50 RPM | Buffrat Varvtal: 2270.40 RPM | Effektivitet: 0.05163Filter delta Hastighet: 0.22462217334458856Filter delta Vridmoment: 0.5107260781888279Filter delta Varvtal: 11.09594583039916
+Tilt: 12.51% | Hastighet: 3.59 m/s | Buffrat hastighet: 3.3010076465186486 m/s | Effekt: 6767.28 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.46 Nm | Varvtal: 2272.00 RPM | Buffrat Varvtal: 2270.72 RPM | Effektivitet: 0.05305Filter delta Hastighet: 0.2889923534813512Filter delta Vridmoment: 0.45910566158516986Filter delta Varvtal: 1.2767566643192367
+Tilt: 12.51% | Hastighet: 3.55 m/s | Buffrat hastighet: 3.3196569834019347 m/s | Effekt: 6775.46 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.52 Nm | Varvtal: 2262.00 RPM | Buffrat Varvtal: 2268.98 RPM | Effektivitet: 0.05239Filter delta Hastighet: 0.23034301659806555Filter delta Vridmoment: 0.4845929529611688Filter delta Varvtal: 6.978594668544702
+Tilt: 12.51% | Hastighet: 3.40 m/s | Buffrat hastighet: 3.324319634263446 m/s | Effekt: 6756.48 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.46 Nm | Varvtal: 2258.00 RPM | Buffrat Varvtal: 2266.78 RPM | Effektivitet: 0.05032Filter delta Hastighet: 0.07568036573655412Filter delta Vridmoment: 0.46307225227316096Filter delta Varvtal: 8.78287573483567
+Tilt: 12.51% | Hastighet: 3.27 m/s | Buffrat hastighet: 3.3213085902836217 m/s | Effekt: 6725.19 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.42 Nm | Varvtal: 2232.00 RPM | Buffrat Varvtal: 2259.83 RPM | Effektivitet: 0.04862Filter delta Hastighet: 0.05130859028362167Filter delta Vridmoment: 0.4184750485769726Filter delta Varvtal: 27.826300587868445
+Tilt: 12.51% | Hastighet: 3.11 m/s | Buffrat hastighet: 3.3062780287366755 m/s | Effekt: 6715.42 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.48 Nm | Varvtal: 2218.50 RPM | Buffrat Varvtal: 2251.56 RPM | Effektivitet: 0.04631Filter delta Hastighet: 0.19627802873667566Filter delta Vridmoment: 0.5186315769391214Filter delta Varvtal: 33.061040470294756
+Tilt: 12.51% | Hastighet: 2.92 m/s | Buffrat hastighet: 3.2720430557513724 m/s | Effekt: 6710.21 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.53 Nm | Varvtal: 2222.00 RPM | Buffrat Varvtal: 2245.65 RPM | Effektivitet: 0.04352Filter delta Hastighet: 0.3520430557513725Filter delta Vridmoment: 0.4658021268323296Filter delta Varvtal: 23.648832376235987
+Tilt: 12.51% | Hastighet: 2.82 m/s | Buffrat hastighet: 3.2290066105385 m/s | Effekt: 6709.33 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.58 Nm | Varvtal: 2226.50 RPM | Buffrat Varvtal: 2241.82 RPM | Effektivitet: 0.04203Filter delta Hastighet: 0.40900661053849996Filter delta Vridmoment: 0.42081485835455723Filter delta Varvtal: 15.31906590098879
+Tilt: 12.51% | Hastighet: 2.84 m/s | Buffrat hastighet: 3.1944236657073097 m/s | Effekt: 6684.31 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.52 Nm | Varvtal: 2224.50 RPM | Buffrat Varvtal: 2238.36 RPM | Effektivitet: 0.04249Filter delta Hastighet: 0.3544236657073099Filter delta Vridmoment: 0.5166803417328865Filter delta Varvtal: 13.855252720791214
+Tilt: 12.51% | Hastighet: 2.87 m/s | Buffrat hastighet: 3.1676774109348473 m/s | Effekt: 6697.63 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.56 Nm | Varvtal: 2242.00 RPM | Buffrat Varvtal: 2239.08 RPM | Effektivitet: 0.04285Filter delta Hastighet: 0.29767741093484723Filter delta Vridmoment: 0.4357938861470103Filter delta Varvtal: 2.915797823367029
+Tilt: 11.63% | Hastighet: 2.94 m/s | Buffrat hastighet: 3.1511098400431057 m/s | Effekt: 6693.95 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.50 Nm | Varvtal: 2256.50 RPM | Buffrat Varvtal: 2242.57 RPM | Effektivitet: 0.04392Filter delta Hastighet: 0.21110984004310573Filter delta Vridmoment: 0.5041629542694288Filter delta Varvtal: 13.93263825869326
+Tilt: 9.07% | Hastighet: 3.11 m/s | Buffrat hastighet: 3.1488853461461135 m/s | Effekt: 6776.08 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2262.50 RPM | Buffrat Varvtal: 2246.55 RPM | Effektivitet: 0.04590Filter delta Hastighet: 0.03888534614611361Filter delta Vridmoment: 1.1972923467060461Filter delta Varvtal: 15.94611060695479
+Tilt: 9.07% | Hastighet: 3.30 m/s | Buffrat hastighet: 3.1587246426997457 m/s | Effekt: 6786.53 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.82 Nm | Varvtal: 2258.50 RPM | Buffrat Varvtal: 2248.94 RPM | Effektivitet: 0.04863Filter delta Hastighet: 0.14127535730025453Filter delta Vridmoment: 0.18353530236386462Filter delta Varvtal: 9.556888485563832
+Tilt: 9.07% | Hastighet: 3.39 m/s | Buffrat hastighet: 3.1756372396541948 m/s | Effekt: 6840.78 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.02 Nm | Varvtal: 2261.00 RPM | Buffrat Varvtal: 2251.35 RPM | Effektivitet: 0.04956Filter delta Hastighet: 0.21436276034580537Filter delta Vridmoment: 0.9842829560515192Filter delta Varvtal: 9.645510788451247
+Tilt: 9.07% | Hastighet: 3.35 m/s | Buffrat hastighet: 3.187395614891026 m/s | Effekt: 6890.89 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.16 Nm | Varvtal: 2277.00 RPM | Buffrat Varvtal: 2256.48 RPM | Effektivitet: 0.04861Filter delta Hastighet: 0.16260438510897401Filter delta Vridmoment: 0.8381875144915902Filter delta Varvtal: 20.516408630760907
+Tilt: 9.07% | Hastighet: 3.53 m/s | Buffrat hastighet: 3.216263610616065 m/s | Effekt: 6927.83 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.27 Nm | Varvtal: 2273.50 RPM | Buffrat Varvtal: 2259.89 RPM | Effektivitet: 0.05095Filter delta Hastighet: 0.31373638938393533Filter delta Vridmoment: 0.7260223078220527Filter delta Varvtal: 13.613126904608635
+Tilt: 9.07% | Hastighet: 3.55 m/s | Buffrat hastighet: 3.2440884278451643 m/s | Effekt: 6935.13 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.25 Nm | Varvtal: 2280.00 RPM | Buffrat Varvtal: 2263.91 RPM | Effektivitet: 0.05119Filter delta Hastighet: 0.305911572154836Filter delta Vridmoment: 0.25277242998793525Filter delta Varvtal: 16.090501523686726
+Tilt: 9.07% | Hastighet: 3.68 m/s | Buffrat hastighet: 3.284885896326756 m/s | Effekt: 6944.76 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.23 Nm | Varvtal: 2287.00 RPM | Buffrat Varvtal: 2268.53 RPM | Effektivitet: 0.05299Filter delta Hastighet: 0.3951141036732442Filter delta Vridmoment: 0.2337444183523374Filter delta Varvtal: 18.47240121894947
+Tilt: 9.07% | Hastighet: 3.86 m/s | Buffrat hastighet: 3.3467172247348063 m/s | Effekt: 6992.06 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.33 Nm | Varvtal: 2308.00 RPM | Buffrat Varvtal: 2276.42 RPM | Effektivitet: 0.05521Filter delta Hastighet: 0.5132827752651936Filter delta Vridmoment: 0.6692280409246614Filter delta Varvtal: 31.577920975159486
+Tilt: 9.07% | Hastighet: 4.00 m/s | Buffrat hastighet: 3.422059201943885 m/s | Effekt: 7033.55 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.41 Nm | Varvtal: 2313.50 RPM | Buffrat Varvtal: 2283.84 RPM | Effektivitet: 0.05687Filter delta Hastighet: 0.5779407980561149Filter delta Vridmoment: 0.5909800218024408Filter delta Varvtal: 29.66233678012759
+Tilt: 9.07% | Hastighet: 4.03 m/s | Buffrat hastighet: 3.4894154432408016 m/s | Effekt: 7043.82 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.37 Nm | Varvtal: 2315.00 RPM | Buffrat Varvtal: 2290.07 RPM | Effektivitet: 0.05721Filter delta Hastighet: 0.5405845567591987Filter delta Vridmoment: 0.37183924503120735Filter delta Varvtal: 24.92986942410198
+Tilt: 9.07% | Hastighet: 3.97 m/s | Buffrat hastighet: 3.536540822698305 m/s | Effekt: 6995.92 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.12 Nm | Varvtal: 2312.50 RPM | Buffrat Varvtal: 2294.56 RPM | Effektivitet: 0.05675Filter delta Hastighet: 0.43345917730169514Filter delta Vridmoment: 1.1150529913588656Filter delta Varvtal: 17.943895539281584
+Tilt: 9.90% | Hastighet: 3.98 m/s | Buffrat hastighet: 3.578379385756699 m/s | Effekt: 7043.71 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.24 Nm | Varvtal: 2324.50 RPM | Buffrat Varvtal: 2300.54 RPM | Effektivitet: 0.05650Filter delta Hastighet: 0.401620614243301Filter delta Vridmoment: 0.7623865373987861Filter delta Varvtal: 23.955116431425267
+Tilt: 10.08% | Hastighet: 3.95 m/s | Buffrat hastighet: 3.6107706045619206 m/s | Effekt: 7046.80 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.22 Nm | Varvtal: 2312.50 RPM | Buffrat Varvtal: 2302.94 RPM | Effektivitet: 0.05605Filter delta Hastighet: 0.3392293954380796Filter delta Vridmoment: 0.2200867737102179Filter delta Varvtal: 9.56409314513985
+Tilt: 8.11% | Hastighet: 3.83 m/s | Buffrat hastighet: 3.626538227116239 m/s | Effekt: 7070.46 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.32 Nm | Varvtal: 2302.00 RPM | Buffrat Varvtal: 2302.80 RPM | Effektivitet: 0.05417Filter delta Hastighet: 0.20346177288376088Filter delta Vridmoment: 0.6800911009211177Filter delta Varvtal: 0.8015193480196103
+Tilt: 4.81% | Hastighet: 3.81 m/s | Buffrat hastighet: 3.6390771379713924 m/s | Effekt: 7015.70 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.08 Nm | Varvtal: 2308.00 RPM | Buffrat Varvtal: 2303.84 RPM | Effektivitet: 0.05431Filter delta Hastighet: 0.17092286202860763Filter delta Vridmoment: 1.0796975039381778Filter delta Varvtal: 4.158784521584039
+Tilt: 4.12% | Hastighet: 3.69 m/s | Buffrat hastighet: 3.641882594860541 m/s | Effekt: 7004.94 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.08 Nm | Varvtal: 2288.00 RPM | Buffrat Varvtal: 2300.67 RPM | Effektivitet: 0.05268Filter delta Hastighet: 0.048117405139458835Filter delta Vridmoment: 0.07507745952787204Filter delta Varvtal: 12.67297238273295
+Tilt: 4.12% | Hastighet: 3.63 m/s | Buffrat hastighet: 3.6412743455114525 m/s | Effekt: 6952.23 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.91 Nm | Varvtal: 2281.00 RPM | Buffrat Varvtal: 2296.74 RPM | Effektivitet: 0.05221Filter delta Hastighet: 0.011274345511452566Filter delta Vridmoment: 0.9057444321529893Filter delta Varvtal: 15.738377906186543
+Tilt: 4.12% | Hastighet: 3.51 m/s | Buffrat hastighet: 3.632987332856934 m/s | Effekt: 6908.81 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.78 Nm | Varvtal: 2275.50 RPM | Buffrat Varvtal: 2292.49 RPM | Effektivitet: 0.05080Filter delta Hastighet: 0.12298733285693375Filter delta Vridmoment: 0.7784199129077294Filter delta Varvtal: 16.990702324949325
+Tilt: 4.12% | Hastighet: 3.53 m/s | Buffrat hastighet: 3.626777327141189 m/s | Effekt: 6945.03 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 28.99 Nm | Varvtal: 2269.00 RPM | Buffrat Varvtal: 2287.79 RPM | Effektivitet: 0.05083Filter delta Hastighet: 0.0967773271411887Filter delta Vridmoment: 1.0112752918196222Filter delta Varvtal: 18.792561859959733
+Tilt: 4.12% | Hastighet: 3.42 m/s | Buffrat hastighet: 3.6121627744821643 m/s | Effekt: 6900.23 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.84 Nm | Varvtal: 2272.00 RPM | Buffrat Varvtal: 2284.63 RPM | Effektivitet: 0.04956Filter delta Hastighet: 0.19216277448216434Filter delta Vridmoment: 0.8415308179147232Filter delta Varvtal: 12.634049487967786
+Tilt: 4.12% | Hastighet: 3.28 m/s | Buffrat hastighet: 3.5845214248828876 m/s | Effekt: 6891.77 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.85 Nm | Varvtal: 2266.50 RPM | Buffrat Varvtal: 2281.01 RPM | Effektivitet: 0.04759Filter delta Hastighet: 0.30452142488288736Filter delta Vridmoment: 0.1480344748139366Filter delta Varvtal: 14.507239590374411
+Tilt: 4.12% | Hastighet: 3.29 m/s | Buffrat hastighet: 3.5611210666672384 m/s | Effekt: 6883.78 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.86 Nm | Varvtal: 2264.00 RPM | Buffrat Varvtal: 2277.61 RPM | Effektivitet: 0.04779Filter delta Hastighet: 0.27112106666723834Filter delta Vridmoment: 0.13844133049989438Filter delta Varvtal: 13.605791672299802
+Tilt: 4.12% | Hastighet: 3.24 m/s | Buffrat hastighet: 3.5347531393881257 m/s | Effekt: 6874.64 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.87 Nm | Varvtal: 2259.00 RPM | Buffrat Varvtal: 2273.88 RPM | Effektivitet: 0.04713Filter delta Hastighet: 0.29475313938812553Filter delta Vridmoment: 0.12960266377584517Filter delta Varvtal: 14.884633337840114
+Tilt: 4.12% | Hastighet: 3.28 m/s | Buffrat hastighet: 3.5155255662159086 m/s | Effekt: 6837.87 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.75 Nm | Varvtal: 2260.00 RPM | Buffrat Varvtal: 2271.11 RPM | Effektivitet: 0.04797Filter delta Hastighet: 0.23552556621590837Filter delta Vridmoment: 0.7511183171223337Filter delta Varvtal: 11.10770667027191
+Tilt: 4.12% | Hastighet: 3.25 m/s | Buffrat hastighet: 3.495198905273685 m/s | Effekt: 6833.81 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.77 Nm | Varvtal: 2257.00 RPM | Buffrat Varvtal: 2268.29 RPM | Effektivitet: 0.04756Filter delta Hastighet: 0.24519890527368515Filter delta Vridmoment: 0.2302433895265814Filter delta Varvtal: 11.286165336217437
+Tilt: 4.12% | Hastighet: 3.17 m/s | Buffrat hastighet: 3.468363527210881 m/s | Effekt: 6802.31 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.67 Nm | Varvtal: 2254.50 RPM | Buffrat Varvtal: 2265.53 RPM | Effektivitet: 0.04660Filter delta Hastighet: 0.2983635272108809Filter delta Vridmoment: 0.6720162560129985Filter delta Varvtal: 11.028932268974131
+Tilt: 4.12% | Hastighet: 3.07 m/s | Buffrat hastighet: 3.4325760008691475 m/s | Effekt: 6845.96 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 28.91 Nm | Varvtal: 2242.50 RPM | Buffrat Varvtal: 2260.92 RPM | Effektivitet: 0.04484Filter delta Hastighet: 0.3625760008691472Filter delta Vridmoment: 1.08523047435828Filter delta Varvtal: 18.423145815179396
+Tilt: 4.12% | Hastighet: 2.96 m/s | Buffrat hastighet: 3.3866143931659423 m/s | Effekt: 6800.29 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.79 Nm | Varvtal: 2236.00 RPM | Buffrat Varvtal: 2255.94 RPM | Effektivitet: 0.04353Filter delta Hastighet: 0.4266143931659423Filter delta Vridmoment: 0.7853507208553552Filter delta Varvtal: 19.938516652143335
+Tilt: 4.12% | Hastighet: 3.02 m/s | Buffrat hastighet: 3.354843062180002 m/s | Effekt: 6790.68 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2234.00 RPM | Buffrat Varvtal: 2251.55 RPM | Effektivitet: 0.04447Filter delta Hastighet: 0.3348430621800018Filter delta Vridmoment: 0.1993093838836799Filter delta Varvtal: 17.55081332171494
+Tilt: 4.12% | Hastighet: 3.24 m/s | Buffrat hastighet: 3.3477820161779137 m/s | Effekt: 6836.27 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2247.50 RPM | Buffrat Varvtal: 2250.74 RPM | Effektivitet: 0.04739Filter delta Hastighet: 0.1077820161779135Filter delta Vridmoment: 0.9955096148623532Filter delta Varvtal: 3.2406506573720435
+Tilt: 4.12% | Hastighet: 3.34 m/s | Buffrat hastighet: 3.347386859391439 m/s | Effekt: 6803.23 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.85 Nm | Varvtal: 2255.00 RPM | Buffrat Varvtal: 2251.59 RPM | Effektivitet: 0.04909Filter delta Hastighet: 0.007386859391439238Filter delta Vridmoment: 0.8533657724973658Filter delta Varvtal: 3.4074794741022743
+Tilt: 4.12% | Hastighet: 3.49 m/s | Buffrat hastighet: 3.356551367209291 m/s | Effekt: 6863.50 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.04 Nm | Varvtal: 2277.50 RPM | Buffrat Varvtal: 2256.77 RPM | Effektivitet: 0.05085Filter delta Hastighet: 0.13344863279070918Filter delta Vridmoment: 0.9578255109594487Filter delta Varvtal: 20.725983579282
+Tilt: 4.12% | Hastighet: 3.51 m/s | Buffrat hastighet: 3.3665784471393603 m/s | Effekt: 6903.67 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.18 Nm | Varvtal: 2268.50 RPM | Buffrat Varvtal: 2259.12 RPM | Effektivitet: 0.05084Filter delta Hastighet: 0.14342155286063996Filter delta Vridmoment: 0.8181912644670035Filter delta Varvtal: 9.380786863425783
+Tilt: 4.12% | Hastighet: 3.28 m/s | Buffrat hastighet: 3.361499942031486 m/s | Effekt: 6930.95 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.29 Nm | Varvtal: 2262.00 RPM | Buffrat Varvtal: 2259.70 RPM | Effektivitet: 0.04732Filter delta Hastighet: 0.0814999420314857Filter delta Vridmoment: 0.7103380067186436Filter delta Varvtal: 2.3046294907403535
+Tilt: 4.12% | Hastighet: 3.04 m/s | Buffrat hastighet: 3.3350887236572864 m/s | Effekt: 6941.64 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.38 Nm | Varvtal: 2244.00 RPM | Buffrat Varvtal: 2256.56 RPM | Effektivitet: 0.04379Filter delta Hastighet: 0.29508872365728633Filter delta Vridmoment: 0.6243630980038084Filter delta Varvtal: 12.556296407407899
+Tilt: 4.12% | Hastighet: 2.99 m/s | Buffrat hastighet: 3.3059256647548807 m/s | Effekt: 6924.00 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.34 Nm | Varvtal: 2240.50 RPM | Buffrat Varvtal: 2253.35 RPM | Effektivitet: 0.04318Filter delta Hastighet: 0.3159256647548805Filter delta Vridmoment: 0.34274474868225013Filter delta Varvtal: 12.84503712592641
+Tilt: 4.12% | Hastighet: 2.93 m/s | Buffrat hastighet: 3.2729973709749967 m/s | Effekt: 6929.10 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.42 Nm | Varvtal: 2232.50 RPM | Buffrat Varvtal: 2249.18 RPM | Effektivitet: 0.04229Filter delta Hastighet: 0.3429973709749965Filter delta Vridmoment: 0.5811940422133866Filter delta Varvtal: 16.67602970074131
+Tilt: 4.12% | Hastighet: 2.93 m/s | Buffrat hastighet: 3.244082782776671 m/s | Effekt: 6928.36 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.48 Nm | Varvtal: 2224.00 RPM | Buffrat Varvtal: 2244.14 RPM | Effektivitet: 0.04229Filter delta Hastighet: 0.314082782776671Filter delta Vridmoment: 0.5183556886322833Filter delta Varvtal: 20.14082376059332
+Tilt: 4.12% | Hastighet: 2.97 m/s | Buffrat hastighet: 3.222866506456377 m/s | Effekt: 6914.39 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.43 Nm | Varvtal: 2239.50 RPM | Buffrat Varvtal: 2243.21 RPM | Effektivitet: 0.04295Filter delta Hastighet: 0.25286650645637687Filter delta Vridmoment: 0.43436397153204354Filter delta Varvtal: 3.7126590084749296
+Tilt: 4.12% | Hastighet: 3.10 m/s | Buffrat hastighet: 3.215213563292679 m/s | Effekt: 6909.34 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.39 Nm | Varvtal: 2250.50 RPM | Buffrat Varvtal: 2244.67 RPM | Effektivitet: 0.04487Filter delta Hastighet: 0.11521356329267896Filter delta Vridmoment: 0.39377856697893066Filter delta Varvtal: 5.829872793220147
+Tilt: 4.12% | Hastighet: 3.25 m/s | Buffrat hastighet: 3.2170738947459245 m/s | Effekt: 6914.49 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.36 Nm | Varvtal: 2266.50 RPM | Buffrat Varvtal: 2249.04 RPM | Effektivitet: 0.04700Filter delta Hastighet: 0.032926105254075466Filter delta Vridmoment: 0.3585834826487826Filter delta Varvtal: 17.463898234575936
+Tilt: 4.12% | Hastighet: 3.44 m/s | Buffrat hastighet: 3.2331898048490033 m/s | Effekt: 6949.59 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.43 Nm | Varvtal: 2278.00 RPM | Buffrat Varvtal: 2254.83 RPM | Effektivitet: 0.04950Filter delta Hastighet: 0.20681019515099663Filter delta Vridmoment: 0.5682041766105606Filter delta Varvtal: 23.171118587660658
+Tilt: 4.12% | Hastighet: 3.55 m/s | Buffrat hastighet: 3.2590671845817143 m/s | Effekt: 6902.39 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.16 Nm | Varvtal: 2284.50 RPM | Buffrat Varvtal: 2260.76 RPM | Effektivitet: 0.05143Filter delta Hastighet: 0.290932815418286Filter delta Vridmoment: 1.1552021042324228Filter delta Varvtal: 23.736894870128253
+Tilt: 4.12% | Hastighet: 3.58 m/s | Buffrat hastighet: 3.2854136125538593 m/s | Effekt: 6948.74 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.27 Nm | Varvtal: 2292.50 RPM | Buffrat Varvtal: 2267.11 RPM | Effektivitet: 0.05152Filter delta Hastighet: 0.29458638744614074Filter delta Vridmoment: 0.7311896525098653Filter delta Varvtal: 25.38951589610224
+Tilt: 4.12% | Hastighet: 3.57 m/s | Buffrat hastighet: 3.3077418731181307 m/s | Effekt: 6908.47 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.04 Nm | Varvtal: 2288.50 RPM | Buffrat Varvtal: 2271.39 RPM | Effektivitet: 0.05168Filter delta Hastighet: 0.26225812688186956Filter delta Vridmoment: 1.0443818603258208Filter delta Varvtal: 17.11161271688161
+Tilt: 4.12% | Hastighet: 3.61 m/s | Buffrat hastighet: 3.3319907769888375 m/s | Effekt: 6955.99 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.18 Nm | Varvtal: 2295.00 RPM | Buffrat Varvtal: 2276.11 RPM | Effektivitet: 0.05190Filter delta Hastighet: 0.2780092230111624Filter delta Vridmoment: 0.8165166298030364Filter delta Varvtal: 18.889290173505287
+Tilt: 4.12% | Hastighet: 3.67 m/s | Buffrat hastighet: 3.3603162616234563 m/s | Effekt: 6992.90 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.29 Nm | Varvtal: 2294.50 RPM | Buffrat Varvtal: 2279.79 RPM | Effektivitet: 0.05248Filter delta Hastighet: 0.3096837383765436Filter delta Vridmoment: 0.709020857638393Filter delta Varvtal: 14.711432138803957
+Tilt: 4.12% | Hastighet: 3.69 m/s | Buffrat hastighet: 3.387669585277277 m/s | Effekt: 6940.87 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.06 Nm | Varvtal: 2285.00 RPM | Buffrat Varvtal: 2280.83 RPM | Effektivitet: 0.05316Filter delta Hastighet: 0.3023304147227228Filter delta Vridmoment: 1.0597674706422566Filter delta Varvtal: 4.169145711042802
+Tilt: 4.12% | Hastighet: 3.78 m/s | Buffrat hastighet: 3.422678421445064 m/s | Effekt: 6017.28 W | Vridmoment: 15.00 Nm |Buffrat Vridmoment: 26.25 Nm | Varvtal: 1822.50 RPM | Buffrat Varvtal: 2189.16 RPM | Effektivitet: 0.06282Filter delta Hastighet: 0.3573215785549362Filter delta Vridmoment: 11.247813976513807Filter delta Varvtal: 366.66468343116594
+Tilt: 4.12% | Hastighet: 3.78 m/s | Buffrat hastighet: 3.45331237142291 m/s | Effekt: 5095.64 W | Vridmoment: 12.00 Nm |Buffrat Vridmoment: 23.40 Nm | Varvtal: 1641.50 RPM | Buffrat Varvtal: 2079.63 RPM | Effektivitet: 0.07418Filter delta Hastighet: 0.3266876285770901Filter delta Vridmoment: 11.398251181211045Filter delta Varvtal: 438.131746744933
+Tilt: 4.12% | Hastighet: 3.59 m/s | Buffrat hastighet: 3.4620151036323676 m/s | Effekt: 4501.00 W | Vridmoment: 14.00 Nm |Buffrat Vridmoment: 21.52 Nm | Varvtal: 1668.50 RPM | Buffrat Varvtal: 1997.41 RPM | Effektivitet: 0.07976Filter delta Hastighet: 0.12798489636763222Filter delta Vridmoment: 7.5186009449688385Filter delta Varvtal: 328.90539739594647
+Tilt: 4.12% | Hastighet: 3.27 m/s | Buffrat hastighet: 3.4487273684484543 m/s | Effekt: 4109.58 W | Vridmoment: 15.00 Nm |Buffrat Vridmoment: 20.21 Nm | Varvtal: 1717.00 RPM | Buffrat Varvtal: 1941.32 RPM | Effektivitet: 0.07957Filter delta Hastighet: 0.17872736844845427Filter delta Vridmoment: 5.21488075597507Filter delta Varvtal: 224.3243179167573
+Tilt: 4.12% | Hastighet: 3.22 m/s | Buffrat hastighet: 3.4320593791182965 m/s | Effekt: 3702.68 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 18.77 Nm | Varvtal: 1652.50 RPM | Buffrat Varvtal: 1883.56 RPM | Effektivitet: 0.08696Filter delta Hastighet: 0.2120593791182963Filter delta Vridmoment: 5.771904604780058Filter delta Varvtal: 231.05945433340594
+READ MODE avslutat
+resultat sparade i logs\ReadMode_results_1745330574.csv
+Avslutar CAN-kommunikation.
+PcanBus was not properly shut down
+
+C:\Users\marti\Desktop>python3 att.py
+  File "C:\Users\marti\Desktop\att.py", line 182
+    print(f"Tilt: {tilt_percent / 100:.2f}% | "
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+C:\Users\marti\Desktop>python3 att.py
+Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode
+3
+Spara data i LUTs? y/n
+n
+Ingen aprning av data
+Algoritm vald: MOMENTUM GRADIENT ASCENT
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Iteration 1
+Current Tilt: 5.00%, Efficiency: 0.00
+New Tilt: 5.00%, Efficiency: 0.00
+Optimal tilt uppnådd: 5.00%
+resultat sparade i logs\Gradient_results_1745330786.csv
+Avslutar CAN-kommunikation.
+PcanBus was not properly shut down
+
+C:\Users\marti\Desktop>python3 att.py
+Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode
+3
+Spara data i LUTs? y/n
+n
+Ingen aprning av data
+Algoritm vald: MOMENTUM GRADIENT ASCENT
+Iteration 1
+Current Tilt: 15.69%, Efficiency: 0.00
+New Tilt: 15.69%, Efficiency: 0.00
+Optimal tilt uppnådd: 15.69%
+resultat sparade i logs\Gradient_results_1745330807.csv
+Avslutar CAN-kommunikation.
+PcanBus was not properly shut down
+
+C:\Users\marti\Desktop>python3 att.py
+Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode
+3
+Spara data i LUTs? y/n
+n
+Ingen aprning av data
+Algoritm vald: MOMENTUM GRADIENT ASCENT
+Iteration 1
+Current Tilt: 15.69%, Efficiency: 0.00
+New Tilt: 15.69%, Efficiency: 0.00
+Optimal tilt uppnådd: 15.69%
+resultat sparade i logs\Gradient_results_1745330851.csv
+Avslutar CAN-kommunikation.
+PcanBus was not properly shut down
+
+C:\Users\marti\Desktop>python3 att.py
+Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode
+1
+Spara data i LUTs? y/n
+n
+Ingen aprning av data
+Algoritm vald: HILL CLIMBING
+Optimal tilt uppnådd: 16.69%
+resultat sparade i logs\Hillclimbing_results_1745330865.csv
+Avslutar CAN-kommunikation.
+PcanBus was not properly shut down
+
+C:\Users\marti\Desktop>python3 att.py
+Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode
+5
+Spara data i LUTs? y/n
+n
+Ingen aprning av data
+READ AND WRITE MODE – Visar och sparar data
+Tilt: 15.69% | Hastighet: 4.98 m/s | Effekt: 7531.97 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 30.00 Nm | Varvtal: 2397.50 RPM | Buffrat Varvtal: 2397.50 RPM | Effektivitet: 0.0006611817
+Tilt: 15.69% | Hastighet: 4.84 m/s | Effekt: 7273.31 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2392.50 RPM | Buffrat Varvtal: 2395.00 RPM | Effektivitet: 0.0006654466
+Tilt: 15.69% | Hastighet: 4.87 m/s | Effekt: 7274.32 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2396.00 RPM | Buffrat Varvtal: 2395.33 RPM | Effektivitet: 0.0006694781
+Tilt: 15.69% | Hastighet: 4.79 m/s | Effekt: 7335.25 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.25 Nm | Varvtal: 2393.00 RPM | Buffrat Varvtal: 2394.75 RPM | Effektivitet: 0.0006530115
+Tilt: 15.69% | Hastighet: 4.86 m/s | Effekt: 7373.63 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.40 Nm | Varvtal: 2396.00 RPM | Buffrat Varvtal: 2395.00 RPM | Effektivitet: 0.0006591053
+Tilt: 15.69% | Hastighet: 4.84 m/s | Effekt: 7313.99 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2382.00 RPM | Buffrat Varvtal: 2391.90 RPM | Effektivitet: 0.0006617453
+Tilt: 15.69% | Hastighet: 4.86 m/s | Effekt: 7416.66 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.60 Nm | Varvtal: 2396.50 RPM | Buffrat Varvtal: 2392.70 RPM | Effektivitet: 0.0006552812
+Tilt: 15.69% | Hastighet: 4.81 m/s | Effekt: 7406.74 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.60 Nm | Varvtal: 2380.00 RPM | Buffrat Varvtal: 2389.50 RPM | Effektivitet: 0.0006494081
+Tilt: 15.69% | Hastighet: 4.83 m/s | Effekt: 7307.57 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2394.50 RPM | Buffrat Varvtal: 2389.80 RPM | Effektivitet: 0.0006609584
+Tilt: 15.69% | Hastighet: 4.87 m/s | Effekt: 7301.46 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2386.00 RPM | Buffrat Varvtal: 2387.80 RPM | Effektivitet: 0.0006669903
+Tilt: 15.69% | Hastighet: 4.86 m/s | Effekt: 7357.31 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.40 Nm | Varvtal: 2391.50 RPM | Buffrat Varvtal: 2389.70 RPM | Effektivitet: 0.0006605671
+Tilt: 15.69% | Hastighet: 4.86 m/s | Effekt: 7349.62 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.40 Nm | Varvtal: 2384.00 RPM | Buffrat Varvtal: 2387.20 RPM | Effektivitet: 0.0006612589
+Tilt: 15.69% | Hastighet: 4.92 m/s | Effekt: 7353.00 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.40 Nm | Varvtal: 2385.50 RPM | Buffrat Varvtal: 2388.30 RPM | Effektivitet: 0.0006691142
+Tilt: 15.69% | Hastighet: 4.88 m/s | Effekt: 7347.46 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.40 Nm | Varvtal: 2385.50 RPM | Buffrat Varvtal: 2386.50 RPM | Effektivitet: 0.0006641749
+Tilt: 15.69% | Hastighet: 4.82 m/s | Effekt: 7354.54 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.40 Nm | Varvtal: 2397.50 RPM | Buffrat Varvtal: 2388.80 RPM | Effektivitet: 0.0006553772
+Tilt: 15.69% | Hastighet: 4.83 m/s | Effekt: 7359.16 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.40 Nm | Varvtal: 2399.00 RPM | Buffrat Varvtal: 2390.30 RPM | Effektivitet: 0.0006563247
+Tilt: 15.69% | Hastighet: 5.06 m/s | Effekt: 7252.05 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2372.50 RPM | Buffrat Varvtal: 2388.00 RPM | Effektivitet: 0.0006977335
+Tilt: 15.69% | Hastighet: 4.97 m/s | Effekt: 7263.59 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2404.50 RPM | Buffrat Varvtal: 2391.80 RPM | Effektivitet: 0.0006842344
+Tilt: 15.69% | Hastighet: 5.05 m/s | Effekt: 7267.84 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2392.50 RPM | Buffrat Varvtal: 2393.20 RPM | Effektivitet: 0.0006948415
+Tilt: 15.69% | Hastighet: 4.94 m/s | Effekt: 7085.65 W | Vridmoment: 27.00 Nm |Buffrat Vridmoment: 28.40 Nm | Varvtal: 2344.00 RPM | Buffrat Varvtal: 2382.50 RPM | Effektivitet: 0.0006971835
+Tilt: 15.69% | Hastighet: 4.90 m/s | Effekt: 6017.83 W | Vridmoment: 14.00 Nm |Buffrat Vridmoment: 25.20 Nm | Varvtal: 1888.50 RPM | Buffrat Varvtal: 2280.40 RPM | Effektivitet: 0.0008142465
+Tilt: 15.69% | Hastighet: 4.74 m/s | Effekt: 4871.69 W | Vridmoment: 11.00 Nm |Buffrat Vridmoment: 21.80 Nm | Varvtal: 1640.50 RPM | Buffrat Varvtal: 2134.00 RPM | Effektivitet: 0.0009729686
+Tilt: 15.69% | Hastighet: 4.22 m/s | Effekt: 4181.78 W | Vridmoment: 18.00 Nm |Buffrat Vridmoment: 19.60 Nm | Varvtal: 1921.50 RPM | Buffrat Varvtal: 2037.40 RPM | Effektivitet: 0.0010091401
+Tilt: 15.69% | Hastighet: 3.91 m/s | Effekt: 3731.56 W | Vridmoment: 21.00 Nm |Buffrat Vridmoment: 18.20 Nm | Varvtal: 1995.00 RPM | Buffrat Varvtal: 1957.90 RPM | Effektivitet: 0.0010478189
+Tilt: 15.69% | Hastighet: 3.76 m/s | Effekt: 3765.82 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 18.40 Nm | Varvtal: 2326.50 RPM | Buffrat Varvtal: 1954.40 RPM | Effektivitet: 0.0009984537
+Tilt: 15.69% | Hastighet: 3.64 m/s | Effekt: 3981.66 W | Vridmoment: 19.00 Nm |Buffrat Vridmoment: 19.40 Nm | Varvtal: 1916.00 RPM | Buffrat Varvtal: 1959.90 RPM | Effektivitet: 0.0009141914
+Tilt: 15.69% | Hastighet: 3.63 m/s | Effekt: 4434.95 W | Vridmoment: 19.00 Nm |Buffrat Vridmoment: 21.00 Nm | Varvtal: 1924.50 RPM | Buffrat Varvtal: 2016.70 RPM | Effektivitet: 0.0008184976
+Tilt: 15.69% | Hastighet: 3.51 m/s | Effekt: 4599.44 W | Vridmoment: 21.00 Nm |Buffrat Vridmoment: 21.60 Nm | Varvtal: 2005.00 RPM | Buffrat Varvtal: 2033.40 RPM | Effektivitet: 0.0007631360
+Tilt: 15.69% | Hastighet: 3.21 m/s | Effekt: 4830.55 W | Vridmoment: 25.00 Nm |Buffrat Vridmoment: 22.40 Nm | Varvtal: 2124.50 RPM | Buffrat Varvtal: 2059.30 RPM | Effektivitet: 0.0006645211
+Tilt: 15.69% | Hastighet: 3.06 m/s | Effekt: 4771.90 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 22.40 Nm | Varvtal: 2201.50 RPM | Buffrat Varvtal: 2034.30 RPM | Effektivitet: 0.0006412536
+Tilt: 15.69% | Hastighet: 3.09 m/s | Effekt: 5373.51 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 24.40 Nm | Varvtal: 2259.50 RPM | Buffrat Varvtal: 2103.00 RPM | Effektivitet: 0.0005750436
+Tilt: 15.69% | Hastighet: 3.08 m/s | Effekt: 5533.01 W | Vridmoment: 21.00 Nm |Buffrat Vridmoment: 24.80 Nm | Varvtal: 2062.00 RPM | Buffrat Varvtal: 2130.50 RPM | Effektivitet: 0.0005566585
+Tilt: 15.69% | Hastighet: 3.22 m/s | Effekt: 5371.97 W | Vridmoment: 19.00 Nm |Buffrat Vridmoment: 24.40 Nm | Varvtal: 1864.50 RPM | Buffrat Varvtal: 2102.40 RPM | Effektivitet: 0.0005994074
+Tilt: 15.69% | Hastighet: 3.15 m/s | Effekt: 5118.49 W | Vridmoment: 21.00 Nm |Buffrat Vridmoment: 23.60 Nm | Varvtal: 1968.00 RPM | Buffrat Varvtal: 2071.10 RPM | Effektivitet: 0.0006154161
+Tilt: 15.69% | Hastighet: 2.93 m/s | Effekt: 4784.57 W | Vridmoment: 22.00 Nm |Buffrat Vridmoment: 22.40 Nm | Varvtal: 2044.50 RPM | Buffrat Varvtal: 2039.70 RPM | Effektivitet: 0.0006123852
+Tilt: 15.69% | Hastighet: 2.83 m/s | Effekt: 4577.65 W | Vridmoment: 26.00 Nm |Buffrat Vridmoment: 21.80 Nm | Varvtal: 2087.00 RPM | Buffrat Varvtal: 2005.20 RPM | Effektivitet: 0.0006182208
+Tilt: 15.69% | Hastighet: 2.82 m/s | Effekt: 4836.58 W | Vridmoment: 26.00 Nm |Buffrat Vridmoment: 22.80 Nm | Varvtal: 2164.50 RPM | Buffrat Varvtal: 2025.70 RPM | Effektivitet: 0.0005830563
+Tilt: 15.69% | Hastighet: 2.90 m/s | Effekt: 5363.03 W | Vridmoment: 27.00 Nm |Buffrat Vridmoment: 24.40 Nm | Varvtal: 2230.50 RPM | Buffrat Varvtal: 2098.90 RPM | Effektivitet: 0.0005407391
+Tilt: 15.69% | Hastighet: 2.90 m/s | Effekt: 5757.07 W | Vridmoment: 27.00 Nm |Buffrat Vridmoment: 25.60 Nm | Varvtal: 2211.00 RPM | Buffrat Varvtal: 2147.50 RPM | Effektivitet: 0.0005037282
+Tilt: 15.69% | Hastighet: 2.98 m/s | Effekt: 6238.23 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 27.20 Nm | Varvtal: 2257.50 RPM | Buffrat Varvtal: 2190.10 RPM | Effektivitet: 0.0004776995
+Tilt: 15.69% | Hastighet: 2.93 m/s | Effekt: 6469.58 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 27.80 Nm | Varvtal: 2248.00 RPM | Buffrat Varvtal: 2222.30 RPM | Effektivitet: 0.0004528887
+Tilt: 15.69% | Hastighet: 3.14 m/s | Effekt: 6654.42 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.40 Nm | Varvtal: 2240.50 RPM | Buffrat Varvtal: 2237.50 RPM | Effektivitet: 0.0004718670
+Tilt: 15.69% | Hastighet: 3.03 m/s | Effekt: 6812.01 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2258.50 RPM | Buffrat Varvtal: 2243.10 RPM | Effektivitet: 0.0004448027
+Tilt: 15.69% | Hastighet: 2.93 m/s | Effekt: 6877.03 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2240.50 RPM | Buffrat Varvtal: 2249.00 RPM | Effektivitet: 0.0004260560
+Tilt: 15.69% | Hastighet: 3.00 m/s | Effekt: 6831.75 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2260.50 RPM | Buffrat Varvtal: 2249.60 RPM | Effektivitet: 0.0004391262
+Tilt: 15.69% | Hastighet: 3.13 m/s | Effekt: 6802.13 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2277.00 RPM | Buffrat Varvtal: 2255.40 RPM | Effektivitet: 0.0004601502
+Tilt: 15.69% | Hastighet: 3.38 m/s | Effekt: 6881.86 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2294.00 RPM | Buffrat Varvtal: 2266.10 RPM | Effektivitet: 0.0004911465
+Tilt: 15.69% | Hastighet: 3.56 m/s | Effekt: 6860.03 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2301.00 RPM | Buffrat Varvtal: 2274.60 RPM | Effektivitet: 0.0005189480
+Tilt: 15.69% | Hastighet: 3.59 m/s | Effekt: 6952.92 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2315.00 RPM | Buffrat Varvtal: 2289.50 RPM | Effektivitet: 0.0005163298
+Tilt: 15.69% | Hastighet: 3.70 m/s | Effekt: 6992.10 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2325.00 RPM | Buffrat Varvtal: 2302.40 RPM | Effektivitet: 0.0005291689
+Tilt: 15.69% | Hastighet: 3.83 m/s | Effekt: 7075.48 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2334.50 RPM | Buffrat Varvtal: 2313.90 RPM | Effektivitet: 0.0005413058
+Tilt: 15.69% | Hastighet: 3.93 m/s | Effekt: 7008.72 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2344.00 RPM | Buffrat Varvtal: 2323.90 RPM | Effektivitet: 0.0005607303
+Tilt: 15.69% | Hastighet: 4.00 m/s | Effekt: 6987.60 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2347.00 RPM | Buffrat Varvtal: 2333.10 RPM | Effektivitet: 0.0005724427
+Tilt: 15.66% | Hastighet: 4.14 m/s | Effekt: 6961.93 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.40 Nm | Varvtal: 2354.00 RPM | Buffrat Varvtal: 2340.90 RPM | Effektivitet: 0.0005946625
+Tilt: 13.75% | Hastighet: 4.17 m/s | Effekt: 6984.54 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.40 Nm | Varvtal: 2363.00 RPM | Buffrat Varvtal: 2348.50 RPM | Effektivitet: 0.0005970333
+Tilt: 12.11% | Hastighet: 4.30 m/s | Effekt: 6954.25 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.20 Nm | Varvtal: 2366.50 RPM | Buffrat Varvtal: 2354.90 RPM | Effektivitet: 0.0006183271
+Tilt: 10.96% | Hastighet: 4.37 m/s | Effekt: 6971.97 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.20 Nm | Varvtal: 2374.00 RPM | Buffrat Varvtal: 2360.90 RPM | Effektivitet: 0.0006267959
+Tilt: 7.76% | Hastighet: 4.41 m/s | Effekt: 7038.66 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.40 Nm | Varvtal: 2376.00 RPM | Buffrat Varvtal: 2366.70 RPM | Effektivitet: 0.0006265394
+Tilt: 4.40% | Hastighet: 4.42 m/s | Effekt: 7153.78 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2380.50 RPM | Buffrat Varvtal: 2372.00 RPM | Effektivitet: 0.0006178549
+Tilt: 2.68% | Hastighet: 4.53 m/s | Effekt: 7116.38 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2383.50 RPM | Buffrat Varvtal: 2376.10 RPM | Effektivitet: 0.0006365593
+Tilt: 2.68% | Hastighet: 4.57 m/s | Effekt: 7124.77 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2380.50 RPM | Buffrat Varvtal: 2378.90 RPM | Effektivitet: 0.0006414242
+Tilt: 2.68% | Hastighet: 4.61 m/s | Effekt: 7178.82 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2381.00 RPM | Buffrat Varvtal: 2380.30 RPM | Effektivitet: 0.0006421672
+Tilt: 2.68% | Hastighet: 4.61 m/s | Effekt: 7177.31 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2373.50 RPM | Buffrat Varvtal: 2379.80 RPM | Effektivitet: 0.0006423021
+Tilt: 2.68% | Hastighet: 4.65 m/s | Effekt: 7175.20 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2377.00 RPM | Buffrat Varvtal: 2379.10 RPM | Effektivitet: 0.0006480659
+Tilt: 2.68% | Hastighet: 4.60 m/s | Effekt: 7218.04 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2372.00 RPM | Buffrat Varvtal: 2376.80 RPM | Effektivitet: 0.0006372922
+Tilt: 2.68% | Hastighet: 4.60 m/s | Effekt: 7262.32 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2371.50 RPM | Buffrat Varvtal: 2375.00 RPM | Effektivitet: 0.0006334068
+Tilt: 2.68% | Hastighet: 4.53 m/s | Effekt: 7308.98 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.40 Nm | Varvtal: 2376.00 RPM | Buffrat Varvtal: 2374.00 RPM | Effektivitet: 0.0006197857
+Tilt: 2.68% | Hastighet: 4.56 m/s | Effekt: 7370.48 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.60 Nm | Varvtal: 2392.50 RPM | Buffrat Varvtal: 2377.80 RPM | Effektivitet: 0.0006186844
+Tilt: 2.12% | Hastighet: 4.63 m/s | Effekt: 7278.52 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2389.50 RPM | Buffrat Varvtal: 2380.30 RPM | Effektivitet: 0.0006361182
+Tilt: 1.80% | Hastighet: 4.66 m/s | Effekt: 7291.06 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2392.50 RPM | Buffrat Varvtal: 2384.40 RPM | Effektivitet: 0.0006391390
+Tilt: 1.80% | Hastighet: 4.75 m/s | Effekt: 7259.04 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2401.00 RPM | Buffrat Varvtal: 2390.30 RPM | Effektivitet: 0.0006543567
+Tilt: 1.80% | Hastighet: 4.76 m/s | Effekt: 7273.92 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2400.50 RPM | Buffrat Varvtal: 2395.20 RPM | Effektivitet: 0.0006543929
+Tilt: 1.80% | Hastighet: 4.90 m/s | Effekt: 7182.87 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2408.00 RPM | Buffrat Varvtal: 2398.30 RPM | Effektivitet: 0.0006821783
+Tilt: 1.80% | Hastighet: 4.82 m/s | Effekt: 7195.15 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2410.00 RPM | Buffrat Varvtal: 2402.40 RPM | Effektivitet: 0.0006698955
+Tilt: 1.80% | Hastighet: 4.92 m/s | Effekt: 7210.73 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2418.50 RPM | Buffrat Varvtal: 2407.60 RPM | Effektivitet: 0.0006823169
+Tilt: 1.80% | Hastighet: 4.91 m/s | Effekt: 7276.53 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2426.50 RPM | Buffrat Varvtal: 2412.70 RPM | Effektivitet: 0.0006747720
+Tilt: 1.80% | Hastighet: 5.00 m/s | Effekt: 7247.26 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2436.00 RPM | Buffrat Varvtal: 2419.80 RPM | Effektivitet: 0.0006899155
+Tilt: 1.80% | Hastighet: 5.20 m/s | Effekt: 7421.32 W | Vridmoment: 31.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2444.00 RPM | Buffrat Varvtal: 2427.00 RPM | Effektivitet: 0.0007006838
+Tilt: 1.80% | Hastighet: 5.16 m/s | Effekt: 7494.94 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.40 Nm | Varvtal: 2447.00 RPM | Buffrat Varvtal: 2434.40 RPM | Effektivitet: 0.0006884649
+Tilt: 1.80% | Hastighet: 5.27 m/s | Effekt: 7509.71 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.40 Nm | Varvtal: 2442.50 RPM | Buffrat Varvtal: 2439.20 RPM | Effektivitet: 0.0007017578
+Tilt: 1.80% | Hastighet: 5.23 m/s | Effekt: 7465.66 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2438.00 RPM | Buffrat Varvtal: 2441.50 RPM | Effektivitet: 0.0007005409
+Tilt: 1.80% | Hastighet: 5.25 m/s | Effekt: 7516.49 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.40 Nm | Varvtal: 2435.50 RPM | Buffrat Varvtal: 2441.40 RPM | Effektivitet: 0.0006984646
+Tilt: 1.81% | Hastighet: 5.22 m/s | Effekt: 7357.96 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2435.50 RPM | Buffrat Varvtal: 2439.70 RPM | Effektivitet: 0.0007094356
+Tilt: 3.45% | Hastighet: 5.22 m/s | Effekt: 7343.79 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2423.50 RPM | Buffrat Varvtal: 2435.00 RPM | Effektivitet: 0.0007108049
+Tilt: 6.70% | Hastighet: 5.19 m/s | Effekt: 7384.46 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2425.50 RPM | Buffrat Varvtal: 2431.60 RPM | Effektivitet: 0.0007028273
+Tilt: 6.70% | Hastighet: 5.13 m/s | Effekt: 7370.49 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2415.00 RPM | Buffrat Varvtal: 2427.00 RPM | Effektivitet: 0.0006960188
+Tilt: 6.72% | Hastighet: 5.08 m/s | Effekt: 7363.81 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2424.50 RPM | Buffrat Varvtal: 2424.80 RPM | Effektivitet: 0.0006898603
+Tilt: 8.43% | Hastighet: 5.07 m/s | Effekt: 7360.17 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2429.50 RPM | Buffrat Varvtal: 2423.60 RPM | Effektivitet: 0.0006888432
+Tilt: 11.38% | Hastighet: 5.14 m/s | Effekt: 7374.74 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2447.50 RPM | Buffrat Varvtal: 2428.40 RPM | Effektivitet: 0.0006969735
+Tilt: 11.39% | Hastighet: 5.14 m/s | Effekt: 7288.30 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2451.00 RPM | Buffrat Varvtal: 2433.50 RPM | Effektivitet: 0.0007052403
+Tilt: 11.39% | Hastighet: 5.33 m/s | Effekt: 7410.27 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2448.00 RPM | Buffrat Varvtal: 2440.10 RPM | Effektivitet: 0.0007192717
+Tilt: 11.39% | Hastighet: 5.30 m/s | Effekt: 7371.53 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2445.00 RPM | Buffrat Varvtal: 2444.20 RPM | Effektivitet: 0.0007189820
+Tilt: 11.39% | Hastighet: 5.31 m/s | Effekt: 7483.70 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2445.50 RPM | Buffrat Varvtal: 2447.40 RPM | Effektivitet: 0.0007095420
+Tilt: 11.39% | Hastighet: 5.31 m/s | Effekt: 7482.78 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2446.00 RPM | Buffrat Varvtal: 2447.10 RPM | Effektivitet: 0.0007096290
+Tilt: 11.39% | Hastighet: 5.31 m/s | Effekt: 7475.44 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2439.00 RPM | Buffrat Varvtal: 2444.70 RPM | Effektivitet: 0.0007103256
+Tilt: 11.39% | Hastighet: 5.34 m/s | Effekt: 7370.93 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2444.50 RPM | Buffrat Varvtal: 2444.00 RPM | Effektivitet: 0.0007244676
+Tilt: 11.39% | Hastighet: 5.32 m/s | Effekt: 7427.89 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2454.50 RPM | Buffrat Varvtal: 2445.90 RPM | Effektivitet: 0.0007162198
+Tilt: 11.39% | Hastighet: 5.37 m/s | Effekt: 7382.09 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2454.50 RPM | Buffrat Varvtal: 2447.70 RPM | Effektivitet: 0.0007274363
+Tilt: 11.39% | Hastighet: 5.38 m/s | Effekt: 7388.42 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2456.50 RPM | Buffrat Varvtal: 2449.80 RPM | Effektivitet: 0.0007281662
+Tilt: 11.39% | Hastighet: 5.40 m/s | Effekt: 7450.66 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2457.00 RPM | Buffrat Varvtal: 2453.40 RPM | Effektivitet: 0.0007247676
+Tilt: 11.39% | Hastighet: 5.42 m/s | Effekt: 7458.26 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2457.00 RPM | Buffrat Varvtal: 2455.90 RPM | Effektivitet: 0.0007267114
+Tilt: 11.39% | Hastighet: 5.46 m/s | Effekt: 7356.28 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2456.00 RPM | Buffrat Varvtal: 2456.20 RPM | Effektivitet: 0.0007422228
+Tilt: 11.39% | Hastighet: 5.48 m/s | Effekt: 7358.68 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2458.50 RPM | Buffrat Varvtal: 2457.00 RPM | Effektivitet: 0.0007446990
+Tilt: 11.39% | Hastighet: 5.52 m/s | Effekt: 7359.28 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2457.50 RPM | Buffrat Varvtal: 2457.20 RPM | Effektivitet: 0.0007500737
+Tilt: 10.61% | Hastighet: 5.44 m/s | Effekt: 7361.67 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2461.00 RPM | Buffrat Varvtal: 2458.00 RPM | Effektivitet: 0.0007389624
+Tilt: 7.49% | Hastighet: 5.49 m/s | Effekt: 7466.46 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2460.00 RPM | Buffrat Varvtal: 2458.60 RPM | Effektivitet: 0.0007352886
+Tilt: 4.19% | Hastighet: 5.36 m/s | Effekt: 7519.17 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2458.00 RPM | Buffrat Varvtal: 2459.00 RPM | Effektivitet: 0.0007128445
+Tilt: 0.83% | Hastighet: 5.40 m/s | Effekt: 7469.49 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2461.50 RPM | Buffrat Varvtal: 2459.60 RPM | Effektivitet: 0.0007229407
+Tilt: 0.28% | Hastighet: 5.41 m/s | Effekt: 7523.76 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2462.00 RPM | Buffrat Varvtal: 2460.50 RPM | Effektivitet: 0.0007190555
+Tilt: 0.28% | Hastighet: 5.45 m/s | Effekt: 7521.31 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2457.00 RPM | Buffrat Varvtal: 2459.70 RPM | Effektivitet: 0.0007246076
+Tilt: 0.28% | Hastighet: 5.41 m/s | Effekt: 7467.97 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2457.00 RPM | Buffrat Varvtal: 2459.10 RPM | Effektivitet: 0.0007244267
+Tilt: 0.28% | Hastighet: 5.46 m/s | Effekt: 7524.37 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2466.00 RPM | Buffrat Varvtal: 2460.70 RPM | Effektivitet: 0.0007256422
+Tilt: 0.28% | Hastighet: 5.47 m/s | Effekt: 7637.67 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.60 Nm | Varvtal: 2478.00 RPM | Buffrat Varvtal: 2464.00 RPM | Effektivitet: 0.0007161868
+Tilt: 0.28% | Hastighet: 5.48 m/s | Effekt: 7589.45 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.40 Nm | Varvtal: 2467.50 RPM | Buffrat Varvtal: 2465.10 RPM | Effektivitet: 0.0007220546
+Tilt: 0.28% | Hastighet: 5.55 m/s | Effekt: 7599.00 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.40 Nm | Varvtal: 2472.50 RPM | Buffrat Varvtal: 2468.20 RPM | Effektivitet: 0.0007303595
+Tilt: 0.28% | Hastighet: 5.56 m/s | Effekt: 7611.93 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.40 Nm | Varvtal: 2478.00 RPM | Buffrat Varvtal: 2472.40 RPM | Effektivitet: 0.0007304325
+Tilt: 0.28% | Hastighet: 5.55 m/s | Effekt: 7567.79 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2478.50 RPM | Buffrat Varvtal: 2474.90 RPM | Effektivitet: 0.0007333712
+Tilt: 0.28% | Hastighet: 5.58 m/s | Effekt: 7559.23 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2464.00 RPM | Buffrat Varvtal: 2472.10 RPM | Effektivitet: 0.0007381705
+Tilt: 0.28% | Hastighet: 5.47 m/s | Effekt: 7558.62 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2466.50 RPM | Buffrat Varvtal: 2471.90 RPM | Effektivitet: 0.0007236773
+Tilt: 0.28% | Hastighet: 5.46 m/s | Effekt: 7545.47 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2451.00 RPM | Buffrat Varvtal: 2467.60 RPM | Effektivitet: 0.0007236131
+Tilt: 0.28% | Hastighet: 5.40 m/s | Effekt: 7535.68 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2462.00 RPM | Buffrat Varvtal: 2464.40 RPM | Effektivitet: 0.0007165906
+Tilt: 0.28% | Hastighet: 5.52 m/s | Effekt: 7481.64 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2474.50 RPM | Buffrat Varvtal: 2463.60 RPM | Effektivitet: 0.0007378061
+Tilt: 0.28% | Hastighet: 5.56 m/s | Effekt: 7494.70 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2485.50 RPM | Buffrat Varvtal: 2467.90 RPM | Effektivitet: 0.0007418577
+READ MODE avslutat
+resultat sparade i logs\ReadMode_results_1745330937.csv
+Avslutar CAN-kommunikation.
+PcanBus was not properly shut down
+
+C:\Users\marti\Desktop>python3 att.py
+Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode
+2
+Spara data i LUTs? y/n
+n
+Ingen aprning av data
+Algoritm vald: VANILLA GRADIENT ASCENT
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Minsta vinkel nådd: 500 %
+Iteration 1
+Current Tilt: 4.00%, Efficiency: 0.00
+New Tilt: 4.00%, Efficiency: 0.00
+Optimal tilt uppnådd: 4.00%
+resultat sparade i logs\Gradient_results_1745330954.csv
+Avslutar CAN-kommunikation.
+PcanBus was not properly shut down
+
+C:\Users\marti\Desktop>python3 att.py
+Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode
+2
+Spara data i LUTs? y/n
+n
+Ingen aprning av data
+Algoritm vald: VANILLA GRADIENT ASCENT
+Iteration 1
+Current Tilt: 11.42%, Efficiency: 0.00
+New Tilt: 11.42%, Efficiency: 0.00
+Optimal tilt uppnådd: 11.42%
+resultat sparade i logs\Gradient_results_1745330998.csv
+Avslutar CAN-kommunikation.
+PcanBus was not properly shut down
+
+C:\Users\marti\Desktop>python3 att.py
+Välj algorithm: '1': Hillclimbing, '2': Vanilla Gradient Ascent, '3': Momentum Gradient Ascent, '4': READ ONLY Mode, '5' READ AND WRITE Mode
+5
+Spara data i LUTs? y/n
+n
+Ingen aprning av data
+READ AND WRITE MODE – Visar och sparar data
+Tilt: 17.53% | Hastighet: 3.79 m/s | Effekt: 7030.36 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2315.00 RPM | Buffrat Varvtal: 2315.00 RPM | Effektivitet: 0.0005390904
+Tilt: 17.53% | Hastighet: 3.84 m/s | Effekt: 6915.12 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.50 Nm | Varvtal: 2319.00 RPM | Buffrat Varvtal: 2317.00 RPM | Effektivitet: 0.0005553052
+Tilt: 17.53% | Hastighet: 3.85 m/s | Effekt: 6873.69 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.33 Nm | Varvtal: 2316.00 RPM | Buffrat Varvtal: 2316.67 RPM | Effektivitet: 0.0005601069
+Tilt: 17.53% | Hastighet: 3.80 m/s | Effekt: 6915.12 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.50 Nm | Varvtal: 2318.00 RPM | Buffrat Varvtal: 2317.00 RPM | Effektivitet: 0.0005495207
+Tilt: 17.53% | Hastighet: 3.85 m/s | Effekt: 6990.32 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2321.00 RPM | Buffrat Varvtal: 2317.80 RPM | Effektivitet: 0.0005507616
+Tilt: 17.53% | Hastighet: 3.81 m/s | Effekt: 6940.58 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2313.00 RPM | Buffrat Varvtal: 2317.40 RPM | Effektivitet: 0.0005489456
+Tilt: 17.53% | Hastighet: 3.70 m/s | Effekt: 6936.98 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2313.00 RPM | Buffrat Varvtal: 2316.20 RPM | Effektivitet: 0.0005333730
+Tilt: 17.53% | Hastighet: 3.73 m/s | Effekt: 6990.92 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2325.00 RPM | Buffrat Varvtal: 2318.00 RPM | Effektivitet: 0.0005335490
+Tilt: 17.53% | Hastighet: 3.78 m/s | Effekt: 6937.88 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2310.50 RPM | Buffrat Varvtal: 2316.50 RPM | Effektivitet: 0.0005448348
+Tilt: 17.53% | Hastighet: 3.75 m/s | Effekt: 6889.96 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.40 Nm | Varvtal: 2322.00 RPM | Buffrat Varvtal: 2316.70 RPM | Effektivitet: 0.0005442701
+Tilt: 17.53% | Hastighet: 3.80 m/s | Effekt: 6996.35 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2328.50 RPM | Buffrat Varvtal: 2319.80 RPM | Effektivitet: 0.0005431402
+Tilt: 17.53% | Hastighet: 3.91 m/s | Effekt: 7005.40 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2328.00 RPM | Buffrat Varvtal: 2322.80 RPM | Effektivitet: 0.0005581409
+Tilt: 17.53% | Hastighet: 4.01 m/s | Effekt: 6964.24 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2337.50 RPM | Buffrat Varvtal: 2325.30 RPM | Effektivitet: 0.0005757988
+Tilt: 17.53% | Hastighet: 4.03 m/s | Effekt: 6983.41 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2342.50 RPM | Buffrat Varvtal: 2331.70 RPM | Effektivitet: 0.0005770823
+Tilt: 17.53% | Hastighet: 4.10 m/s | Effekt: 6998.38 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2347.00 RPM | Buffrat Varvtal: 2336.70 RPM | Effektivitet: 0.0005858497
+Tilt: 17.53% | Hastighet: 4.21 m/s | Effekt: 6917.04 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.20 Nm | Varvtal: 2356.50 RPM | Buffrat Varvtal: 2342.30 RPM | Effektivitet: 0.0006086419
+Tilt: 17.09% | Hastighet: 4.30 m/s | Effekt: 6983.35 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.40 Nm | Varvtal: 2357.00 RPM | Buffrat Varvtal: 2348.10 RPM | Effektivitet: 0.0006157507
+Tilt: 14.21% | Hastighet: 4.30 m/s | Effekt: 7099.20 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2366.50 RPM | Buffrat Varvtal: 2353.90 RPM | Effektivitet: 0.0006057025
+Tilt: 10.85% | Hastighet: 4.46 m/s | Effekt: 7117.89 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2373.50 RPM | Buffrat Varvtal: 2360.10 RPM | Effektivitet: 0.0006265898
+Tilt: 7.48% | Hastighet: 4.50 m/s | Effekt: 7090.33 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2383.50 RPM | Buffrat Varvtal: 2367.40 RPM | Effektivitet: 0.0006346674
+Tilt: 4.19% | Hastighet: 4.56 m/s | Effekt: 7156.50 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2384.00 RPM | Buffrat Varvtal: 2372.90 RPM | Effektivitet: 0.0006371832
+Tilt: 0.83% | Hastighet: 4.67 m/s | Effekt: 7173.39 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2385.00 RPM | Buffrat Varvtal: 2378.50 RPM | Effektivitet: 0.0006510174
+Tilt: 0.42% | Hastighet: 4.66 m/s | Effekt: 7085.36 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.40 Nm | Varvtal: 2386.00 RPM | Buffrat Varvtal: 2382.40 RPM | Effektivitet: 0.0006576946
+Tilt: 0.42% | Hastighet: 4.75 m/s | Effekt: 7195.10 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2390.00 RPM | Buffrat Varvtal: 2385.70 RPM | Effektivitet: 0.0006601714
+Tilt: 0.42% | Hastighet: 4.80 m/s | Effekt: 7209.58 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2407.50 RPM | Buffrat Varvtal: 2390.50 RPM | Effektivitet: 0.0006657810
+Tilt: 0.42% | Hastighet: 4.86 m/s | Effekt: 7227.37 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2413.50 RPM | Buffrat Varvtal: 2396.40 RPM | Effektivitet: 0.0006724436
+Tilt: 0.42% | Hastighet: 4.95 m/s | Effekt: 7196.65 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2417.50 RPM | Buffrat Varvtal: 2402.90 RPM | Effektivitet: 0.0006878201
+Tilt: 0.42% | Hastighet: 5.00 m/s | Effekt: 7266.28 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2418.00 RPM | Buffrat Varvtal: 2409.30 RPM | Effektivitet: 0.0006881102
+Tilt: 0.42% | Hastighet: 5.13 m/s | Effekt: 7243.67 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2436.50 RPM | Buffrat Varvtal: 2418.60 RPM | Effektivitet: 0.0007082045
+Tilt: 0.42% | Hastighet: 5.14 m/s | Effekt: 7360.47 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2433.00 RPM | Buffrat Varvtal: 2423.70 RPM | Effektivitet: 0.0006983251
+Tilt: 0.42% | Hastighet: 5.19 m/s | Effekt: 7379.90 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2445.50 RPM | Buffrat Varvtal: 2430.10 RPM | Effektivitet: 0.0007032611
+Tilt: 0.42% | Hastighet: 5.32 m/s | Effekt: 7400.56 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2451.50 RPM | Buffrat Varvtal: 2436.90 RPM | Effektivitet: 0.0007188649
+Tilt: 0.42% | Hastighet: 5.37 m/s | Effekt: 7369.72 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2451.50 RPM | Buffrat Varvtal: 2443.60 RPM | Effektivitet: 0.0007286569
+Tilt: 0.42% | Hastighet: 5.37 m/s | Effekt: 7385.41 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2462.50 RPM | Buffrat Varvtal: 2448.80 RPM | Effektivitet: 0.0007271096
+Tilt: 0.42% | Hastighet: 5.48 m/s | Effekt: 7406.22 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2467.50 RPM | Buffrat Varvtal: 2455.70 RPM | Effektivitet: 0.0007399189
+Tilt: 0.42% | Hastighet: 5.45 m/s | Effekt: 7369.16 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2469.50 RPM | Buffrat Varvtal: 2460.50 RPM | Effektivitet: 0.0007395686
+Tilt: 0.42% | Hastighet: 5.50 m/s | Effekt: 7432.15 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2470.50 RPM | Buffrat Varvtal: 2464.30 RPM | Effektivitet: 0.0007400278
+Tilt: 0.42% | Hastighet: 5.44 m/s | Effekt: 7490.14 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2462.00 RPM | Buffrat Varvtal: 2466.40 RPM | Effektivitet: 0.0007262878
+Tilt: 0.42% | Hastighet: 5.36 m/s | Effekt: 7436.38 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2459.00 RPM | Buffrat Varvtal: 2465.70 RPM | Effektivitet: 0.0007207812
+Tilt: 0.42% | Hastighet: 5.28 m/s | Effekt: 7374.85 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2451.00 RPM | Buffrat Varvtal: 2462.40 RPM | Effektivitet: 0.0007159467
+Tilt: 0.42% | Hastighet: 5.20 m/s | Effekt: 7352.39 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2432.00 RPM | Buffrat Varvtal: 2454.90 RPM | Effektivitet: 0.0007072531
+Tilt: 0.42% | Hastighet: 5.10 m/s | Effekt: 7280.75 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.40 Nm | Varvtal: 2436.50 RPM | Buffrat Varvtal: 2448.10 RPM | Effektivitet: 0.0007004773
+Tilt: 0.42% | Hastighet: 5.13 m/s | Effekt: 7314.65 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 28.60 Nm | Varvtal: 2433.00 RPM | Buffrat Varvtal: 2442.30 RPM | Effektivitet: 0.0007013321
+Tilt: 0.42% | Hastighet: 5.11 m/s | Effekt: 7340.17 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2416.50 RPM | Buffrat Varvtal: 2433.80 RPM | Effektivitet: 0.0006961694
+Tilt: 0.42% | Hastighet: 5.01 m/s | Effekt: 7375.35 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2425.00 RPM | Buffrat Varvtal: 2428.60 RPM | Effektivitet: 0.0006792898
+Tilt: 0.42% | Hastighet: 4.94 m/s | Effekt: 7360.47 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2407.50 RPM | Buffrat Varvtal: 2423.70 RPM | Effektivitet: 0.0006711529
+Tilt: 0.42% | Hastighet: 4.81 m/s | Effekt: 7378.51 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2383.00 RPM | Buffrat Varvtal: 2413.00 RPM | Effektivitet: 0.0006518930
+Tilt: 0.42% | Hastighet: 4.57 m/s | Effekt: 7355.88 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2396.00 RPM | Buffrat Varvtal: 2405.60 RPM | Effektivitet: 0.0006212713
+Tilt: 0.42% | Hastighet: 4.63 m/s | Effekt: 7328.98 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2372.50 RPM | Buffrat Varvtal: 2396.80 RPM | Effektivitet: 0.0006317391
+Tilt: 0.42% | Hastighet: 4.47 m/s | Effekt: 7187.86 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 28.80 Nm | Varvtal: 2357.50 RPM | Buffrat Varvtal: 2383.30 RPM | Effektivitet: 0.0006218816
+Tilt: 0.42% | Hastighet: 4.29 m/s | Effekt: 7213.79 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2368.00 RPM | Buffrat Varvtal: 2375.40 RPM | Effektivitet: 0.0005946945
+Tilt: 0.42% | Hastighet: 4.35 m/s | Effekt: 7246.11 W | Vridmoment: 30.00 Nm |Buffrat Vridmoment: 29.20 Nm | Varvtal: 2354.50 RPM | Buffrat Varvtal: 2369.70 RPM | Effektivitet: 0.0006003222
+Tilt: 0.42% | Hastighet: 4.26 m/s | Effekt: 7163.38 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2341.50 RPM | Buffrat Varvtal: 2358.80 RPM | Effektivitet: 0.0005946917
+Tilt: 0.42% | Hastighet: 4.17 m/s | Effekt: 7158.82 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2365.00 RPM | Buffrat Varvtal: 2357.30 RPM | Effektivitet: 0.0005824982
+Tilt: 0.42% | Hastighet: 4.31 m/s | Effekt: 7157.91 W | Vridmoment: 28.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2356.00 RPM | Buffrat Varvtal: 2357.00 RPM | Effektivitet: 0.0006021311
+Tilt: 0.42% | Hastighet: 4.29 m/s | Effekt: 7157.61 W | Vridmoment: 29.00 Nm |Buffrat Vridmoment: 29.00 Nm | Varvtal: 2367.50 RPM | Buffrat Varvtal: 2356.90 RPM | Effektivitet: 0.0005993624
+Tilt: 0.42% | Hastighet: 2.69 m/s | Effekt: 5817.43 W | Vridmoment: 12.00 Nm |Buffrat Vridmoment: 25.40 Nm | Varvtal: 1505.50 RPM | Buffrat Varvtal: 2187.10 RPM | Effektivitet: 0.0004624037
+Tilt: 0.42% | Hastighet: 2.45 m/s | Effekt: 4793.72 W | Vridmoment: 14.00 Nm |Buffrat Vridmoment: 22.40 Nm | Varvtal: 1624.00 RPM | Buffrat Varvtal: 2043.60 RPM | Effektivitet: 0.0005110855
+Tilt: 0.42% | Hastighet: 2.51 m/s | Effekt: 3794.84 W | Vridmoment: 13.00 Nm |Buffrat Vridmoment: 19.20 Nm | Varvtal: 1584.00 RPM | Buffrat Varvtal: 1887.40 RPM | Effektivitet: 0.0006614240
+Tilt: 0.42% | Hastighet: 2.53 m/s | Effekt: 2978.32 W | Vridmoment: 14.00 Nm |Buffrat Vridmoment: 16.40 Nm | Varvtal: 1590.00 RPM | Buffrat Varvtal: 1734.20 RPM | Effektivitet: 0.0008494716
+Tilt: 0.42% | Hastighet: 2.74 m/s | Effekt: 2401.98 W | Vridmoment: 18.00 Nm |Buffrat Vridmoment: 14.20 Nm | Varvtal: 1773.00 RPM | Buffrat Varvtal: 1615.30 RPM | Effektivitet: 0.0011407235
+Tilt: 0.42% | Hastighet: 2.89 m/s | Effekt: 2531.87 W | Vridmoment: 14.00 Nm |Buffrat Vridmoment: 14.60 Nm | Varvtal: 1709.00 RPM | Buffrat Varvtal: 1656.00 RPM | Effektivitet: 0.0011414478
+READ MODE avslutat
+resultat sparade i logs\ReadMode_results_1745331123.csv
+Avslutar CAN-kommunikation.
+PcanBus was not properly shut down
+
+C:\Users\marti\Desktop>
