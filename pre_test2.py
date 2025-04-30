@@ -361,7 +361,7 @@ class CSVLoggning:
 
 class GradientAscent:
 # Trim-algoritm som optimerar tilt för bästa effektivitet (Gradient Ascent), har alternativet momentum gradient ascent.
-    def __init__(self, can_interface, csv_logger, step_size=500, tolerance=0.00002, max_iterations=100, alpha=100, beta=0.9, v=0, use_momentum=False, fake = False):
+    def __init__(self, can_interface, csv_logger, step_size=500, tolerance=0.00002, max_iterations=100, alpha=100, beta=0.9, v=0, use_momentum=False, fake = False, sim = False):
         self.can = can_interface
         self.csv_logger = csv_logger
         self.step_size = step_size
@@ -384,11 +384,16 @@ class GradientAscent:
     def measure_efficiency(self, speed, power):
         return speed / power if power else 0
     
+    def simulate_efficiency(self, tilt_percent):
+        optimal_tilt = 4000
+        return (optimal_tilt - tilt_percent)**2
+        
+    
     def delta_vinkel(self, new_tilt, prev_tilt):
         return new_tilt / prev_tilt if prev_tilt else 0
 
     # Kör optimeringen
-    def run(self):
+    def run(self, sim = False):
         # Vänta på initial giltig data innan optimering
         if not self.can.wait_for_valid_data(timeout=10):
             print("Ingen giltig data tillgänglig – avbryter optimering.")
@@ -397,7 +402,10 @@ class GradientAscent:
         try:
             prev_tilt, power, filtered_speed, _, _, _, _, _, = self.can.get_latest_data()
             prev_tilt = self.can.clamp_tilt_percent(prev_tilt)
-            prev_efficiency = self.measure_efficiency(filtered_speed, power)
+            if sim == True:
+                prev_efficiency = self.simulate_efficiency(prev_tilt)
+            else:
+                prev_efficiency = self.measure_efficiency(filtered_speed, power)
             self.can.current_tilt_percent = prev_tilt # Krävs för att skicka periodiska msg
             alpha = self.alpha
             beta = self.beta
@@ -443,7 +451,10 @@ class GradientAscent:
                 new_tilt, power, filtered_speed, _, _, _, _, _, = self.can.get_latest_data()
 
                 # Beräkna ny effektivitet
-                new_efficiency = self.measure_efficiency(filtered_speed,power)
+                if sim == True:
+                    new_efficiency = self.simulate_efficiency(new_tilt)
+                else:
+                    new_efficiency = self.measure_efficiency(filtered_speed,power)
                 error = new_efficiency - prev_efficiency
                 
                 # Estimera gradient (första derivatan efter det är envariabel)
@@ -748,7 +759,7 @@ def main():
                 return
             elif val == '6':
                 print("Fake Data test")
-                optimizer = GradientAscent(can_interface, csv_logger, fake=True)
+                optimizer = GradientAscent(can_interface, csv_logger, fake=True, sim=True)
                 can_interface.start_reading(fake=True)
                 optimizer.run()
             else:
