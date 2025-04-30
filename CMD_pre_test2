@@ -1,43 +1,38 @@
+Fake Data test
 Väntar på giltig data från CAN...
 Iteration 1
-Tiltjustering: -1.00%
-Förändring i effektivitet: -58.87%
+Tiltjustering (procentenheter): -1.00%
+Förändring i effektivitet (error): 0.1182924273
 Iteration 2
-Tiltjustering: 0.00%
-Förändring i effektivitet: -30.04%
+Tiltjustering (procentenheter): -0.00%
+Förändring i effektivitet (error): -0.0581422305
 Iteration 3
-Tiltjustering: -0.51%
-Förändring i effektivitet: -17.87%
+Tiltjustering (procentenheter): 0.49%
+Förändring i effektivitet (error): -0.0060374956
 Iteration 4
-Tiltjustering: 0.00%
-Förändring i effektivitet: -11.61%
+Tiltjustering (procentenheter): -0.00%
+Förändring i effektivitet (error): 0.0176290512
 Iteration 5
-Tiltjustering: -0.33%
-Förändring i effektivitet: -7.98%
+Tiltjustering (procentenheter): -1.44%
+Förändring i effektivitet (error): -0.0103596603
 Iteration 6
-Tiltjustering: 0.00%
-Förändring i effektivitet: -5.70%
+Tiltjustering (procentenheter): 0.00%
+Förändring i effektivitet (error): 0.3133025340
 Iteration 7
-Tiltjustering: -0.24%
-Förändring i effektivitet: -4.18%
+Tiltjustering (procentenheter): 43.40%
+Förändring i effektivitet (error): 3.0930168467
 Iteration 8
-Tiltjustering: 0.00%
-Förändring i effektivitet: -2.80%
+Tiltjustering (procentenheter): 0.00%
+Förändring i effektivitet (error): -3.3904094686
 Iteration 9
-Tiltjustering: -0.16%
-Förändring i effektivitet: 60.94%
+Tiltjustering (procentenheter): -47.58%
+Förändring i effektivitet (error): -0.0772958797
 Iteration 10
-Tiltjustering: -0.00%
-Förändring i effektivitet: -21.35%
+Tiltjustering (procentenheter): 0.00%
+Förändring i effektivitet (error): 0.0507469075
 Iteration 11
-Tiltjustering: 0.06%
-Förändring i effektivitet: 81.18%
+Tiltjustering (procentenheter): 31.24%
+Förändring i effektivitet (error): 0.2696389127
 Iteration 12
-Tiltjustering: 0.00%
-Förändring i effektivitet: -44.52%
-Iteration 13
-Tiltjustering: -0.03%
-Förändring i effektivitet: 99.97%
-Iteration 14
-Tiltjustering: -0.00%
-Förändring i effektivitet: -69.22%
+Tiltjustering (procentenheter): 0.00%
+Förändring i effektivitet (error): -0.2106755394
