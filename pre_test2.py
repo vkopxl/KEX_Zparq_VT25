@@ -14,7 +14,8 @@ import threading  # För att hantera parallella trådar
 import numpy as np  # För matematiska beräkningar
 import csv # För att spara dokumentation i csv filer
 import os # Filhantering för dokumentation  
-#import serial # hanterar interaktion med arduino
+import serial # hanterar interaktion med arduino
+import random # genererar slumpmässiga siffror
 #from scipy.spatial import KDTree # hämtar kdtree ur scipy för att hitta närmsta grannar i LUTs
 
 class CANInterface:
@@ -79,20 +80,20 @@ class CANInterface:
                             self.latest_data["tilt_percent"] = int.from_bytes(message.data[2:4], byteorder='little')
 
         elif fake == True:
-            def fake_reader(self):
+            def fake_reader():
                 while self.read_running:
                     message = self.bus.recv(timeout=10.0)
                     if message:
                         if message.arbitration_id == 0x14FF0A50:
                             self.latest_data["tilt_percent"] = int.from_bytes(message.data[2:4], byteorder='little')
+                            self.latest_data["speed"] =  int.from_bytes(message.data[2:4], byteorder='little') - 1000
                         else:
-                            self.latest_data["vridmoment"] = 10
-                            self.latest_data["varvtal"] = 10
-                            self.latest_data["speed"] = 10
+                            self.latest_data["vridmoment"] = 10 * random.randint(1, 50)
+                            self.latest_data["varvtal"] = 10 * random.randint(51, 100)
 
-        if fake == True:    
+        if fake == False:    
             self.read_thread = threading.Thread(target=reader)
-        elif fake == False:
+        elif fake == True:
             self.read_thread = threading.Thread(target=fake_reader)
         self.read_thread.start()            
 
@@ -360,7 +361,7 @@ class CSVLoggning:
 
 class GradientAscent:
 # Trim-algoritm som optimerar tilt för bästa effektivitet (Gradient Ascent), har alternativet momentum gradient ascent.
-    def __init__(self, can_interface, csv_logger, step_size=100, tolerance=0.00002, max_iterations=100, alpha=0.1, beta=0.9, v=0, use_momentum=False, fake = False):
+    def __init__(self, can_interface, csv_logger, step_size=100, tolerance=0.00002, max_iterations=100, alpha=100, beta=0.9, v=0, use_momentum=False, fake = False):
         self.can = can_interface
         self.csv_logger = csv_logger
         self.step_size = step_size
@@ -411,7 +412,6 @@ class GradientAscent:
             
             for iteration in range(1, self.max_iterations + 1):
 
-                new_tilt = prev_tilt - step_size
                 if self.use_momentum:
                     new_tilt = prev_tilt + v
                 else:
@@ -432,13 +432,12 @@ class GradientAscent:
                 
                 # Estimera gradient (första derivatan efter det är envariabel)
                 # gradient = (new_efficiency - prev_efficiency) / (new_tilt - prev_tilt)
-                gradient = error / step_size
 
                 print(f"Iteration {iteration}")
                 #print(f"Current Tilt: {new_tilt /100:.2f}%, Efficiency: {prev_efficiency:.2f}")
                 #print(f"New Tilt: {new_tilt /100:.2f}%, Efficiency: {new_efficiency:.2f}")
-                print(f"Tiltjustering: {(new_tilt-prev_tilt)/100:.2f}%")
-                print(f"Förändring i effektivitet: {abs(error)*100:.2f}%")
+                print(f"Tiltjustering (procentenheter): {(new_tilt-prev_tilt)/100:.2f}%")
+                print(f"Förändring i effektivitet (error): {error:.10f}")
 
                 # Spara historik
                 self.tilt_percent_history.append(new_tilt)
@@ -457,10 +456,10 @@ class GradientAscent:
                 prev_tilt = new_tilt 
 
                 if self.use_momentum:
-                    v = beta*v - (alpha*gradient)
+                    v = beta*v - (alpha*error/step_size)
                     step_size = abs(v) # för logging
                 else:
-                    step_size = (alpha*gradient)
+                    step_size = (alpha*error/step_size)
 
                 # Kort paus mellan iterationer
                 time.sleep(1.5)
@@ -493,7 +492,7 @@ class GradientAscent:
 
 class HillClimbing:
 # Trim-algoritm som optimerar tilt för bästa effektivitet (Hill Climbing)
-    def __init__(self, can_interface, csv_logger, step_size=100, tolerance=0.00002, max_iterations=100):
+    def __init__(self, can_interface, csv_logger, step_size=100, tolerance=0.00002, max_iterations=100, fake = False):
         self.can = can_interface
         self.csv_logger = csv_logger
         self.step_size = step_size
@@ -555,8 +554,8 @@ class HillClimbing:
                 print(f"Iteration {iteration}")
                 #print(f"Current Tilt: {new_tilt /100:.2f}%, Efficiency: {prev_efficiency:.2f}")
                 #print(f"New Tilt: {new_tilt /100:.2f}%, Efficiency: {new_efficiency:.2f}")
-                print(f"Tiltjustering: {(new_tilt-current_tilt)/100:.2f}%")
-                print(f"Förändring i effektivitet: {abs(error)*100:.2f}%")
+                print(f"Tiltjustering (procentenheter): {(new_tilt-current_tilt)/100:.2f}%")
+                print(f"Förändring i effektivitet (error): {error:.10f}")
 
                 # Spara historik
                 self.tilt_percent_history.append(new_tilt)
@@ -700,7 +699,8 @@ def main():
             print("'2': Vanilla Gradient Ascent")
             print("'3': Momentum Gradient Ascent")
             print("'4': READ ONLY Mode")
-            print("'5' READ AND WRITE Mode")
+            print("'5': READ AND WRITE Mode")
+            print("'6': Fake ahh data test")
             val = input()
 
             if val == '1':
@@ -726,7 +726,7 @@ def main():
             elif val == '6':
                 print("Fake Data test")
                 optimizer = GradientAscent(can_interface, csv_logger, fake=True)
-                can.interface.start_reading(fake=True)
+                can_interface.start_reading(fake=True)
                 optimizer.run()
             else:
                 print("Ogiltigt val – avslutar.")
