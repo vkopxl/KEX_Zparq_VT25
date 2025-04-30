@@ -361,7 +361,7 @@ class CSVLoggning:
 
 class GradientAscent:
 # Trim-algoritm som optimerar tilt för bästa effektivitet (Gradient Ascent), har alternativet momentum gradient ascent.
-    def __init__(self, can_interface, csv_logger, step_size=500, tolerance=0.00002, max_iterations=100, alpha=100, beta=0.9, v=0, use_momentum=False, fake = False, sim = False):
+    def __init__(self, can_interface, csv_logger, step_size= 200, tolerance=0.004, max_iterations=100, alpha= 1.01*1000, beta=0.98, v=0, use_momentum=False, fake = False, sim = False):
         self.can = can_interface
         self.csv_logger = csv_logger
         self.step_size = step_size
@@ -385,8 +385,8 @@ class GradientAscent:
         return speed / power if power else 0
     
     def simulate_efficiency(self, tilt_percent):
-        optimal_tilt = 4000
-        return (optimal_tilt - tilt_percent)**2
+        optimal_tilt = 3000
+        return - (tilt_percent-optimal_tilt)**2 *0.01 *0.0001
         
     
     def delta_vinkel(self, new_tilt, prev_tilt):
@@ -402,10 +402,10 @@ class GradientAscent:
         try:
             prev_tilt, power, filtered_speed, _, _, _, _, _, = self.can.get_latest_data()
             prev_tilt = self.can.clamp_tilt_percent(prev_tilt)
-            if sim == True:
-                prev_efficiency = self.simulate_efficiency(prev_tilt)
-            else:
-                prev_efficiency = self.measure_efficiency(filtered_speed, power)
+            #if sim == True:
+            #prev_efficiency = self.simulate_efficiency(prev_tilt)
+            #else:
+            prev_efficiency = self.measure_efficiency(filtered_speed, power)
             self.can.current_tilt_percent = prev_tilt # Krävs för att skicka periodiska msg
             alpha = self.alpha
             beta = self.beta
@@ -422,7 +422,7 @@ class GradientAscent:
             v = self.v
 
             print(f"Iteration: {0}")
-            print(f"Initial tilt: {prev_tilt}")
+            print(f"Initial tilt: {prev_tilt/100:.2f}%")
             
             for iteration in range(1, self.max_iterations + 1):
 
@@ -430,13 +430,13 @@ class GradientAscent:
 
                 if self.use_momentum:
                     if iteration == 1: 
-                        new_tilt = prev_tilt - step_size
+                        new_tilt = prev_tilt + step_size
 
                     else:
                         new_tilt = prev_tilt + v
 
                 else:
-                    new_tilt = prev_tilt - step_size
+                    new_tilt = prev_tilt + step_size
 
                 # Clampa vinkeln
                 new_tilt = self.can.clamp_tilt_percent(new_tilt)
@@ -451,18 +451,18 @@ class GradientAscent:
                 new_tilt, power, filtered_speed, _, _, _, _, _, = self.can.get_latest_data()
 
                 # Beräkna ny effektivitet
-                if sim == True:
-                    new_efficiency = self.simulate_efficiency(new_tilt)
-                else:
-                    new_efficiency = self.measure_efficiency(filtered_speed,power)
+                #if sim == True:
+                #new_efficiency = self.simulate_efficiency(new_tilt)
+                #else:
+                new_efficiency = self.measure_efficiency(filtered_speed,power)
                 error = new_efficiency - prev_efficiency
                 
                 # Estimera gradient (första derivatan efter det är envariabel)
                 # gradient = (new_efficiency - prev_efficiency) / (new_tilt - prev_tilt)
 
-                print(f"Ny tilt: {new_tilt /100:.2f}%")
                 #print(f"New Tilt: {new_tilt /100:.2f}%, Efficiency: {new_efficiency:.2f}")
                 print(f"Tiltjustering (procentenheter): {(new_tilt-prev_tilt)/100:.2f}%")
+                print(f"Ny tilt: {new_tilt /100:.2f}%")
                 print(f"Förändring i effektivitet (error): {error:.10f}")
 
                 # Spara historik
@@ -481,14 +481,16 @@ class GradientAscent:
 
                 if self.use_momentum:
                     v = beta*v - (alpha*(error/delta_vinkel))
-                    print(f"v: {(v):.15f}")
+                    print(f"v: {(v/100):.15f}")
+                    print(f"Beta: {(beta):.2f}")   
 
                     # step_size = abs(v) # för logging
                 else:
                     step_size = (alpha*(error/delta_vinkel))
+                    print(f"Step size: {(step_size/100):.5f}%")
 
-                print(f"Step size: {(step_size):.15f}")
-                print(f"Gradient: {(error/delta_vinkel):.15f}") 
+
+                print(f"Gradient: {(error/delta_vinkel):.5f}") 
                 print(f"Alpha: {(alpha):.2f}")                               
 
                 # Förbereda nästa iteration
@@ -572,6 +574,9 @@ class HillClimbing:
                 # Föreslå nytt tilt-värde
                 new_tilt = current_tilt + step_direction * step_size
 
+                # Clampa
+                new_tilt = self.can.clamp_tilt_percent(new_tilt)
+
                 # Uppdatera tilt explicit via CAN
                 self.can.current_tilt_percent = new_tilt
 
@@ -579,7 +584,7 @@ class HillClimbing:
                 time.sleep(3)
 
                 # Läs data efter tilt-justering
-                _, power, filtered_speed, _, _, _, _, _, = self.can.get_latest_data()
+                new_tilt, power, filtered_speed, _, _, _, _, _, = self.can.get_latest_data()
 
                 # Beräkna ny effektivitet
                 new_efficiency = self.measure_efficiency(filtered_speed,power)
@@ -759,7 +764,7 @@ def main():
                 return
             elif val == '6':
                 print("Fake Data test")
-                optimizer = GradientAscent(can_interface, csv_logger, fake=True, sim=True)
+                optimizer = GradientAscent(can_interface, csv_logger, fake=True, sim=True, use_momentum=True)
                 can_interface.start_reading(fake=True)
                 optimizer.run()
             else:
