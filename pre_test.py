@@ -60,7 +60,7 @@ class CANInterface:
             print(f"Största vinkel nådd: {self.max_tilt_percent*0.01} %")
         return clamped
 
-    def start_reading(self, fake = False):
+    def start_reading(self):
         self.read_running = True
 
         def reader():
@@ -75,21 +75,7 @@ class CANInterface:
                     elif message.arbitration_id == 0x14FF1140:  # GPS Status
                         self.latest_data["speed"] = int.from_bytes(message.data[0:2], byteorder='little') * 0.01
                     elif message.arbitration_id == 0x14FF0A50:  # Junction Box Status
-                        self.latest_data["tilt_percent"] = int.from_bytes(message.data[2:4], byteorder='little')
-
-        def fake_reader(self, fake = True):
-            while self.read_running:
-                message = self.bus.recv(timeout=10.0)
-                if message:
-                    if message.arbitration_id == 0x14FF0A50:
-                        self.latest_data["tilt_percent"] = int.from_bytes(message.data[2:4], byteorder='little')
-                    else:
-                        self.latest_data["vridmoment"] = 10
-                        self.latest_data["varvtal"] = 10
-                        self.latest_data["speed"] = 10
-        
-        self.read_thread = threading.Thread(target=reader)
-        self.read_thread.start()            
+                        self.latest_data["tilt_percent"] = int.from_bytes(message.data[2:4], byteorder='little')    
 
     def stop_read(self):
         self.read_running = False
@@ -114,6 +100,13 @@ class CANInterface:
 
             # P = M * 2pi*RPM / 60
             power = filtered_vridmoment * (2 * np.pi * filtered_varvtal / 60)
+
+            # ------------ FAKE ------------ #
+            fake_speed = tilt_percent -1000 
+            fake_power = 1
+            power = fake_power
+            filtered_speed = fake_speed
+            # ------------------------------ #
 
             return tilt_percent, power, filtered_speed, filtered_varvtal, filtered_vridmoment, speed, vridmoment, varvtal
 
