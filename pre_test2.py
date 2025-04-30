@@ -14,7 +14,7 @@ import threading  # För att hantera parallella trådar
 import numpy as np  # För matematiska beräkningar
 import csv # För att spara dokumentation i csv filer
 import os # Filhantering för dokumentation  
-import serial # hanterar interaktion med arduino
+#import serial # hanterar interaktion med arduino
 import random # genererar slumpmässiga siffror
 #from scipy.spatial import KDTree # hämtar kdtree ur scipy för att hitta närmsta grannar i LUTs
 
@@ -86,10 +86,10 @@ class CANInterface:
                     if message:
                         if message.arbitration_id == 0x14FF0A50:
                             self.latest_data["tilt_percent"] = int.from_bytes(message.data[2:4], byteorder='little')
-                            self.latest_data["speed"] =  int.from_bytes(message.data[2:4], byteorder='little') - 1000
+                            self.latest_data["speed"] =  int.from_bytes(message.data[2:4], byteorder='little') - 1500
                         else:
-                            self.latest_data["vridmoment"] = 10 * random.randint(1, 50)
-                            self.latest_data["varvtal"] = 10 * random.randint(51, 100)
+                            self.latest_data["vridmoment"] = 1
+                            self.latest_data["varvtal"] = 1
 
         if fake == False:    
             self.read_thread = threading.Thread(target=reader)
@@ -361,7 +361,7 @@ class CSVLoggning:
 
 class GradientAscent:
 # Trim-algoritm som optimerar tilt för bästa effektivitet (Gradient Ascent), har alternativet momentum gradient ascent.
-    def __init__(self, can_interface, csv_logger, step_size=100, tolerance=0.00002, max_iterations=100, alpha=100, beta=0.9, v=0, use_momentum=False, fake = False):
+    def __init__(self, can_interface, csv_logger, step_size=500, tolerance=0.00002, max_iterations=100, alpha=100, beta=0.9, v=0, use_momentum=False, fake = False):
         self.can = can_interface
         self.csv_logger = csv_logger
         self.step_size = step_size
@@ -383,6 +383,9 @@ class GradientAscent:
         # Beräkna effektivitet som hastighet delat med effekt
     def measure_efficiency(self, speed, power):
         return speed / power if power else 0
+    
+    def delta_vinkel(self, new_tilt, prev_tilt):
+        return new_tilt / prev_tilt if prev_tilt else 0
 
     # Kör optimeringen
     def run(self):
@@ -409,13 +412,26 @@ class GradientAscent:
 
             step_size = self.step_size
             v = self.v
+
+            print(f"Iteration: {0}")
+            print(f"Initial tilt: {prev_tilt}")
             
             for iteration in range(1, self.max_iterations + 1):
 
+                print(f"Iteration {iteration}")
+
                 if self.use_momentum:
-                    new_tilt = prev_tilt + v
+                    if iteration == 1: 
+                        new_tilt = prev_tilt - step_size
+
+                    else:
+                        new_tilt = prev_tilt + v
+
                 else:
                     new_tilt = prev_tilt - step_size
+
+                # Clampa vinkeln
+                new_tilt = self.can.clamp_tilt_percent(new_tilt)
 
                 # Uppdatera tilt explicit via CAN
                 self.can.current_tilt_percent = new_tilt
@@ -424,7 +440,7 @@ class GradientAscent:
                 time.sleep(3)
 
                 # Läs data efter tilt-justering
-                _, power, filtered_speed, _, _, _, _, _, = self.can.get_latest_data()
+                new_tilt, power, filtered_speed, _, _, _, _, _, = self.can.get_latest_data()
 
                 # Beräkna ny effektivitet
                 new_efficiency = self.measure_efficiency(filtered_speed,power)
@@ -433,8 +449,7 @@ class GradientAscent:
                 # Estimera gradient (första derivatan efter det är envariabel)
                 # gradient = (new_efficiency - prev_efficiency) / (new_tilt - prev_tilt)
 
-                print(f"Iteration {iteration}")
-                #print(f"Current Tilt: {new_tilt /100:.2f}%, Efficiency: {prev_efficiency:.2f}")
+                print(f"Ny tilt: {new_tilt /100:.2f}%")
                 #print(f"New Tilt: {new_tilt /100:.2f}%, Efficiency: {new_efficiency:.2f}")
                 print(f"Tiltjustering (procentenheter): {(new_tilt-prev_tilt)/100:.2f}%")
                 print(f"Förändring i effektivitet (error): {error:.10f}")
@@ -450,16 +465,24 @@ class GradientAscent:
                 if abs(error) < self.tolerance:
                     print(f"Optimal tilt uppnådd: {new_tilt / 100:.2f}%")
                     break
-                
-                # Förbereda nästa iteration
-                prev_efficiency = new_efficiency
-                prev_tilt = new_tilt 
+
+                delta_vinkel = self.delta_vinkel(new_tilt, prev_tilt)
 
                 if self.use_momentum:
-                    v = beta*v - (alpha*error/step_size)
-                    step_size = abs(v) # för logging
+                    v = beta*v - (alpha*(error/delta_vinkel))
+                    print(f"v: {(v):.15f}")
+
+                    # step_size = abs(v) # för logging
                 else:
-                    step_size = (alpha*error/step_size)
+                    step_size = (alpha*(error/delta_vinkel))
+
+                print(f"Step size: {(step_size):.15f}")
+                print(f"Gradient: {(error/delta_vinkel):.15f}") 
+                print(f"Alpha: {(alpha):.2f}")                               
+
+                # Förbereda nästa iteration
+                prev_efficiency = new_efficiency
+                prev_tilt = new_tilt
 
                 # Kort paus mellan iterationer
                 time.sleep(1.5)
@@ -492,7 +515,7 @@ class GradientAscent:
 
 class HillClimbing:
 # Trim-algoritm som optimerar tilt för bästa effektivitet (Hill Climbing)
-    def __init__(self, can_interface, csv_logger, step_size=100, tolerance=0.00002, max_iterations=100, fake = False):
+    def __init__(self, can_interface, csv_logger, step_size=500, tolerance=0.00002, max_iterations=100, fake = False):
         self.can = can_interface
         self.csv_logger = csv_logger
         self.step_size = step_size
